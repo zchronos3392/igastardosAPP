@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="C:\laragon\www\gastardosAPP\gastardosAPP.clpprj">
+	<settings>
+		<PM_URL><![CDATA[C:/laragon/www/carpetas/]]></PM_URL><PM_HOME_URL><![CDATA[C:/laragon/www/carpetas/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";C:\laragon\www\gastardosAPP\apis\Carpeta.php;C:\laragon\www\gastardosAPP\asignarmaterias.php;C:\laragon\www\gastardosAPP\cargaHojasMateriasAlumno.php;C:\laragon\www\gastardosAPP\verMateriasAlumno.php;D:\laragon\www\carpetas\apis\eliminar_colegio.php;D:\laragon\www\gastardosAPP\apis\eliminar_curso.php;"/><added value="C:\laragon\www\carpetas\index.phpold;"/><lastopfiles>
+	</lastopfiles>
+	<todoblock>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\axis-spec.ts">
+			<todo name="@TODO make this test better" pos="46;897"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\legend-spec.ts">
+			<todo name="@TODO verify this, seems PhantomJS@^2 adds another 1px" pos="72;315"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.axis.ts">
+			<todo name="TODO: return some values?" pos="3;12"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.color.ts">
+			<todo name="TODO: fix" pos="1;2"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.grid.ts">
+			<todo name="TODO: multiple" pos="3;17"/>
+			<todo name="TODO: multiple" pos="3;37"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.load.ts">
+			<todo name="TODO: do not unload if target will load (included in url/rows/columns)" pos="5;42"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.tooltip.ts">
+			<todo name="TODO: get target data by checking the state of focus" pos="3;35"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\arc.ts">
+			<todo name="TODO: extends all function" pos="5;130"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\axis-internal.ts">
+			<todo name="TODO: each attr should be one function and change its behavior by internal.orient, probably" pos="7;304"/>
+			<todo name="TODO: rotated tick text" pos="11;347"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\chart-internal.ts">
+			<todo name="TODO: Maybe we should check that the modification by rollup-plugin-modify" pos="3;4"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\core.ts">
+			<todo name="TODO: currently this must be called after initLegend because of update of sizes, but it should be d" pos="3;321"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\drag.ts">
+			<todo name="TODO: binary search when multiple xs" pos="3;36"/>
+			<todo name="TODO: included/unincluded callback here" pos="9;74"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\grid.ts">
+			<todo name="TODO: x1, x2, y1, y2, opacity need to be set here maybe" pos="5;110"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\polyfill.ts">
+			<todo name="TODO: Optimize this to just append to the existing attribute." pos="7;1760"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\selection.ts">
+			<todo name="TODO: how to select step chart?" pos="30;80"/>
+		</todofile>
+		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\subchart.ts">
+			<todo name="TODO: dynamically change brushY/brushX according to axis_rotated." pos="3;7"/>
+		</todofile>
+	</todoblock>
+	<dbgurls>
+	</dbgurls>
+	<filescache>
+		<file name="C:\laragon\www\gastardosAPP\styles\normalize.css" crc="1651973687"/>
+		<file name="C:\laragon\www\gastardosAPP\styles\iconstyle.css" crc="1651973687"/>
+		<file name="C:\laragon\www\gastardosAPP\styles\estiloGaleriaCarpetas.css" crc="1651973687"/>
+		<file name="C:\laragon\www\gastardosAPP\styles\diseñoCarpetas.css" crc="1651973687"/>
+		<file name="C:\laragon\www\gastardosAPP\styles\disenioGastardosAPP.css" crc="1666404930"/>
+		<file name="C:\laragon\www\gastardosAPP\styles\demo.js" crc="1651973688"/>
+		<file name="C:\laragon\www\gastardosAPP\styles\demo.css" crc="1651973688"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\zoom.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\tooltip.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\title.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\text.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\select_drag.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\region.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\point.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\main.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\line.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\legend.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\grid.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\focus.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\chart.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\brush.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\bar.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\axis.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\area.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\arc.scss" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\zoom.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\util.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\ua.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\type.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\tooltip.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\title.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\text.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\subchart.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\stanfordelements.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\stanford.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\size.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\shape.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\shape.line.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\shape.bar.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\selection.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scale.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\region.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\polyfill.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\legend.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\interaction.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\index.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\grid.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\format.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\drag.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\domain.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\data.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\data.load.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\data.convert.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\core.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\config.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\colorscale.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\color.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\clip.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\class.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\class-utils.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\chart.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\chart-internal.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\category.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\cache.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\axis.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\axis-internal.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\arc.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.zoom.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.x.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.transform.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.tooltip.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.subchart.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.show.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.selection.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.region.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.pie.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.load.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.legend.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.group.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.grid.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.focus.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.flow.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.donut.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.data.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.color.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.chart.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.category.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\api.axis.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\zoom-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\util-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\type-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\tooltip-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\title-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\svg-helper.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\subchart-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\stanford-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\shape.line-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\shape.bar-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\legend-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\interaction-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\grid-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\drag-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\domain-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\data.convert-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\data-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\core-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\class-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\cache-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\c3-helper.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\axis-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\arc-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.zoom-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.x-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.region-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.pie-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.load-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.grid-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.focus-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.donut-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.data-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\api.axis-spec.ts" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\zoom_type_disable_default_behavior.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\zoom_type.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\zoom_reduction.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\zoom_onzoom.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\zoom_category.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\zoom.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\tooltip_show.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\tooltip_horizontal.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\tooltip_grouped.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\timeseries_raw.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\timeseries_descendent.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\timeseries_date.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\timeseries.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\subchart_onbrush.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\subchart.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\simple.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\selection.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\resize.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\requirejs.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\regions_timeseries.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\regions.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\point_show.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\point_r.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\plugin.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\padding_update.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\padding.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\legend.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\interaction_enabled.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\grids_timeseries.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\grids.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\grid_x_lines_timeseries.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\grid_x_lines.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\grid_focus.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\emptydata.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\element.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\domain_y.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\different_category_datasets.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_url.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_rowed.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_region_timeseries.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_region.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_load_timeseries.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_load.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_label_format.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_label.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_json.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_hide.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\data_columned.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\custom_xs_scale.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\custom_x_scale.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\custom_x_categorized.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_step_category.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_step.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_stanford_custom_elements.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_stanford.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_spline.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_scatter.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_pie_sort.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_pie.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_multi_arc_gauge.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_gauge.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_donut.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_combination_normalized.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_combination.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_bar_stacked_normalized.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_bar_stacked.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_bar_space.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_bar_max_width.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_bar.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_area_step_stacked.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_area_step.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_area_stacked.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_area_spline_stacked.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_area_spline.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_area.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\chart_arc.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\categorized.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\bindto.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\bar_zerobased.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_y2.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_y_default.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_x_tick_values.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_x_tick_rotate.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_x_tick_fit.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_x_tick_culling.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_x_selection.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_x_range_timeseries.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_x_localtime.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_range.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_padding.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\axes_log_scales.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\area_zerobased.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_zoom.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_ygrid_lines.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_xgrid_lines.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_transform.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_tooltip_show.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_legend.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_flow_timeseries.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_flow.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_data_colors.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_category.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_axis_range.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\samples\api_axis_label.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\js\samples\zoom_reduction.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\js\samples\requirejs.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\js\samples\plugin.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\js\require.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\css\style.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\css\index.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\css\bootstrap.min.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\htdocs\index.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\extensions\js\c3ext.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\extensions\exporter\phantom-exporter.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\extensions\chart-bubble\index.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\extensions\chart-bubble\c3.min.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\extensions\chart-bubble\c3.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\extensions\chart-bubble\bubble.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\vendor\modernizr-2.6.1.min.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\vendor\jquery-1.8.0.min.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\transition_duration.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\transform_spline.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\transform_scatter.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\transform_pie.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\transform_line.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\transform_donut.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\transform_bar.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\transform_areaspline.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\transform_area.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\tooltip_show.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\tooltip_horizontal.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\tooltip_grouped.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\tooltip_format.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\timeseries.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\style_region.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\style_grid.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\simple_xy_multiple.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\simple_xy.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\simple_regions.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\simple_multiple.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\simple.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\region_timeseries.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\region.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\point_show.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\pie_label_format.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\options_subchart.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\options_size.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\options_padding.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\options_legend.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\options_gridline.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\options_color.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\legend_position.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\legend_custom.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\interaction_zoom_by_drag.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\interaction_zoom.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\grid_y_lines.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\grid_x_lines.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_xformat.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_url.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_stringx.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_rowed.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_order.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_number_format_l10n.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_name.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_load.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_label_format.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_label.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_json.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_columned.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\data_color.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_step.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_stanford.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_spline.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_scatter.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_pie.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_gauge.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_donut.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_combination.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_bar_stacked.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_bar.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_area_stacked.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\chart_area.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\categorized.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_y2.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_y_tick_format.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_y_range.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_y_padding.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_x_tick_values.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_x_tick_rotate.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_x_tick_format.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_x_tick_fit.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_x_tick_culling.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_x_tick_count.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_x_localtime.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_rotated.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_label_position.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\axes_label.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\api_resize.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\api_grid_x.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\api_flow.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\api_data_name.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\api_data_color.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\api_axis_range.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\samples\api_axis_label.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\ace\worker-javascript.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\ace\theme-tomorrow.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\ace\mode-javascript.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\ace\ace.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\plugins.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\main.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\jquery-1.11.0.min.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\index.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\highlight.pack.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\gettingstarted.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\foundation.min.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\d3-5.8.2.min.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\c3.min.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\c3.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\js\c3.esm.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\transition_duration.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\transform_spline.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\transform_scatter.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\transform_pie.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\transform_line.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\transform_donut.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\transform_bar.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\transform_areaspline.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\transform_area.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\tooltip_show.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\tooltip_grouped.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\tooltip_format.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\timeseries.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\style_region.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\style_grid.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\simple_xy_multiple.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\simple_xy.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\simple_regions.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\simple_multiple.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\region_timeseries.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\region.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\point_show.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\pie_label_format.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\options_subchart.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\options_size.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\options_padding.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\options_legend.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\options_gridline.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\options_color.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\legend_position.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\legend_custom.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\interaction_zoom.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\grid_y_lines.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\grid_x_lines.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_xformat.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_url.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_stringx.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_rowed.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_order.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_name.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_load.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_label_format.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_label.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_json.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_columned.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\data_color.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_step.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_stanford.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_spline.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_scatter.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_pie.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_gauge.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_donut.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_combination.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_bar_stacked.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_bar_negative.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_bar.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_area_stacked.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\chart_area.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\categorized.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_y2.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_y_tick_format.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_y_range.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_y_padding.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_x_tick_values.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_x_tick_rotate.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_x_tick_format.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_x_tick_fit.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_x_tick_culling.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_x_tick_count.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_x_localtime.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_rotated.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_label_position.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\axes_label.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\api_resize.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\api_grid_x.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\api_flow.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\api_data_name.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\api_data_color.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\api_axis_range.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\samples\api_axis_label.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\tomorrow.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\style.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\reference.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\normalize.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\index.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\gettingstarted.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\foundation.min.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\foundation.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\examples.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\c3.min.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\c3.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\css\bootstrap.min.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\robots.txt" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\crossdomain.xml" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\docs\404.html" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\data\samples.yml" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\.circleci\config.yml" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\rollup.config.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\karma.conf.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\config.rb" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\codecov.yml" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\c3.min.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\c3.min.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\c3.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\c3.esm.js" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\c3.css" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\.travis.yml" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\.bmp.yml" crc="1596878038"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\mainGaleriaCarpetas.js" crc="1651973687"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\knobGraphics.js" crc="1653853708"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\gastardosAPP.js" crc="1666442291"/>
+		<file name="C:\laragon\www\gastardosAPP\navegadorcarpetas\materializeGallery\js\main.js" crc="1651973687"/>
+		<file name="C:\laragon\www\gastardosAPP\navegadorcarpetas\materializeGallery\css\estilos.css" crc="1651973684"/>
+		<file name="C:\laragon\www\gastardosAPP\navegadorcarpetas\materializeGallery\index.html" crc="1651973684"/>
+		<file name="C:\laragon\www\gastardosAPP\imagenes\CONSIDERACIONES PARA LOGOS.txt" crc="1651973682"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\Umedida.php" crc="1651973679"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\TiposTabla.php" crc="1651973679"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php" crc="1657721142"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\Objetivo.php" crc="1661352467"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\Negocios.php" crc="1666442153"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\mysql_login.php" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\Monedas.php" crc="1651973679"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\MediosPago.php" crc="1651973679"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\iumed.php" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\ioegresos.php" crc="1662349425"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\iobjetivos.php" crc="1661365075"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\iobjconsumo.php" crc="1657726027"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\insertar_curso.php" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\imonedas.php" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\imediopago.php" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\igtiposhp.php" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\igtipos.php" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\icomercios.php" crc="1666442092"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\GastosIO.php" crc="1662350820"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\eliminar_curso.php" crc="1651973679"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\database.php" crc="1651973679"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\curFunciones.php" crc="1651973679"/>
+		<file name="C:\laragon\www\gastardosAPP\ticket.php" crc="1656201146"/>
+		<file name="C:\laragon\www\gastardosAPP\tests.php" crc="1651973676"/>
+		<file name="C:\laragon\www\gastardosAPP\objetosconsumo.php" crc="1656037765"/>
+		<file name="C:\laragon\www\gastardosAPP\objetivos.php" crc="1661434589"/>
+		<file name="C:\laragon\www\gastardosAPP\NewFile.html" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\index.php" crc="1666441609"/>
+		<file name="C:\laragon\www\gastardosAPP\header.html" crc="1652107437"/>
+		<file name="C:\laragon\www\gastardosAPP\estadisticas.php" crc="1657981333"/>
+		<file name="C:\laragon\www\gastardosAPP\c0990415_xpensio.sql" crc="1651973677"/>
+		<file name="C:\laragon\www\gastardosAPP\c0990415_gastardos.sql" crc="1651973677"/>
+		<file name="C:\laragon\www\gastardosAPP\c0990415_gastardos (1).sql" crc="1651973677"/>
+		<file name="C:\laragon\www\gastardosAPP\c0990415_cursos.sql" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\ANDAMIO_UIUX_TODOS.php" crc="1652919115"/>
+		<file name="C:\laragon\www\gastardosAPP\abmobjetivos.php" crc="1661434840"/>
+	</filescache>
+</project>

@@ -1,0 +1,6 @@
+    • 576px for extra small devices like portrait mode phones
+    • 768px for small devices like landscape phones
+    • 992px for medium devices like tablets
+    • 1200px for large devices like desktops
+    • 2560px for extra large devices like large desktops
+

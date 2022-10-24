@@ -1,0 +1,210 @@
+<codestructure version="5.15">
+<phptree>
+<treenode node="__ROOT__;PHP:PHP Word;C:\laragon\www\carpetas\apis\obtener_materias_personaX.php;f8;4;16;4;;C:\laragon\www\carpetas\apis\obtener_carpeta_materia_persona.php;f8;7;16;7;;C:\laragon\www\carpetas\apis\curFunciones.php;f8;2;16;2;;C:\laragon\www\carpetas\apis\obtener_carpeta_materia_personav2.php;f8;7;16;7;;C:\laragon\www\carpetas\apis\obtener_materias_peso_persona.php;f8;4;16;4;;C:\laragon\www\carpetas\apis\obtener_materias_persona.php;f8;4;16;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Carpeta.php;PHP:PHP Include;C:\laragon\www\carpetas\apis\obtener_carpeta_materia_persona.php;f14;5;25;5;;C:\laragon\www\carpetas\apis\curFunciones.php;f14;4;25;4;;C:\laragon\www\carpetas\apis\obtener_carpeta_materia_personav2.php;f14;5;25;5;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Colegio.php;PHP:PHP Include;C:\laragon\www\carpetas\apis\obtener_colegios.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\insertar_colegio_persona.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\insertar_colegio.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\eliminar_colegio.php;f10;4;21;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Curso.php;PHP:PHP Include;C:\laragon\www\carpetas\apis\obtener_cursos.php;f10;4;19;4;;C:\laragon\www\carpetas\apis\insertar_curso.php;f10;4;19;4;;C:\laragon\www\carpetas\apis\eliminar_curso.php;f10;4;19;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="DATABASE;PHP:PHP Word;C:\laragon\www\carpetas\apis\mysql_login.php;f8;9;16;9;;;;vpos;;v;;a;;r&quot;c0990415_cursos&quot;;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="database.php;PHP:PHP Include;C:\laragon\www\carpetas\apis\RelacionPersona.php;f14;6;26;6;;C:\laragon\www\carpetas\apis\Persona.php;f14;6;26;6;;C:\laragon\www\carpetas\apis\Nivel.php;f14;6;26;6;;C:\laragon\www\carpetas\apis\MateriaCarpeta.php;f14;6;26;6;;C:\laragon\www\carpetas\apis\Materia.php;f14;6;26;6;;C:\laragon\www\carpetas\apis\Curso.php;f14;6;26;6;;C:\laragon\www\carpetas\apis\Colegio.php;f14;6;26;6;;C:\laragon\www\carpetas\apis\Carpeta.php;f14;6;26;6;;;;vpos;;v;;a;;r&#10;Description&#10;     Representa el la estructura de las categorias almacenadas en la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="header.html;PHP:PHP Include;C:\laragon\www\carpetas\cargaHojasMateriasAlumno.php;f10;180;21;180;;C:\laragon\www\carpetas\asignarmaterias.php;f10;75;21;75;;C:\laragon\www\carpetas\verMateriasAlumno.php;f10;129;21;129;;C:\laragon\www\carpetas\index.php;f10;288;21;288;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="HOSTNAME;PHP:PHP Word;C:\laragon\www\carpetas\apis\mysql_login.php;f8;8;16;8;;;;vpos;;v;;a;;r&#10;Description&#10;     Provee las constantes;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Materia.php;PHP:PHP Include;C:\laragon\www\carpetas\apis\procesar_materias.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\obtener_materias_personaX.php;f10;5;21;5;;C:\laragon\www\carpetas\apis\obtener_materias.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\insertar_materia_persona.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\insertar_materia.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\eliminar_materia.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\obtener_carpeta_materia_persona.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\curFunciones.php;f14;3;25;3;;C:\laragon\www\carpetas\apis\obtener_carpeta_materia_personav2.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\obtener_materias_peso_persona.php;f10;5;21;5;;C:\laragon\www\carpetas\apis\obtener_materias_persona.php;f10;5;21;5;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="mysql_login.php;PHP:PHP Include;C:\laragon\www\carpetas\apis\database.php;f15;6;30;6;;;;vpos;;v;;a;;r&#10;Description&#10;     Clase que envuelve una instancia de la clase PDO para el manejo de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Nivel.php;PHP:PHP Include;C:\laragon\www\carpetas\apis\obtener_niveles.php;f10;4;19;4;;C:\laragon\www\carpetas\apis\insertar_nivel.php;f10;4;19;4;;C:\laragon\www\carpetas\apis\eliminar_nivel.php;f10;4;19;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="PASSWORD;PHP:PHP Word;C:\laragon\www\carpetas\apis\mysql_login.php;f8;11;16;11;;;;vpos;;v;;a;;r&quot;kefaKA24fu&quot;;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Persona.php;PHP:PHP Include;C:\laragon\www\carpetas\apis\obtener_personas.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\insertar_persona.php;f10;4;21;4;;C:\laragon\www\carpetas\apis\eliminar_persona.php;f10;4;21;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas las Clubs de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="RelacionPersona.php;PHP:PHP Include;C:\laragon\www\carpetas\apis\obtener_relacionAlumnoEspec.php;f10;4;29;4;;C:\laragon\www\carpetas\apis\insertar_alumnoEspec.php;f10;4;29;4;;C:\laragon\www\carpetas\apis\eliminar_alumnoEspec.php;f10;4;29;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas las Clubs de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="USERNAME;PHP:PHP Word;C:\laragon\www\carpetas\apis\mysql_login.php;f8;10;16;10;;;;vpos;;v;;a;;r&quot;c0990415_voleyap&quot;;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Colegio;PHP:Class Name;C:\laragon\www\carpetas\apis\Colegio.php;f0;8;1;175;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\carpetas\apis\Colegio.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\carpetas\apis\Colegio.php;f17;40;5;55;;;;vpos;;v;;a;;r;;d4,41;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\carpetas\apis\Colegio.php;f18;164;5;174;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($idcolegio)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,165;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\carpetas\apis\Colegio.php;f18;20;5;37;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\carpetas\apis\Colegio.php;f18;65;5;85;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($idcolegio)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,66;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\carpetas\apis\Colegio.php;f18;120;5;133;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($nombreColegio,$CreaColegio)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d62,120;;b1,5;;m0;;e $idcategoria;;p $nombre;;p">
+</treenode>
+<treenode node="insertPersona;PHP:Function Name;C:\laragon\www\carpetas\apis\Colegio.php;f18;142;5;155;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insertPersona($colegiopersona,$personaid,$CreaColegioPersona)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d88,142;;b1,5;;m0;;ecolegiopersona;;ppersonaid;;pCreaColegioPersona;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\carpetas\apis\Colegio.php;f18;95;5;111;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($idcolegio, $nombreColegio, $CreaColegio )&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,96;;b1,5;;m0;;eidcolegio;;pnombreColegio;;pCreaColegio;;p">
+</treenode>
+</treenode>
+<treenode node="Cursos;PHP:Class Name;C:\laragon\www\carpetas\apis\Curso.php;f0;8;1;221;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\carpetas\apis\Curso.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\carpetas\apis\Curso.php;f17;95;5;110;;;;vpos;;v;;a;;r;;d4,96;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\carpetas\apis\Curso.php;f18;208;5;220;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($anioCurso, $idColegio, $idCurso)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,209;;b1,5;;m0;;eanioCurso;;pidColegio;;pidCurso;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\carpetas\apis\Curso.php;f18;20;5;48;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getAllPersona;PHP:Function Name;C:\laragon\www\carpetas\apis\Curso.php;f18;57;5;92;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAllPersona($persona)&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,58;;b1,5;;m0;;e $idCategoria;;p">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\carpetas\apis\Curso.php;f18;120;5;153;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($anioCurso,$idColegio,$idCurso)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,121;;b1,5;;m0;;eanioCurso;;pidColegio;;pidCurso;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\carpetas\apis\Curso.php;f18;187;5;200;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($anioCurso,$idColegio,$idnivel,$nombreCurso)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d78,187;;b1,5;;m0;;eanioCurso;;pidColegio;;pidnivel;;pnombreCurso;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\carpetas\apis\Curso.php;f18;163;5;178;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($anioCurso,$idColegio,$idCurso,$nombreCurso)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,164;;b1,5;;m0;;eanioCurso;;pidColegio;;pidCurso;;pnombreCurso;;p">
+</treenode>
+</treenode>
+<treenode node="Database;PHP:Class Name;C:\laragon\www\carpetas\apis\database.php;f0;9;1;81;;;;vpos;;v;;a;;r;;d0,10;;b0,0;;m0;;e">
+<treenode node="__clone;PHP:Function Name;C:\laragon\www\carpetas\apis\database.php;f20;73;5;75;;;;vpos;;v;;a;;r&#10;Definition&#10;    __clone()&#10;&#10;Description&#10;     Evita la clonaci?n del objeto;;d4,74;;b2,0;;m0;;e">
+</treenode>
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\carpetas\apis\database.php;f18;22;5;32;;;;vpos;;v;;a;;r;;d4,23;;b3,0;;m0;;e">
+</treenode>
+<treenode node="_destructor;PHP:Function Name;C:\laragon\www\carpetas\apis\database.php;f4;77;5;80;;;;vpos;;v;;a;;r;;d4,78;;b0,0;;m0;;e">
+</treenode>
+<treenode node="getDb;PHP:Function Name;C:\laragon\www\carpetas\apis\database.php;f11;51;5;68;;;;vpos;;v;;aPDO;;r&#10;Definition&#10;    getDb()&#10;&#10;Description&#10;     Crear una nueva conexi?n PDO basada en los datos de conexi?n&#10;&#10;Return:&#10;   Objeto PDO;;d4,52;;b1,0;;m0;;e">
+</treenode>
+<treenode node="getInstance;PHP:Function Name;C:\laragon\www\carpetas\apis\database.php;f18;38;5;44;;;;vpos;;v;;aDatabase;;r&#10;Definition&#10;    getInstance()&#10;&#10;Description&#10;     Retorna en la ?nica instancia de la clase&#10;&#10;Return:&#10;   |null;;d4,39;;b1,5;;m0;;e">
+</treenode>
+</treenode>
+<treenode node="EspecialistaAlumno;PHP:Class Name;C:\laragon\www\carpetas\apis\RelacionPersona.php;f0;8;1;184;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\carpetas\apis\RelacionPersona.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="deleteAluFromEspec;PHP:Function Name;C:\laragon\www\carpetas\apis\RelacionPersona.php;f18;173;5;183;;;;vpos;;v;;abool;;r&#10;Definition&#10;    deleteAluFromEspec($especialista, $alumno)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,174;;b1,5;;m0;;eespecialista;;palumno;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\carpetas\apis\RelacionPersona.php;f18;20;5;44;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getByIdAlumno;PHP:Function Name;C:\laragon\www\carpetas\apis\RelacionPersona.php;f18;93;5;120;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getByIdAlumno($alumno)&#10;&#10;Description&#10;     Obtiene los campos de Relacion entre Especialista y Alumno con un identificador determinado&#10;&#10;Parameters:&#10;     $especialista - Identificador de la categoria;;d4,94;;b1,5;;m0;;e $especialista;;p">
+</treenode>
+<treenode node="getByIdEspecialista;PHP:Function Name;C:\laragon\www\carpetas\apis\RelacionPersona.php;f18;56;5;83;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getByIdEspecialista($especialista)&#10;&#10;Description&#10;     Obtiene los campos de Relacion entre Especialista y Alumno con un identificador determinado&#10;&#10;Parameters:&#10;     $especialista - Identificador de la categoria;;d4,57;;b1,5;;m0;;e $especialista;;p">
+</treenode>
+<treenode node="insertRelacion;PHP:Function Name;C:\laragon\www\carpetas\apis\RelacionPersona.php;f18;155;5;165;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insertRelacion($idespecialista, $idalumno,$FechaIinicio, $relacionObs)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d97,155;;b1,5;;m0;;eidespecialista;;pidalumno;;pFechaIinicio;;prelacionObs;;p">
+</treenode>
+<treenode node="updateEspecialista;PHP:Function Name;C:\laragon\www\carpetas\apis\RelacionPersona.php;f18;131;5;146;;;;vpos;;v;;a;;r&#10;Definition&#10;    updateEspecialista($especialista,$alumno,$FechaRelacion,$obsrelacion)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,132;;b1,5;;m0;;eespecialista;;palumno;;pFechaRelacion;;pobsrelacion;;p">
+</treenode>
+</treenode>
+<treenode node="HojasCarpeta;PHP:Class Name;C:\laragon\www\carpetas\apis\Carpeta.php;f0;8;1;313;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\carpetas\apis\Carpeta.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\carpetas\apis\Carpeta.php;f18;298;5;312;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($ianio,$icurso,$personaid,$imateria,$hojaId)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,299;;b1,5;;m0;;eianio;;picurso;;ppersonaid;;pimateria;;phojaId;;p">
+</treenode>
+<treenode node="getAllPersonaAnioCurso;PHP:Function Name;C:\laragon\www\carpetas\apis\Carpeta.php;f18;20;2;45;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAllPersonaAnioCurso($personaid,$ianio,$icurso)&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;epersonaid;;pianio;;picurso;;p">
+</treenode>
+<treenode node="getByMateria;PHP:Function Name;C:\laragon\www\carpetas\apis\Carpeta.php;f18;53;5;132;;;;vpos;;v;;a;;r&#10;Definition&#10;    getByMateria($personaid,$ianio,$icurso,$imateria,$filtroFechaCarga)&#10;&#10;Description&#10;     OBTIENE TODAS LAS HOJAS CARGADAS EN UNA CARPETA POR A?O, PERSONA, MATERIA&#10;&#10;Parameters:&#10;    ;;d4,54;;b1,5;;m0;;epersonaid;;pianio;;picurso;;pimateria;;pfiltroFechaCarga;;p">
+</treenode>
+<treenode node="getHojaByID;PHP:Function Name;C:\laragon\www\carpetas\apis\Carpeta.php;f18;208;5;237;;;;vpos;;v;;a;;r;;d4,209;;b1,5;;m0;;epersonaid;;pianio;;picurso;;pimateria;;pidhoja;;p">
+</treenode>
+<treenode node="getStats1;PHP:Function Name;C:\laragon\www\carpetas\apis\Carpeta.php;f18;134;5;170;;;;vpos;;v;;a;;r;;d4,135;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getUltimoNroHojaByMateria;PHP:Function Name;C:\laragon\www\carpetas\apis\Carpeta.php;f18;177;5;206;;;;vpos;;v;;a;;r&#10;Definition&#10;    getUltimoNroHojaByMateria($personaid,$ianio,$icurso,$imateria)&#10;&#10;Description&#10;     OBTIENE TODAS LAS HOJAS CARGADAS EN UNA CARPETA POR A?O, PERSONA, MATERIA&#10;&#10;Parameters:&#10;    ;;d4,178;;b1,5;;m0;;epersonaid;;pianio;;picurso;;pimateria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\carpetas\apis\Carpeta.php;f18;273;5;290;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($anioCurso, $idCurso, $idpersona, $idMateria, &#10;          $nrohoja,$fechaEnHoja, $fechaCarga, $nombreHoja, $obsUNO,&#10;           $obsDOS, $quienSube )&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d4,276;;b1,5;;m0;;eanioCurso;;pidCurso;;pidpersona;;pidMateria;;pnrohoja;;pfechaEnHoja;;pfechaCarga;;pnombreHoja;;pobsUNO;;pobsDOS;;pquienSube;;p">
+</treenode>
+<treenode node="updateFechaVisto;PHP:Function Name;C:\laragon\www\carpetas\apis\Carpeta.php;f18;247;5;264;;;;vpos;;v;;a;;r&#10;Definition&#10;    updateFechaVisto($personaid,$ianio,$icurso,$imateria,$hojaId,$vistael)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,248;;b1,5;;m0;;epersonaid;;pianio;;picurso;;pimateria;;phojaId;;pvistael;;p">
+</treenode>
+</treenode>
+<treenode node="MateriaCarpeta;PHP:Class Name;C:\laragon\www\carpetas\apis\MateriaCarpeta.php;f0;8;1;172;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\carpetas\apis\MateriaCarpeta.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\carpetas\apis\MateriaCarpeta.php;f17;42;5;57;;;;vpos;;v;;a;;r;;d4,43;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\carpetas\apis\MateriaCarpeta.php;f18;156;5;171;;;;vpos;;v;;a;;r;;d4,157;;b1,5;;m0;;eanioCurso;;pidCurso;;pidpersona;;pidmateria;;pidhoja;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\carpetas\apis\MateriaCarpeta.php;f18;20;5;40;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll($filtro)&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e $idCategoria;;p">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\carpetas\apis\MateriaCarpeta.php;f18;66;5;94;;;;vpos;;v;;a;;r&#10;Definition&#10;    getById($anioCurso,$idCurso,$idpersona,$idmateria,$idhoja)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;    ;;d4,67;;b1,5;;m0;;eanioCurso;;pidCurso;;pidpersona;;pidmateria;;pidhoja;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\carpetas\apis\MateriaCarpeta.php;f18;135;5;149;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($anioCurso,$idCurso,$idpersona,$idmateria,$nrohoja,&#10;            $fechaCarga, $nombreHoja,$obsUNO,$obsDOS,$quienSUBE)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d64,136;;b1,5;;m0;;eanioCurso;;pidCurso;;pidpersona;;pidmateria;;pnrohoja;;pfechaCarga;;pnombreHoja;;pobsUNO;;pobsDOS;;pquienSUBE;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\carpetas\apis\MateriaCarpeta.php;f18;104;5;126;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($anioCurso,$idCurso,$idpersona,$idmateria,$idhoja,&#10;            $nrohoja,$fechaCarga, $nombreHoja,$obsUNO,$obsDOS,$quienSUBE)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,106;;b1,5;;m0;;eanioCurso;;pidCurso;;pidpersona;;pidmateria;;pidhoja;;pnrohoja;;pfechaCarga;;pnombreHoja;;pobsUNO;;pobsDOS;;pquienSUBE;;p">
+</treenode>
+</treenode>
+<treenode node="Materias;PHP:Class Name;C:\laragon\www\carpetas\apis\Materia.php;f0;8;1;302;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f17;149;5;164;;;;vpos;;v;;a;;r;;d4,150;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;272;5;284;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($idmateria)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,273;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="deleteMateriasPersona;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;286;5;299;;;;vpos;;v;;a;;r;;d105,286;;b1,5;;m0;;eanioCurso;;pidcolegio;;pcursomateria;;pidMateria;;ppersona;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;20;5;45;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getAllPersona;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;76;5;110;;;;vpos;;v;;a;;r;;d4,77;;b1,5;;m0;;epersonaid;;pianio;;p">
+</treenode>
+<treenode node="getAllPersonaCurso;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;112;5;147;;;;vpos;;v;;a;;r;;d4,113;;b1,5;;m0;;epersonaid;;pianio;;pcursoid;;p">
+</treenode>
+<treenode node="getAnioCurso;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;47;2;74;;;;vpos;;v;;a;;r;;d65,47;;b1,5;;m0;;eanioCurso;;pcursomateria;;p">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;173;5;198;;;;vpos;;v;;a;;r&#10;Definition&#10;    getById($anioCurso,$idColegio,$idCurso,$idmateria)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;    ;;d4,174;;b1,5;;m0;;eanioCurso;;pidColegio;;pidCurso;;pidmateria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;234;5;244;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($anioCurso,$idColegio,$idCurso,$nombreMateria)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d80,234;;b1,5;;m0;;eanioCurso;;pidColegio;;pidCurso;;pnombreMateria;;p">
+</treenode>
+<treenode node="insertMateriasPersona;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;253;5;263;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insertMateriasPersona($anioCurso,$idcolegio,$cursomateria,$idMateria,$persona)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d105,253;;b1,5;;m0;;eanioCurso;;pidcolegio;;pcursomateria;;pidMateria;;ppersona;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\carpetas\apis\Materia.php;f18;208;5;225;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($anioCurso,$idColegio,$idCurso,$idmateria,$nombreMateria)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,209;;b1,5;;m0;;eanioCurso;;pidColegio;;pidCurso;;pidmateria;;pnombreMateria;;p">
+</treenode>
+</treenode>
+<treenode node="Niveles;PHP:Class Name;C:\laragon\www\carpetas\apis\Nivel.php;f0;8;1;148;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\carpetas\apis\Nivel.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\carpetas\apis\Nivel.php;f17;40;5;55;;;;vpos;;v;;a;;r;;d4,41;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\carpetas\apis\Nivel.php;f18;138;5;147;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($idNivel)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,139;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\carpetas\apis\Nivel.php;f18;20;5;37;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\carpetas\apis\Nivel.php;f18;65;5;85;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($idnivel)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,66;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\carpetas\apis\Nivel.php;f18;118;5;130;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($DescripcionNivel)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d52,118;;b1,5;;m0;;eDescripcionNivel;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\carpetas\apis\Nivel.php;f18;95;5;109;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($idNivel,$DescripcionNivel )&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,96;;b1,5;;m0;;e $idcategoria;;p $nombre;;p">
+</treenode>
+</treenode>
+<treenode node="Persona;PHP:Class Name;C:\laragon\www\carpetas\apis\Persona.php;f0;8;1;204;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\carpetas\apis\Persona.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\carpetas\apis\Persona.php;f17;46;5;61;;;;vpos;;v;;a;;r;;d4,47;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\carpetas\apis\Persona.php;f18;193;5;203;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($idpersona)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idpersona - identificador de la persona&#10;&#10;Return:&#10;   Respuesta de la eliminacion;;d4,194;;b1,5;;m0;;e $idpersona;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\carpetas\apis\Persona.php;f18;20;5;43;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getAllEspecialista;PHP:Function Name;C:\laragon\www\carpetas\apis\Persona.php;f18;72;5;100;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getAllEspecialista($idpersona)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,73;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\carpetas\apis\Persona.php;f18;111;5;138;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($idpersona)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,112;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\carpetas\apis\Persona.php;f18;172;5;185;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($usuariopersona,$nombrepersona,$tipopersona)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d78,172;;b1,5;;m0;;eusuariopersona;;pnombrepersona;;ptipopersona;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\carpetas\apis\Persona.php;f18;148;5;163;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($idpersona,$usuariopersona,$nombrepersona,$tipopersona )&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,149;;b1,5;;m0;;eidpersona;;pusuariopersona;;pnombrepersona;;ptipopersona;;p">
+</treenode>
+</treenode>
+<treenode node="altaHojaCarpeta;PHP:Function Name;C:\laragon\www\carpetas\apis\curFunciones.php;f0;405;1;433;;;;vpos;;v;;a;;r;;d111,405;;b0,0;;m0;;eanioCurso;;pidCurso;;pidpersona;;pmateriaid;;pnombreArchivo;;pmensajes;;pobs1;;pfechaEnHoja;;p">
+</treenode>
+<treenode node="buscarIMAGEN;PHP:Function Name;C:\laragon\www\carpetas\apis\obtener_carpeta_materia_persona.php;f0;147;1;170;;;;vpos;;v;;a;;r;;d0,148;;b0,0;;m0;;evalorNombreImagen;;pHojasDB;;p">
+</treenode>
+<treenode node="buscarMateria;PHP:Function Name;C:\laragon\www\carpetas\apis\obtener_materias_personaX.php;f0;110;1;120;;;;vpos;;v;;a;;r;;d49,110;;b0,0;;m0;;eMaterias;;pMateriaEnviada;;p">
+</treenode>
+<treenode node="compressImage;PHP:Function Name;C:\laragon\www\carpetas\apis\curFunciones.php;f0;439;1;463;;;;vpos;;v;;a;;r;;d56,439;;b0,0;;m0;;esource;;pdestination;;pquality;;p">
+</treenode>
+<treenode node="generaEpigrafe;PHP:Function Name;C:\laragon\www\carpetas\apis\obtener_carpeta_materia_persona.php;f0;122;1;144;;;;vpos;;v;;a;;r;;d0,123;;b0,0;;m0;;evalorNombreImagen;;pHojasDB;;p">
+</treenode>
+<treenode node="listadoSubDirectorio;PHP:Function Name;C:\laragon\www\carpetas\apis\curFunciones.php;f0;316;1;372;;;;vpos;;v;;a;;r;;d0,317;;b0,0;;m0;;edirectorio;;ppadre;;pnivel;;parchivos;;p">
+</treenode>
+<treenode node="listadoSubDirectoriov2;PHP:Function Name;C:\laragon\www\carpetas\apis\curFunciones.php;f0;260;1;315;;;;vpos;;v;;a;;r;;d0,261;;b0,0;;m0;;edirectorio;;ppadre;;pnivel;;parchivos;;p">
+</treenode>
+<treenode node="pathMateria;PHP:Function Name;C:\laragon\www\carpetas\apis\curFunciones.php;f0;373;1;403;;;;vpos;;v;;a;;r;;d50,373;;b0,0;;m0;;epersonaid;;pmateriaid;;pianio;;p">
+</treenode>
+</phptree>
+</codestructure>

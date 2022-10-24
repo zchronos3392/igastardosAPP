@@ -1,0 +1,214 @@
+<codestructure version="5.15">
+<phptree>
+<treenode node="__ROOT__;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\curFunciones.php;f8;2;16;2;;;;vpos;;v;;a;;rdirname(dirname(__FILE__;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Curso.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\insertar_curso.php;f10;4;19;4;;C:\laragon\www\gastardosAPP\apis\eliminar_curso.php;f10;4;19;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas las Clubs de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="DATABASE;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;9;16;9;;;;vpos;;v;;a;;r&quot;c0990415_xpensio&quot;;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="database.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\Umedida.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Monedas.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Negocios.php;f14;6;26;6;;;;vpos;;v;;a;;r&#10;Description&#10;     Representa el la estructura de las categorias almacenadas en la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="GastosIO.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iumed.php;f14;5;26;5;;C:\laragon\www\gastardosAPP\apis\iobjconsumo.php;f14;5;26;5;;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f10;4;22;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="header.html;PHP:PHP Include;C:\laragon\www\gastardosAPP\ANDAMIO_UIUX_TODOS.php;f10;181;21;181;;C:\laragon\www\gastardosAPP\objetosconsumo.php;f10;251;21;251;;C:\laragon\www\gastardosAPP\ticket.php;f10;298;21;298;;C:\laragon\www\gastardosAPP\abmobjetivos.php;f10;394;21;394;;C:\laragon\www\gastardosAPP\estadisticas.php;f10;292;21;292;;C:\laragon\www\gastardosAPP\objetivos.php;f10;231;21;231;;C:\laragon\www\gastardosAPP\index.php;f10;510;21;510;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="HOSTNAME;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;8;16;8;;;;vpos;;v;;a;;r&#10;Description&#10;     Provee las constantes;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="MediosPago.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\imediopago.php;f10;4;24;4;;C:\laragon\www\gastardosAPP\apis\iobjetivos.php;f10;5;24;5;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Monedas.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\imonedas.php;f10;4;21;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="mysql_login.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\database.php;f15;6;30;6;;;;vpos;;v;;a;;r&#10;Description&#10;     Clase que envuelve una instancia de la clase PDO para el manejo de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Negocios.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\icomercios.php;f10;4;22;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Objetivo.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iobjetivos.php;f10;4;22;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="ObjetosConsumo.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iumed.php;f9;4;27;4;;C:\laragon\www\gastardosAPP\apis\iobjconsumo.php;f9;4;27;4;;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f14;5;32;5;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="PASSWORD;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;11;16;11;;;;vpos;;v;;a;;r&quot;kefaKA24fu&quot;;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="TiposTabla.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\igtiposhp.php;f10;4;24;4;;C:\laragon\www\gastardosAPP\apis\igtipos.php;f10;4;24;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="USERNAME;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;10;16;10;;;;vpos;;v;;a;;r&quot;c0990415_voleyap&quot;;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="Comercios;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f0;8;1;189;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f17;77;5;92;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    contar()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,78;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f18;177;5;188;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($ComercioId)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,178;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f18;20;5;38;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getAllxFiltro;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f18;47;5;66;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAllxFiltro($xfiltro)&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,48;;b1,5;;m0;;e $idCategoria;;p">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f18;102;5;123;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($negocioid)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,103;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f18;156;5;169;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($descripcionComercio,$tipoComercio)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d69,156;;b1,5;;m0;;e $idcategoria;;p $nombre;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f18;133;5;147;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($ComercioId, $descripcionComercio)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,134;;b1,5;;m0;;e $idcategoria;;p $nombre;;p">
+</treenode>
+</treenode>
+<treenode node="Database;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\database.php;f0;9;1;81;;;;vpos;;v;;a;;r;;d0,10;;b0,0;;m0;;e">
+<treenode node="__clone;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\database.php;f20;73;5;75;;;;vpos;;v;;a;;r&#10;Definition&#10;    __clone()&#10;&#10;Description&#10;     Evita la clonaci?n del objeto;;d4,74;;b2,0;;m0;;e">
+</treenode>
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\database.php;f18;22;5;32;;;;vpos;;v;;a;;r;;d4,23;;b3,0;;m0;;e">
+</treenode>
+<treenode node="_destructor;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\database.php;f4;77;5;80;;;;vpos;;v;;a;;r;;d4,78;;b0,0;;m0;;e">
+</treenode>
+<treenode node="getDb;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\database.php;f11;51;5;68;;;;vpos;;v;;aPDO;;r&#10;Definition&#10;    getDb()&#10;&#10;Description&#10;     Crear una nueva conexi?n PDO basada en los datos de conexi?n&#10;&#10;Return:&#10;   Objeto PDO;;d4,52;;b1,0;;m0;;e">
+</treenode>
+<treenode node="getInstance;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\database.php;f18;38;5;44;;;;vpos;;v;;aDatabase;;r&#10;Definition&#10;    getInstance()&#10;&#10;Description&#10;     Retorna en la ?nica instancia de la clase&#10;&#10;Return:&#10;   |null;;d4,39;;b1,5;;m0;;e">
+</treenode>
+</treenode>
+<treenode node="gconsObjeto;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f0;8;1;235;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f17;126;5;141;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    contar()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,127;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f18;223;5;234;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($idcnsobjeto)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,224;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f18;46;5;66;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,47;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getAllResumen;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f18;90;5;116;;;;vpos;;v;;a;;r;;d4,91;;b1,5;;m0;;efiltro;;pxpalabraClave;;p">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f18;149;5;171;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($idcnsobjeto)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,150;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getLastidObjCons;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f18;19;5;37;;;;vpos;;v;;a;;r&#10;Definition&#10;    getLastidObjCons()&#10;&#10;Description&#10;     GET LAST ID: NUMERADOR;;d4,20;;b1,5;;m0;;e">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f18;205;5;214;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($idcnsobjeto, $descripcionObjetoCons, $objcnsTipo)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d84,205;;b1,5;;m0;;eidcnsobjeto;;pdescripcionObjetoCons;;pobjcnsTipo;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f18;181;5;196;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($idcnsobjeto, $descripcionObjetoCons, $objcnsTipo)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,182;;b1,5;;m0;;eidcnsobjeto;;pdescripcionObjetoCons;;pobjcnsTipo;;p">
+</treenode>
+<treenode node="xgetAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f18;68;5;88;;;;vpos;;v;;a;;r;;d4,69;;b1,5;;m0;;efiltro;;p">
+</treenode>
+</treenode>
+<treenode node="gTipos;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f0;8;1;167;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f17;50;5;65;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    contar()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,51;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f18;153;5;166;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($tipoid,$tablaPertenece)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,154;;b1,5;;m0;;etipoid;;ptablaPertenece;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f18;20;5;38;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f18;75;5;96;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($tablaPertenece)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,76;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f18;131;5;144;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($tablaPertenece, $descripciontipo)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d68,131;;b1,5;;m0;;e $idcategoria;;p $nombre;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f18;106;5;122;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($tipoid,$tablaPertenece, $descripciontipo)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,107;;b1,5;;m0;;etipoid;;ptablaPertenece;;pdescripciontipo;;p">
+</treenode>
+</treenode>
+<treenode node="iogastos;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f0;8;1;541;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f17;384;5;399;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    contar()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,385;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;516;5;527;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($idTicket,$gasFecha)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,517;;b1,5;;m0;;eidTicket;;pgasFecha;;p">
+</treenode>
+<treenode node="deleteDetalle;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;529;5;540;;;;vpos;;v;;a;;r;;d4,530;;b1,5;;m0;;eidTicket;;pgasFecha;;pidrenglon;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;20;5;44;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll($filtro)&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e $idCategoria;;p">
+</treenode>
+<treenode node="getAllAgrupados;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;69;5;205;;;;vpos;;v;;a;;r;;d4,71;;b1,5;;m0;;efiltroFechaGeneral;;pproductos;;pcomercios;;pFechaBuscar;;psonCuotasVal;;pmoneda;;pmformapago;;p">
+</treenode>
+<treenode node="getAllAgrupadosFecha;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;274;5;297;;;;vpos;;v;;a;;r;;d4,275;;b1,5;;m0;;eticketidParm;;pgasFecha;;p">
+</treenode>
+<treenode node="getAllDescripciones;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;330;5;353;;;;vpos;;v;;a;;r;;d4,331;;b1,5;;m0;;efechaTicket;;pticketid;;p">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;409;5;437;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($gasid)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,410;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getLastTicket;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;355;5;373;;;;vpos;;v;;a;;r;;d4,356;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getResumen;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;207;2;272;;;;vpos;;v;;a;;r;;d4,208;;b1,5;;m0;;excomercio;;pxproducto;;pxFechaDesde;;pxFechaHasta;;p">
+</treenode>
+<treenode node="getTicketById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;301;5;326;;;;vpos;;v;;a;;r;;d4,302;;b1,5;;m0;;efechaTicket;;pticketid;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;488;5;508;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($ticketID,$tipoMedioPago,$gasFecha,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$movTipo,$gasobservaciones1,$gasobservaciones2,&#10;    $descgenDesc,$descuentogenmonto,$totalCuotas)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d49,489;;b1,5;;m0;;eticketID;;ptipoMedioPago;;pgasFecha;;pgasDescripcion;;pgasPUnit;;pgasCant;;punidad;;pComercioId;;pmonedaId;;pdescuento;;precargo;;pmovTipo;;pgasobservaciones1;;pgasobservaciones2;;pdescgenDesc;;pdescuentogenmonto;;ptotalCuotas;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;447;5;479;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($i_ticketID,$gasFecha,$gasid,$tipoMedioPago,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,$descgenDesc,$descuentogenmonto)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,448;;b1,5;;m0;;ei_ticketID;;pgasFecha;;pgasid;;ptipoMedioPago;;pgasDescripcion;;pgasPUnit;;pgasCant;;punidad;;pComercioId;;pmonedaId;;pdescuento;;precargo;;ptipoMov;;pgasobservaciones1;;pgasobservaciones2;;pdescgenDesc;;pdescuentogenmonto;;p">
+</treenode>
+<treenode node="xgetAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;47;5;67;;;;vpos;;v;;a;;r;;d4,48;;b1,5;;m0;;efiltro;;p">
+</treenode>
+</treenode>
+<treenode node="MediosPago;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f0;8;1;162;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f17;49;5;64;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    contar()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,50;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f18;150;5;161;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($mediopagoid)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,151;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f18;20;5;37;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f18;74;5;95;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($mediopagoid)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,75;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f18;129;5;142;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($descripcionmediopago,$nombreabrev)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d69,129;;b1,5;;m0;;e $idcategoria;;p $nombre;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f18;105;5;120;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($mediopagoid, $descripcionmediopago,$nombreabrev)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,106;;b1,5;;m0;;emediopagoid;;pdescripcionmediopago;;pnombreabrev;;p">
+</treenode>
+</treenode>
+<treenode node="Moneda;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\Monedas.php;f0;8;1;162;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Monedas.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Monedas.php;f17;49;5;64;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    contar()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,50;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Monedas.php;f18;150;5;161;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($monedaId)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,151;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Monedas.php;f18;20;5;37;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Monedas.php;f18;74;5;95;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($monedaId)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,75;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Monedas.php;f18;129;5;142;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($descripcionmoneda, $abrmoneda)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d65,129;;b1,5;;m0;;e $idcategoria;;p $nombre;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Monedas.php;f18;105;5;120;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($monedaId, $descripcionmoneda, $abrmoneda)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,106;;b1,5;;m0;;emonedaId;;pdescripcionmoneda;;pabrmoneda;;p">
+</treenode>
+</treenode>
+<treenode node="objetivos;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f0;8;1;315;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f17;156;5;171;;;;vpos;;v;;a;;r;;d4,157;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f18;289;5;298;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($idobjetivo)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,290;;b1,5;;m0;;eidobjetivo;;p">
+</treenode>
+<treenode node="deleteSubObjetivo;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f18;302;5;311;;;;vpos;;v;;a;;r;;d4,303;;b1,5;;m0;;eidobjetivo;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f18;41;5;62;;;;vpos;;v;;a;;r;;d4,42;;b1,5;;m0;;efiltro;;p">
+</treenode>
+<treenode node="getAllSubObjetivos;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f18;65;5;91;;;;vpos;;v;;a;;r;;d4,66;;b1,5;;m0;;efiltro;;p">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f18;180;5;203;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($idobjetivo)&#10;&#10;Description&#10;     Obtiene los campos del objetivo buscado o pedido&#10;&#10;Parameters:&#10;     $idobjetivo - Identificador del Objetivo;;d4,181;;b1,5;;m0;;e $idobjetivo;;p">
+</treenode>
+<treenode node="getLastId;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f18;21;5;39;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getLastId()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;gasobjetivos&apos;&#10;&#10;Parameters:&#10;    NO - HAY&#10;&#10;Return:&#10;   Datos del registro;;d4,22;;b1,5;;m0;;e">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f18;245;5;265;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($FechaDesdeVig, $FechaHastaVig, $fraccion,$FraccionTipo,&#10;             $fraccionTiempo,$montoObjetivo, $montoAviso,&#10;             $objobservaciones1,$objetivoTipo )&#10;&#10;Description&#10;     Insertar un OBJETIVO;;d47,247;;b1,5;;m0;;eFechaDesdeVig;;pFechaHastaVig;;pfraccion;;pFraccionTipo;;pfraccionTiempo;;pmontoObjetivo;;pmontoAviso;;pobjobservaciones1;;pobjetivoTipo;;p">
+</treenode>
+<treenode node="insertaSubObjetivo;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f18;268;5;282;;;;vpos;;v;;a;;r;;d4,270;;b1,5;;m0;;eidobjetivo;;pidsubobjetivo;;pmonedasubobj;;pmediopagosubobj;;pfraccionsubobj;;pfraccionTotsubobj;;p">
+</treenode>
+<treenode node="PorcentajeCumplidoFraccion;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f17;99;4;126;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    PorcentajeCumplidoFraccion($FechaInicio,$Fechafin,$FraccionMonto,&#10;                $mediopago,$monedaid)&#10;&#10;Description&#10;     Retorna conteo de registros de la tabla &apos;gasobjetivos&apos;&#10;&#10;Return:&#10;   Datos del registro;;d37,100;;b1,5;;m0;;eFechaInicio;;pFechafin;;pFraccionMonto;;pmediopago;;pmonedaid;;p">
+</treenode>
+<treenode node="PorcentajeCumplidoFraccionX;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f17;128;4;155;;;;vpos;;v;;a;;r;;d37,129;;b1,5;;m0;;eFechaInicio;;pFechafin;;pFraccionMonto;;pmediopago;;pmonedaid;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f18;212;5;238;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($idobjetivo,$FechaDesdeVig, $FechaHastaVig, $fraccion,&#10;             $fraccionTiempo,$FraccionTipo,$montoObjetivo,&#10;             $montoAviso,$objobservaciones1,$objetivoTipo )&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;    TODOS - MODIFICABLES, Y SE INGRESA POR LA CLAVE $idobjetivo;;d4,215;;b1,5;;m0;;eidobjetivo;;pFechaDesdeVig;;pFechaHastaVig;;pfraccion;;pfraccionTiempo;;pFraccionTipo;;pmontoObjetivo;;pmontoAviso;;pobjobservaciones1;;pobjetivoTipo;;p">
+</treenode>
+</treenode>
+<treenode node="UnidadesMedidas;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\Umedida.php;f0;8;1;162;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Umedida.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
+</treenode>
+<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Umedida.php;f17;49;5;64;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    contar()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,50;;b1,5;;m0;;e">
+</treenode>
+<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Umedida.php;f18;150;5;161;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($unidadmedidaid)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,151;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="getAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Umedida.php;f18;20;5;37;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e">
+</treenode>
+<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Umedida.php;f18;74;5;95;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($unidadmedidaid)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,75;;b1,5;;m0;;e $idcategoria;;p">
+</treenode>
+<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Umedida.php;f18;129;5;142;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($descripcionumedida,$nombreAbr)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d65,129;;b1,5;;m0;;e $idcategoria;;p $nombre;;p">
+</treenode>
+<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Umedida.php;f18;105;5;120;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($unidadmedidaid, $descripcionumedida,$nombreAbr)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,106;;b1,5;;m0;;eunidadmedidaid;;pdescripcionumedida;;pnombreAbr;;p">
+</treenode>
+</treenode>
+<treenode node="insertarcuotas;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f0;311;1;417;;;;vpos;;v;;a;;r;;d63,311;;b0,0;;m0;;enumeroTotal;;pcuotaNumero;;ptotalCuotas;;p">
+</treenode>
+</phptree>
+</codestructure>
