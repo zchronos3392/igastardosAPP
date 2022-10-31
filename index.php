@@ -134,7 +134,6 @@ $("#cargarotroanio").on("click",function()
 			//pedirmediospago2('#itemFMP2',99); //para FILTROS DE BUSQUEDA
 			pedirmediospago3('#itemFMP2','mpagoFiltro_',99); //para FILTROS DE BUSQUEDA
 		pedirumedidas('#iumed',99);
-			//pedirumedidas('#iumedidas_',99);
 		pedirtipos('#igtipos','');
 		pedirtipos('#comerciotipo','COMERCIO');
 		

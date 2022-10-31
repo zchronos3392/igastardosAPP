@@ -21,7 +21,8 @@ class UnidadesMedidas
     public static function getAll()
     {
     	$filtro="";
-        $consulta = "select unidadmedidaid, descripcionumedida,nombreAbr FROM gasumedidas";
+        $consulta = "select unidadmedidaid, descripcionumedida,nombreAbr FROM gasumedidas
+        				order by descripcionumedida";
         try {
             // Preparar sentencia
             $comando = Database::getInstance()->getDb()->prepare($consulta);
