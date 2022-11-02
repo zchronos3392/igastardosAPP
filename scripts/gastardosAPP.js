@@ -152,7 +152,6 @@ if(key != ''){
 }
 
 /**
-
 * @param {object} destinoid : el objeto Combo a donde se cargaran los resultados
 * @param {object} idDescriptor : el objeto en donde se esta escribiendo el dato a filtrar
 * @return SELECT DE COMERCIOS, FILTRADOS POR EL TEXTO QUE ESTA EN '#'+idDescriptor
@@ -211,6 +210,74 @@ var key = $("#"+idDescriptor).val();
 					$(".errores").append(xhr);
 			}
         });// fin del AJAX
+} //fin de la funcion
+
+
+/**
+* @param {object} destinoid : el objeto Combo a donde se cargaran los resultados
+* @param {object} idDescriptor : el objeto en donde se esta escribiendo el dato a filtrar
+* @return SELECT DE COMERCIOS, FILTRADOS POR EL TEXTO QUE ESTA EN '#'+idDescriptor
+*/
+function  filtrarProducto(destinoid,idDescriptor)
+{
+	
+var key = $("#"+idDescriptor).val();		
+	var parametros=
+	{
+			"llama":"sugerir",
+			"funcion":"XGETX",
+			"filtro":key
+	};
+
+if(key != ''){
+	 	$.ajax({ 
+	    url:   './apis/iobjconsumo.php',
+	    type:  'GET',
+	    data: parametros ,
+	    datatype:   'text json',
+		// EVENTOS QUE PODRIAN OCURRIR CUANDO ESTEMOS PROCESANDO EL AJAX		            
+	    beforeSend: function (){
+    	$(destinoid).empty();
+    	$(destinoid).append('<option value="9999">Seleccione producto...</option>');
+    	},
+    	done: function(data){},
+	    success:  function (data){
+                //Escribimos las sugerencias que nos manda la consulta
+               if(data != ''){
+
+			   if(data.indexOf("<br />") > -1)
+							$(".errores").append(re);
+				else
+				{
+					var r = JSON.parse(data);
+			        if(r['estado'] == 1) {
+			         $(r['ObjCons']).each(function(i, v)
+					        { // indice, valor
+
+		        	if (! $(destinoid).find("option[value='" + v.descripcionObjetoCons + "']").length)
+		        	{						
+						  $(destinoid).append('<option value="' + v.descripcionObjetoCons + '">' +v.descripcionObjetoCons+ '</option>');
+					}	//if que no haya copias	
+					}); // if coleccion comercios trajo datos..
+					} //if estado == 1
+					else {			
+							$(".errores").append(re);
+						 };
+		        } //else hay data	
+      			 $(destinoid).prop('disabled', false);
+                } //if hay Data no vacia
+               },//success
+		    error: function (xhr, ajaxOptions, thrownError)
+	    	{
+				// LA TABLA VACIA, ES UN ERROR PORQUE NO DEVUELVE NADA
+					$(".errores").append(xhr);
+			}
+        });// fin del AJAX
+  } // cuando el key tiene un valor y no esta vacio, para no buscar al pedo..        
+  else
+  {
+  	pedirProductos(destinoid,'');
+  }
 } //fin de la funcion
 
 function seleccionmoneda(xidmoneda){

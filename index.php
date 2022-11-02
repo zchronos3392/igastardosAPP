@@ -173,7 +173,16 @@ $("#cargarotroanio").on("click",function()
 		$("#gComFiltro").on("change",function(){
 			filtrarComercio("#gcomercio","gComFiltro");
 		});
+
+		$("#comerciobuscar").on("change",function(){
+			filtrarComercio("#fcomercios","comerciobuscar");
+		});
+
+		$("#productobuscar").on("change",function(){
+			filtrarProducto("#gproductos","productobuscar");
+		});
 		
+
 		
   		  	//<input type="text" class="FormNombres" id="descripciontipo" />
   		  	//<input type="text" class="FormNombres" id="tablaPertenece" />
@@ -499,7 +508,6 @@ $("#cargarotroanio").on("click",function()
 				$(".itemAcceso9").hide();
 		});
 
-		
 		
 	}); // parentesis del READY
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -843,14 +851,31 @@ $("#cargarotroanio").on("click",function()
            		 </select>
            	</div>
            	<div class="grillaFiltrositem3">
-					<select id="gproductos" class="comercioSel">
-		  		  		<option value="9999">Seleccione producto...</option>
-		  		  	</select>
+           	<!-- lo transformo en grilla -->
+					<div class="itemProductos1">
+		  		  		<div class="itmPrd1A">Producto</div>
+		  		  		<div  class="itmPrd1B">
+		  		  		<input type="text" id="productobuscar" class="productobuscar" value="" placeholder="nombre producto a buscar"/> </div>
+		  		  	</div>
+		  		  	<div class="itemProductos2">
+		  		  		<select id="gproductos" class="comercioSel">
+		  		  			<option value="9999">Seleccione producto...</option>
+		  		  		</select>
+		  		  	</div>
            	</div>
            	<div  class="grillaFiltrositem4">
-  		  		<select id="fcomercios" class="comercioSel">
-  		  				<option value="9999">Seleccione comercios...</option>
-  		  		</select>
+           	<!-- lo transformo en grilla -->
+	           	<div class="itemComercios1">
+	           		<div  class="itmCmm1A">Comercio:</div>
+	           		<div  class="itmCmm1B">
+	           		<input type="text" id="comerciobuscar" class="comerciobuscar" value="" placeholder="nombre comercio a buscar"/> 
+	           		</div>
+	           	</div>
+	           	<div class="itemComercios2">           	
+	  		  		<select id="fcomercios" class="comercioSel">
+	  		  				<option value="9999">Seleccione comercios...</option>
+	  		  		</select>
+	  		  	</div>	
            	</div>
            	<div  class="grillaFiltrositem5">
 				<div class="itemFmon2" id="itemFmon2">
