@@ -56,14 +56,12 @@
 			<todo name="TODO: dynamically change brushY/brushX according to axis_rotated." pos="3;7"/>
 		</todofile>
 	</todoblock>
-	<dbgurls>
-	</dbgurls>
 	<filescache>
 		<file name="C:\laragon\www\gastardosAPP\styles\normalize.css" crc="1651973687"/>
 		<file name="C:\laragon\www\gastardosAPP\styles\iconstyle.css" crc="1651973687"/>
 		<file name="C:\laragon\www\gastardosAPP\styles\estiloGaleriaCarpetas.css" crc="1651973687"/>
 		<file name="C:\laragon\www\gastardosAPP\styles\diseñoCarpetas.css" crc="1651973687"/>
-		<file name="C:\laragon\www\gastardosAPP\styles\disenioGastardosAPP.css" crc="1666404930"/>
+		<file name="C:\laragon\www\gastardosAPP\styles\disenioGastardosAPP.css" crc="1667405736"/>
 		<file name="C:\laragon\www\gastardosAPP\styles\demo.js" crc="1651973688"/>
 		<file name="C:\laragon\www\gastardosAPP\styles\demo.css" crc="1651973688"/>
 		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\src\scss\zoom.scss" crc="1596878038"/>
@@ -510,7 +508,7 @@
 		<file name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\.bmp.yml" crc="1596878038"/>
 		<file name="C:\laragon\www\gastardosAPP\scripts\mainGaleriaCarpetas.js" crc="1651973687"/>
 		<file name="C:\laragon\www\gastardosAPP\scripts\knobGraphics.js" crc="1653853708"/>
-		<file name="C:\laragon\www\gastardosAPP\scripts\gastardosAPP.js" crc="1666442291"/>
+		<file name="C:\laragon\www\gastardosAPP\scripts\gastardosAPP.js" crc="1667407661"/>
 		<file name="C:\laragon\www\gastardosAPP\navegadorcarpetas\materializeGallery\js\main.js" crc="1651973687"/>
 		<file name="C:\laragon\www\gastardosAPP\navegadorcarpetas\materializeGallery\css\estilos.css" crc="1651973684"/>
 		<file name="C:\laragon\www\gastardosAPP\navegadorcarpetas\materializeGallery\index.html" crc="1651973684"/>
@@ -542,7 +540,7 @@
 		<file name="C:\laragon\www\gastardosAPP\objetosconsumo.php" crc="1656037765"/>
 		<file name="C:\laragon\www\gastardosAPP\objetivos.php" crc="1661434589"/>
 		<file name="C:\laragon\www\gastardosAPP\NewFile.html" crc="1651973678"/>
-		<file name="C:\laragon\www\gastardosAPP\index.php" crc="1667233107"/>
+		<file name="C:\laragon\www\gastardosAPP\index.php" crc="1667406637"/>
 		<file name="C:\laragon\www\gastardosAPP\header.html" crc="1652107437"/>
 		<file name="C:\laragon\www\gastardosAPP\estadisticas.php" crc="1657981333"/>
 		<file name="C:\laragon\www\gastardosAPP\c0990415_xpensio.sql" crc="1651973677"/>

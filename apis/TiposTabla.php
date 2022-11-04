@@ -22,7 +22,8 @@ class gTipos
     {
     	$filtro="";
     	// `tipoid`, `tablaPertenece`, `descripciontipo` FROM `gastipos` WHERE 1
-        $consulta = "select tipoid,tablaPertenece,descripciontipo FROM gastipos";
+        $consulta = "select tipoid,tablaPertenece,descripciontipo FROM gastipos
+        			ORDER BY descripciontipo";
         try {
             // Preparar sentencia
             $comando = Database::getInstance()->getDb()->prepare($consulta);
@@ -78,7 +79,8 @@ class gTipos
         // tipoid, tablaPertenece, descripciontipo FROM gastipos WHERE 1
         // Consulta de la categoria
         $consulta = " Select tipoid,tablaPertenece,descripciontipo FROM gastipos
-					WHERE tablaPertenece='$tablaPertenece'  ";
+					WHERE tablaPertenece='$tablaPertenece'  
+					ORDER BY descripciontipo";
 
         try {
             // Preparar sentencia
