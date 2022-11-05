@@ -1079,7 +1079,13 @@ function pedirmonedas2(destinoid,monedaid){
 // ****************************************************************
 function pedirmonedas3(destinoid,preidobjetomoneda,monedaid){	 
 	// llega 'monedaFiltro_' en preidobjetomoneda
-	var parametros={"filtro":monedaid,"llama":"pedirmonedas","funcion":"GET"};
+	var xmonedaid = 0;
+	if(monedaid == 999)
+		xmonedaid = 99;
+	else
+		xmonedaid = monedaid;
+		
+	var parametros={"filtro":xmonedaid,"llama":"pedirmonedas","funcion":"GET"};
  	$.ajax({ 
     url:   './apis/imonedas.php',
     type:  'GET',
@@ -1102,7 +1108,13 @@ function pedirmonedas3(destinoid,preidobjetomoneda,monedaid){
 		    //TUVE QUE AGREGARLE, QUE NO EXISTA EL ELEMENTO, PORQUE SE ESTA
 			// monedaId, descripcionmoneda, abrmoneda
 		if (! $(destinoid).find("id[value='" + v.monedaId + "']").length)
-		{						
+		{		
+		//garcia etcheverria...	
+		if(monedaid == 999)
+		  $(destinoid).append('<div class="itemgmon">'+
+					'<button class="moneda" id="'+preidobjetomoneda+v.monedaId+'" onclick="seleccionmoneda(this.id);">'+v.abrmoneda+'</button>'+
+					'</div>');
+		else			
 		  $(destinoid).append('<div class="itemgmon">'+
 					'<button class="moneda" id="'+preidobjetomoneda+v.monedaId+'" onclick="seleccionmoneda(this.id);pedirTickets(\'#grillaGastos\',99);">'+v.abrmoneda+'</button>'+
 					'</div>');
@@ -1326,7 +1338,12 @@ function pedirmediospago2(destinoid,mediopago){
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function pedirmediospago3(destinoid,mediopagoidFiltro, mediopago){	 
 //mediopagoidFiltro viene 'mpagoFiltro_'
-	var parametros={"filtro":mediopago,"llama":"pedirmediospago","funcion":"GET"};
+	var xmediopago =0;
+	if(mediopago == 999)//nuevo flag, lo estoy llamando desde Estadisticas
+	    xmediopago =99; //llega a la api con este valor, "trae todos"
+	else
+	    xmediopago =mediopago; //otro
+	var parametros={"filtro":xmediopago,"llama":"pedirmediospago","funcion":"GET"};
  	$.ajax({ 
     url:   './apis/imediopago.php',
     type:  'GET',
@@ -1349,7 +1366,13 @@ function pedirmediospago3(destinoid,mediopagoidFiltro, mediopago){
 		    //TUVE QUE AGREGARLE, QUE NO EXISTA EL ELEMENTO, PORQUE SE ESTA
 			// monedaId, descripcionmoneda, abrmoneda
 		if (! $(destinoid).find("id[value='" + v.mediopagoid + "']").length)
-		{						
+		{			
+		 if(mediopago == 999)
+		  $(destinoid).append('<div class="itemgMPa">'+
+					'<button class="moneda" id="'+mediopagoidFiltro+v.mediopagoid+'" onclick="seleccionmpago(this.id);" >'+v.nombreabrev+'</button>'+
+					'</div>');
+
+		 else			
 		  $(destinoid).append('<div class="itemgMPa">'+
 					'<button class="moneda" id="'+mediopagoidFiltro+v.mediopagoid+'" onclick="seleccionmpago(this.id);pedirTickets(\'#grillaGastos\',99);" >'+v.nombreabrev+'</button>'+
 					'</div>');

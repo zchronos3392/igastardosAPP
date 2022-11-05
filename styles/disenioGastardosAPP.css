@@ -3292,6 +3292,8 @@ input[type=number] { -moz-appearance:textfield; }
 		display: grid;
 		grid-template-columns: 50% 50%;
 }
+.grillaFiltrositem15{grid-area: filtrositem15;}
+.grillaFiltrositem16{grid-area: filtrositem16;}
 .grillaFiltrositem2{grid-area: filtrositem2;}
 .grillaFiltrositem3{grid-area: filtrositem3;}
 .grillaFiltrositem4{grid-area: filtrositem4;}
@@ -3318,6 +3320,7 @@ input[type=number] { -moz-appearance:textfield; }
 							 'filtrositem10 filtrositem10 filtrositem10'
 							 'filtrositem11 filtrositem11 filtrositem11'
 							 'filtrositem12 filtrositem12 filtrositem12'
+							 'filtrositem15 filtrositem15 filtrositem16'
 							 'filtrositem2 filtrositem2 filtrositem2'
 							 'filtrositem3 filtrositem3 filtrositem3'
 							 'filtrositem4 filtrositem4 filtrositem4'
@@ -3346,6 +3349,13 @@ input[type=number] { -moz-appearance:textfield; }
     background: gold;
 	transition: .3s;
 }
+
+.grillaFiltros .grillaFiltrositem16 BUTTON {
+	background-color: #076d70;}
+.grillaFiltros .grillaFiltrositem15 BUTTON {
+	background-color: #9f9409;}
+
+
 .grillaFiltros SELECT {
 		display: block;
 

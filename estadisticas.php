@@ -19,6 +19,24 @@
 
 function pedirProductoResumen(destinoid){
 	var productos='';
+	// Cargo la moneda elegida
+	stringmoneda = '';
+	monedaSeleccionada='';
+	$(".selectedMon").each(function(index) {
+	 //     console.log(index + ": " + $(this).text());
+	 	  stringmoneda = $(this).attr('id').split("_");
+	  });	
+	monedaSeleccionada = stringmoneda[1];
+	// Cargo el medio de pago elegido..
+	stringmepago = '';		
+	mformapago = '';
+	$(".selectedMPago").each(function(index) {
+	   //   console.log(index + ": " + $(this).text());
+	 	  stringmepago = $(this).attr('id').split("_");
+	  });	
+	mformapago = stringmepago[1];
+
+	
 	var parametros={
 			"llama":"pedirproductosResumen",
 			"funcion":"GETRESUMEN",
@@ -26,7 +44,9 @@ function pedirProductoResumen(destinoid){
 			"producto":$("#stproductos").val(),
 			"FechaDesde": $("#sFechaBuscarDde").val(),
 			"palabraClave": $("#fBuscartexto").val(),
-			"FechaHasta":$("#sFechaBuscarHta").val()
+			"FechaHasta":$("#sFechaBuscarHta").val(),
+			"FormaPago":mformapago ,
+			"Moneda"   :monedaSeleccionada
 			};
  	$.ajax({ 
 	url:   './apis/iobjconsumo.php',
@@ -126,6 +146,10 @@ function pedirProductoResumen(destinoid){
 		if(pFechaIni != '') $("#sFechaBuscarDde").val(pFechaIni);
 		if(pFechaFin != '') $("#sFechaBuscarHta").val(pFechaFin);	
 				if(pFechaIni !='' && pFechaFin != '') pedirProductoResumen("#grillaObjetivos");
+		
+		
+		pedirmediospago3('#itemFMPSTS1','mpagoFiltro_',999); // para FILTROS DE BUSQUEDA
+		pedirmonedas3('#itemFmonSTS1','monedaFiltro_',999);  // para FILTROS DE BUSQUEDA
 		
 $("#cargarotroanio").on("click",function()
 {
@@ -343,6 +367,14 @@ $("#cargarotroanio").on("click",function()
            		</div>	
            	
            	</div>           	
+           	<div class="grillaFiltrositem15">
+           		MEDIOS DE PAGO
+				<div class="itemFMP2" id="itemFMPSTS1"></div>
+			</div>
+           	<div class="grillaFiltrositem16">
+           		MONEDAS
+				<div class="itemFmon2" id="itemFmonSTS1"></div>           	
+           	</div>
            	<div class="grillaFiltrositem2">
            		 <input  type="text" id="fBuscartexto" name="fBuscartexto" placeholder="Busque palabra exacta"/>
            	</div>

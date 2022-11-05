@@ -205,7 +205,8 @@ class iogastos
         }
     }
 
-    public static function getResumen($xcomercio,$xproducto,$xFechaDesde,$xFechaHasta)
+    public static function getResumen($xcomercio,$xproducto,$xFechaDesde,$xFechaHasta,
+						   			  $xmonedaSeleccionada,$xmformapago)
     {
     	$filtro="";
     	$contadorFiltros = 0;
@@ -239,6 +240,23 @@ class iogastos
     			$contadorFiltros++;
 		}
 
+		if($xmonedaSeleccionada != ''){
+    			if($contadorFiltros == 0)
+	    			$filtro=" where gm.monedaId = $xmonedaSeleccionada ";
+	    		else 	
+	    			$filtro .=" and  gm.monedaId = $xmonedaSeleccionada ";
+    			$contadorFiltros++;
+		}
+		
+		if($xmformapago != ''){
+    			if($contadorFiltros == 0)
+	    			$filtro=" where gm.tipoMedioPago = $xmformapago ";
+	    		else 	
+	    			$filtro .=" and  gm.tipoMedioPago = $xmformapago ";
+    			$contadorFiltros++;
+		}
+        
+        
         $consulta = "SELECT gasid, ticketID, gmpa.nombreabrev, gasFecha, montoCuota, movTipo, 
         					gasDescripcion, gumed.nombreAbr, gasPUnit, gasCant,
         					gcoms.descripcionComercio, gmon.abrmoneda, descuento, EsRecargo

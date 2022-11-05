@@ -51,6 +51,15 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 						     if(isset($_GET['FechaHasta']))  $xFechaHasta = $_GET['FechaHasta'];
 						     if(isset($_POST['FechaHasta'])) $xFechaHasta = $_POST['FechaHasta'];
 
+
+						$xmformapago=0;
+						     if(isset($_GET['FormaPago']))  $xmformapago = $_GET['FormaPago'];
+						     if(isset($_POST['FormaPago'])) $xmformapago = $_POST['FormaPago'];
+									
+						$xmonedaSeleccionada=0;
+						     if(isset($_GET['Moneda']))  $xmonedaSeleccionada = $_GET['Moneda'];
+						     if(isset($_POST['Moneda'])) $xmonedaSeleccionada = $_POST['Moneda'];
+
 						  $zobjetosconsumo = gconsObjeto::getAllResumen($xproducto,$xpalabraClave);
 						//print_r($zobjetosconsumo);
 						$i=0;
@@ -61,7 +70,9 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 						    $Unproducto = $valor['descripcionObjetoCons'];
 							//echo "<br>un producto encontrado: $Unproducto <br>";
 						   $xobjetosconsumo =  iogastos::getResumen($xcomercio,$Unproducto,
-						  								$xFechaDesde,$xFechaHasta);
+						   											$xFechaDesde,$xFechaHasta,
+						   											$xmonedaSeleccionada,
+						   											$xmformapago);
 							//print_r($xobjetosconsumo);
 						foreach($xobjetosconsumo as $keyVal => $dataConsumo)
 						{
