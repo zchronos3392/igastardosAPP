@@ -56,6 +56,7 @@ function pedirProductoResumen(destinoid){
 	// EVENTOS QUE PODRIAN OCURRIR CUANDO ESTEMOS PROCESANDO EL AJAX		            
     beforeSend: function (){
     	$(destinoid).empty();
+    	$("#totalConsulta").val(0);
     	var productos='';
     },
     done: function(data){},

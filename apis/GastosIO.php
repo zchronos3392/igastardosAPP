@@ -240,7 +240,7 @@ class iogastos
     			$contadorFiltros++;
 		}
 
-		if($xmonedaSeleccionada != ''){
+		if($xmonedaSeleccionada != 0){
     			if($contadorFiltros == 0)
 	    			$filtro=" where gm.monedaId = $xmonedaSeleccionada ";
 	    		else 	
@@ -248,7 +248,7 @@ class iogastos
     			$contadorFiltros++;
 		}
 		
-		if($xmformapago != ''){
+		if($xmformapago != 0){
     			if($contadorFiltros == 0)
 	    			$filtro=" where gm.tipoMedioPago = $xmformapago ";
 	    		else 	

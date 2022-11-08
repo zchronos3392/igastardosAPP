@@ -22,6 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
      if(isset($_POST['funcion']))  $funcion = $_POST['funcion'];
 
 
+
 	switch($funcion)
 	{
 		case "GET":
