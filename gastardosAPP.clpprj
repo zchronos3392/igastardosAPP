@@ -2,7 +2,7 @@
 <project name="C:\laragon\www\gastardosAPP\gastardosAPP.clpprj">
 	<settings>
 		<PM_URL><![CDATA[C:/laragon/www/carpetas/]]></PM_URL><PM_HOME_URL><![CDATA[C:/laragon/www/carpetas/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";C:\laragon\www\gastardosAPP\apis\Carpeta.php;C:\laragon\www\gastardosAPP\asignarmaterias.php;C:\laragon\www\gastardosAPP\cargaHojasMateriasAlumno.php;C:\laragon\www\gastardosAPP\styles\diseñoCarpetas.css;C:\laragon\www\gastardosAPP\verMateriasAlumno.php;D:\laragon\www\carpetas\apis\eliminar_colegio.php;D:\laragon\www\gastardosAPP\apis\eliminar_curso.php;"/><added value="C:\laragon\www\carpetas\index.phpold;"/><lastopfiles>
-		<file name="C:\laragon\www\gastardosAPP\estadisticas.php"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\mysql_login.php"/>
 	</lastopfiles>
 	<todoblock>
 		<todofile name="C:\laragon\www\gastardosAPP\scripts\graficos-c3\spec\axis-spec.ts">
@@ -518,20 +518,20 @@
 		<file name="C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php" crc="1657721142"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\Objetivo.php" crc="1661352467"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\Negocios.php" crc="1666442153"/>
-		<file name="C:\laragon\www\gastardosAPP\apis\mysql_login.php" crc="1651973678"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\mysql_login.php" crc="1669484078"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\Monedas.php" crc="1651973679"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\MediosPago.php" crc="1651973679"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\iumed.php" crc="1651973678"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\ioegresos.php" crc="1662349425"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\iobjetivos.php" crc="1661365075"/>
-		<file name="C:\laragon\www\gastardosAPP\apis\iobjconsumo.php" crc="1667599544"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\iobjconsumo.php" crc="1667910921"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\insertar_curso.php" crc="1651973678"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\imonedas.php" crc="1651973678"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\imediopago.php" crc="1651973678"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\igtiposhp.php" crc="1651973678"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\igtipos.php" crc="1651973678"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\icomercios.php" crc="1666442092"/>
-		<file name="C:\laragon\www\gastardosAPP\apis\GastosIO.php" crc="1667599827"/>
+		<file name="C:\laragon\www\gastardosAPP\apis\GastosIO.php" crc="1667911129"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\eliminar_curso.php" crc="1651973679"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\database.php" crc="1651973679"/>
 		<file name="C:\laragon\www\gastardosAPP\apis\curFunciones.php" crc="1651973679"/>

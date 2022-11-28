@@ -4,7 +4,7 @@
 </treenode>
 <treenode node="Curso.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\insertar_curso.php;f10;4;19;4;;C:\laragon\www\gastardosAPP\apis\eliminar_curso.php;f10;4;19;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas las Clubs de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="DATABASE;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;9;16;9;;;;vpos;;v;;a;;r&quot;c0990415_xpensio&quot;;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="DATABASE;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;10;16;10;;;;vpos;;v;;a;;r&quot;nicolass__xpensio&quot;;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="database.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Monedas.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Negocios.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Umedida.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f14;6;26;6;;;;vpos;;v;;a;;r&#10;Description&#10;     Representa el la estructura de las categorias almacenadas en la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
@@ -12,7 +12,7 @@
 </treenode>
 <treenode node="header.html;PHP:PHP Include;C:\laragon\www\gastardosAPP\ANDAMIO_UIUX_TODOS.php;f10;181;21;181;;C:\laragon\www\gastardosAPP\objetosconsumo.php;f10;251;21;251;;C:\laragon\www\gastardosAPP\ticket.php;f10;298;21;298;;C:\laragon\www\gastardosAPP\abmobjetivos.php;f10;394;21;394;;C:\laragon\www\gastardosAPP\objetivos.php;f10;231;21;231;;C:\laragon\www\gastardosAPP\index.php;f10;517;21;517;;C:\laragon\www\gastardosAPP\estadisticas.php;f10;317;21;317;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="HOSTNAME;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;8;16;8;;;;vpos;;v;;a;;r&#10;Description&#10;     Provee las constantes;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="HOSTNAME;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;9;16;9;;;;vpos;;v;;a;;r&#10;Description&#10;     Provee las constantes;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="MediosPago.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iobjetivos.php;f10;5;24;5;;C:\laragon\www\gastardosAPP\apis\imediopago.php;f10;4;24;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
@@ -26,13 +26,13 @@
 </treenode>
 <treenode node="ObjetosConsumo.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f14;5;32;5;;C:\laragon\www\gastardosAPP\apis\iobjconsumo.php;f9;4;27;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="PASSWORD;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;11;16;11;;;;vpos;;v;;a;;r&quot;kefaKA24fu&quot;;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="PASSWORD;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;12;16;12;;;;vpos;;v;;a;;r&quot;nomelaacuerdo01&quot;;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="TiposTabla.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\igtiposhp.php;f10;4;24;4;;C:\laragon\www\gastardosAPP\apis\igtipos.php;f10;4;24;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="Umedida.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iumed.php;f10;4;21;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="USERNAME;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;10;16;10;;;;vpos;;v;;a;;r&quot;c0990415_voleyap&quot;;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="USERNAME;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;11;16;11;;;;vpos;;v;;a;;r&quot;nicolass_voleyap&quot;;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="Comercios;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f0;8;1;189;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
 <treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
