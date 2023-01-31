@@ -31,9 +31,11 @@ function trunc (x, posiciones = 0) {
 }
 
 function totalCalcular(){
+//ENERO 2023/04. AGREGO EL CALCULO DEL TOTAL DEL DESCUENTO.	
 	var calcular=calculaLinea=0;
 		var TotalItems = $("#contadorItemsVer").text();
-		var DescuentoGeneral = $("#descuentogenmonto").val(); 
+		var DescuentoGeneral = $("#descuentogenmonto").val();
+		var DescuentoAcumulado = 0; 
 		//alert(DescuentoGeneral);
 	if(TotalItems != '' && TotalItems != '0'){
 		for(var i=1;i<=TotalItems;i++){
@@ -54,11 +56,15 @@ function totalCalcular(){
 //            console.log(calculaLinea);
 
 			calcular = parseFloat(calcular) + parseFloat(calculaLinea); 
+			DescuentoAcumulado = parseFloat(DescuentoAcumulado) + parseFloat(recargo);
 		}
 	}
 	$("#totalCalculado").empty();
 			calcular = calcular - DescuentoGeneral;//junio 2022
 	$("#totalCalculado").val(calcular);
+	//alert(DescuentoAcumulado);
+	$("#totalDescuentos").val(DescuentoAcumulado);
+
 }
 
 //cargamos los subobjetivos 
@@ -445,8 +451,8 @@ function pedirObjetivos(destinoid,tipoControl,idObjetivo){
 	  {
 	  	$("#FechaDesdeVigencia").val(v.FechaDesdeVig);
 	  	$("#FechaHastaVigencia").val(v.FechaHastaVig);
+	 	var TotalesSubObjetivos = 0;
 	 	
-	 	$("#fraccion").val(v.fraccion);
 	 	$("#FraccionTipo").val(v.FraccionTipo);//andara??
 		$("#fraccionTiempo").val(v.fraccionTiempo);
 
@@ -465,28 +471,35 @@ function pedirObjetivos(destinoid,tipoControl,idObjetivo){
 				'<input type="hidden" value="'+u.iddetobjetivo+'" id="idsuboj_'+u.iddetobjetivo+'" name="idsuboj_'+u.iddetobjetivo+'">'+
 			'</div>'+			
 			'<div class="itemSUFraccion2">'+
+			'<div>Moneda</div>'+
 			'<input type="hidden" id="isubimonedas_'+u.iddetobjetivo+'" value="'+u.monedaid+'" />'+
   		  		'<select id="subimonedas_'+u.iddetobjetivo+'" class="comercioSel">'+
   		  				'<option value="9999">Seleccione moneda</option>'+
   		  		'</select>'+
 			'</div>'+			
 			'<div class="itemSUFraccion3">'+
+			'<div>MPago:</div>'+
 			'<input type="hidden" id="isubimediospago_'+u.iddetobjetivo+'" value="'+u.mediopagoid+'" />'+
   		  		'<select id="subimediospago_'+u.iddetobjetivo+'" class="comercioSel">'+
   		  				'<option value="9999">Seleccione Forma de pago</option>'+
   		  		'</select>'+
 			'</div>'+			
 			'<div class="itemSUFraccion4">'+
+			'<div>Monto Obj.Fraccion</div>'+
 				'<input id="subFraccion_'+u.iddetobjetivo+'" name="subFraccion_'+u.iddetobjetivo+'" type="number" placeholder="Fraccion poor moneda y medio de pago.." value="'+u.fraccionMonto+'"/>'+	
 			'</div>'+			
 			'<div class="itemSUFraccion5">'+
+			'<div>Total Max.Sub Objetivo</div>'+
 			'<input id="subFraccionTot_'+u.iddetobjetivo+'" name="subFraccionTot_'+u.iddetobjetivo+'" placeholder="Monto total de la fracción" value="'+u.MontoTotalSubObj+'"/></div>'+
 			'<div class="itemSUFraccion6">'+
 			'<button class="accionBotonCancel" value="eliminar sub objetivo" id="EliminarSubObjetivo" onclick="eliminaSubobjetivo(\'subobje_'+u.iddetobjetivo+'\');">-</button>'+
 			'</div>'+
 		'</div>';
+		TotalesSubObjetivos += parseFloat(u.MontoTotalSubObj);
 		});
 		
+		$("#TotalSubObjetivos").val(TotalesSubObjetivos);
+
 		$("#grillaSubObjs").empty();
 		$("#grillaSubObjs").append(itemsSubObjetivos);
 		//luego de agregarlo , los puedo "cargar"
@@ -1780,7 +1793,8 @@ var sonCuotasVal = 0;
 			"llama":"pedir",
 			"funcion":"GET",
 			"filtroTicket":idticket,
-			"FechaBuscar":$("#FechaBuscar").val(),
+			"FechaBuscarDde":$("#FechaBuscarDde").val(),
+			"FechaBuscarHta":$("#FechaBuscarHta").val(),
 			"SonCuotas":sonCuotasVal,
 			"filtroFechaGeneral": $("#filtroFechaGastos").val(),
 			"productos": $("#gproductos").val(),
@@ -1813,6 +1827,7 @@ var sonCuotasVal = 0;
 		{ // indice, valor
 		listaGastos="";    
 		totalTicket =0.0;
+		totalDescuentos = 0.0;
 		totalLinea =0.0;
 				//console.log(i);
 		        $(v.items).each(function(j, x)
@@ -1831,7 +1846,9 @@ var sonCuotasVal = 0;
 		            	totalLinea = parseFloat(Cantidad) * parseFloat(precioUnitario) + 
             					     parseFloat(recargo);
 						//console.log("CALCULANDO LA LINEA con Recargo/Descuento: " + totalLinea);
-						totalTicket = parseFloat(totalTicket) + parseFloat(totalLinea) ;								//console.log("CALCULANDO Total: " + totalTicket);
+						totalTicket = parseFloat(totalTicket) + parseFloat(totalLinea) ;
+						totalDescuentos = parseFloat(totalDescuentos) + parseFloat(recargo);
+													//console.log("CALCULANDO Total: " + totalTicket);
 						
 						
 				listaGastos += '<div class="ga_grillaiTems">'+
@@ -1870,6 +1887,10 @@ var sonCuotasVal = 0;
 											'<div >TOTAL '+v.abrmoneda+totalTicket +'</div>'+
 											'<div >   CUOTA  '+v.abrmoneda+v.montoCuota +'</div>'+
 											'</div>'+
+											'<div class="ga_item71">'+
+											'<div >T.Descuentos '+v.abrmoneda+totalDescuentos +'</div>'+
+											'<div > </div>'+
+											'</div>'+											
 											'<div class="ga_item8">'+listaGastos+
 											'</div>'+
 										'</div>');
@@ -1952,6 +1973,7 @@ function pedirTicketStats(grillaGastosID,idticket){
 		{ // indice, valor
 		listaGastos="";    
 		totalTicket =0.0;
+		totalDescuentos = 0.0;
 		totalLinea =0.0;
 				//console.log(i);
 		        $(v.items).each(function(j, x)
@@ -1971,7 +1993,7 @@ function pedirTicketStats(grillaGastosID,idticket){
             					     parseFloat(recargo);
 						//console.log("CALCULANDO LA LINEA con Recargo/Descuento: " + totalLinea);
 						totalTicket = parseFloat(totalTicket) + parseFloat(totalLinea) ;								//console.log("CALCULANDO Total: " + totalTicket);
-						
+						totalDescuentos = parseFloat(totalDescuentos) + parseFloat(recargo) ;					
 						
 				listaGastos += '<div class="ga_grillaiTems">'+
 									'<div class="gritems1">'+x.gasDescripcion+'</div>'+
@@ -1996,6 +2018,7 @@ function pedirTicketStats(grillaGastosID,idticket){
 											'<div class="ga_item5">'+v.nombreabrev+'</div>'+
 											'<div class="ga_item6">'+v.abrmoneda+' '+v.descripcionmoneda+'</div>'+
 											'<div class="ga_item7">TOTAL '+v.abrmoneda+totalTicket +'</div>'+
+											'<div class="ga_item71">T.Descuentos. '+v.abrmoneda+totalDescuentos +'</div>'+
 											'<div class="ga_item8">'+listaGastos+
 											'</div>'+
 										'</div>');
@@ -2053,6 +2076,7 @@ function pedirTicketsMod(grillaGastosID,idticket,FechaTicket){
 		listaGastos="";    
 		var totalLinea =0.0;
 		var totalTicket =0.0;
+		var DescuentoAcumulado = 0.0;		
 				//console.log(i);
 		contadorDescripcionItems = v.items.length ;		
 		$("#contadorItemsVer").text(contadorDescripcionItems);
@@ -2072,7 +2096,7 @@ function pedirTicketsMod(grillaGastosID,idticket,FechaTicket){
 			var precioUnitario = x.gasPUnit;
 			totalLinea = parseFloat(Cantidad) * parseFloat(precioUnitario) + 
 			     		 parseFloat(recargo);
-			totalTicket = parseFloat(totalTicket) + parseFloat(totalLinea) ;					
+			totalTicket = parseFloat(totalTicket) + parseFloat(totalLinea) ;								DescuentoAcumulado = parseFloat(DescuentoAcumulado) + parseFloat(recargo);
 			
 			$("#itemsTicket").append('<div id="DSCCONTENEDOR_'+(j+1)+'" >'+
 				'<div class="descripcion">'+
@@ -2137,9 +2161,11 @@ function pedirTicketsMod(grillaGastosID,idticket,FechaTicket){
 			//v.ticketID
 			$("#gcomercio").val(v.ComercioId);
 			//v.nombreabrev
-			totalTicket = parseFloat(totalTicket) - parseFloat(v.descuentoGeneral) ;					
+			totalTicket = parseFloat(totalTicket) - parseFloat(v.descuentoGeneral) ;	
+				
 			//v.descripcionmoneda
-			$("#totalCalculado").val(totalTicket); 
+			$("#totalCalculado").val(totalTicket);
+				$("#totalDescuentos").val(DescuentoAcumulado);			 
 		    $("#descgenDesc").val(v.ConceptoDescGen);
 		    $("#descuentogenmonto").val(v.descuentoGeneral);
 			//solo traigo la info de la cuota, no la toco..

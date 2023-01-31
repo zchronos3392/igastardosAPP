@@ -4,17 +4,17 @@
 </treenode>
 <treenode node="Curso.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\insertar_curso.php;f10;4;19;4;;C:\laragon\www\gastardosAPP\apis\eliminar_curso.php;f10;4;19;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas las Clubs de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="DATABASE;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;10;16;10;;;;vpos;;v;;a;;r&quot;nicolass__xpensio&quot;;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="DATABASE;PHP:PHP Word;C:\laragon\www\carpetas\apis\mysql_login.php;f8;5;16;5;;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;5;16;5;;;;vpos;;v;;a;;r&quot;nicolass__xpensio&quot;;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="database.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\MediosPago.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Monedas.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Objetivo.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Negocios.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\Umedida.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\ObjetosConsumo.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f14;6;26;6;;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f14;6;26;6;;;;vpos;;v;;a;;r&#10;Description&#10;     Representa el la estructura de las categorias almacenadas en la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="GastosIO.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f10;4;22;4;;C:\laragon\www\gastardosAPP\apis\iobjconsumo.php;f14;5;26;5;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="GastosIO.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iobjconsumo.php;f14;5;26;5;;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f10;4;22;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="header.html;PHP:PHP Include;C:\laragon\www\gastardosAPP\ANDAMIO_UIUX_TODOS.php;f10;181;21;181;;C:\laragon\www\gastardosAPP\objetosconsumo.php;f10;251;21;251;;C:\laragon\www\gastardosAPP\ticket.php;f10;298;21;298;;C:\laragon\www\gastardosAPP\abmobjetivos.php;f10;394;21;394;;C:\laragon\www\gastardosAPP\objetivos.php;f10;231;21;231;;C:\laragon\www\gastardosAPP\index.php;f10;517;21;517;;C:\laragon\www\gastardosAPP\estadisticas.php;f10;317;21;317;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="header.html;PHP:PHP Include;C:\laragon\www\gastardosAPP\ANDAMIO_UIUX_TODOS.php;f10;181;21;181;;C:\laragon\www\gastardosAPP\objetosconsumo.php;f10;251;21;251;;C:\laragon\www\gastardosAPP\estadisticas.php;f10;317;21;317;;C:\laragon\www\gastardosAPP\ticket.php;f10;298;21;298;;C:\laragon\www\gastardosAPP\objetivos.php;f10;231;21;231;;C:\laragon\www\gastardosAPP\abmobjetivos.php;f10;398;21;398;;C:\laragon\www\gastardosAPP\index.php;f10;546;21;546;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="HOSTNAME;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;9;16;9;;;;vpos;;v;;a;;r&#10;Description&#10;     Provee las constantes;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="HOSTNAME;PHP:PHP Word;C:\laragon\www\carpetas\apis\mysql_login.php;f8;4;16;4;;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;4;16;4;;;;vpos;;v;;a;;r&quot;localhost:3306&quot;;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="MediosPago.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iobjetivos.php;f10;5;24;5;;C:\laragon\www\gastardosAPP\apis\imediopago.php;f10;4;24;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="MediosPago.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\imediopago.php;f10;4;24;4;;C:\laragon\www\gastardosAPP\apis\iobjetivos.php;f10;5;24;5;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="Monedas.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\imonedas.php;f10;4;21;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
@@ -24,15 +24,15 @@
 </treenode>
 <treenode node="Objetivo.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iobjetivos.php;f10;4;22;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="ObjetosConsumo.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f14;5;32;5;;C:\laragon\www\gastardosAPP\apis\iobjconsumo.php;f9;4;27;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="ObjetosConsumo.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iobjconsumo.php;f9;4;27;4;;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f14;5;32;5;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="PASSWORD;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;12;16;12;;;;vpos;;v;;a;;r&quot;nomelaacuerdo01&quot;;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="PASSWORD;PHP:PHP Word;C:\laragon\www\carpetas\apis\mysql_login.php;f8;7;16;7;;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;7;16;7;;;;vpos;;v;;a;;r&quot;nomelaacuerdo01&quot;;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="TiposTabla.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\igtiposhp.php;f10;4;24;4;;C:\laragon\www\gastardosAPP\apis\igtipos.php;f10;4;24;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="Umedida.php;PHP:PHP Include;C:\laragon\www\gastardosAPP\apis\iumed.php;f10;4;21;4;;;;vpos;;v;;a;;r&#10;Description&#10;     Obtiene todas los Colegios de la base de datos;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="USERNAME;PHP:PHP Word;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;11;16;11;;;;vpos;;v;;a;;r&quot;nicolass_voleyap&quot;;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="USERNAME;PHP:PHP Word;C:\laragon\www\carpetas\apis\mysql_login.php;f8;6;16;6;;C:\laragon\www\gastardosAPP\apis\mysql_login.php;f8;6;16;6;;;;vpos;;v;;a;;r&quot;nicolass_voleyap&quot;;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="Comercios;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f0;8;1;189;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
 <treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Negocios.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
@@ -102,34 +102,34 @@
 <treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\TiposTabla.php;f18;108;5;124;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($tipoid,$tablaPertenece, $descripciontipo)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,109;;b1,5;;m0;;etipoid;;ptablaPertenece;;pdescripciontipo;;p">
 </treenode>
 </treenode>
-<treenode node="iogastos;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f0;8;1;559;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
+<treenode node="iogastos;PHP:Class Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f0;8;1;577;;;;vpos;;v;;a;;r;;d0,9;;b0,0;;m0;;e">
 <treenode node="__construct;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f4;10;5;12;;;;vpos;;v;;a;;r;;d4,11;;b0,0;;m0;;e">
 </treenode>
-<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f17;402;5;417;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    contar()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,403;;b1,5;;m0;;e">
+<treenode node="contar;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f17;420;5;435;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    contar()&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,421;;b1,5;;m0;;e">
 </treenode>
-<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;534;5;545;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($idTicket,$gasFecha)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,535;;b1,5;;m0;;eidTicket;;pgasFecha;;p">
+<treenode node="delete;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;552;5;563;;;;vpos;;v;;abool;;r&#10;Definition&#10;    delete($idTicket,$gasFecha)&#10;&#10;Description&#10;     Eliminar el registro con el identificador especificado&#10;&#10;Parameters:&#10;     $idcategoria - identificador de la categoria&#10;&#10;Return:&#10;   Respuesta de la eliminación;;d4,553;;b1,5;;m0;;eidTicket;;pgasFecha;;p">
 </treenode>
-<treenode node="deleteDetalle;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;547;5;558;;;;vpos;;v;;a;;r;;d4,548;;b1,5;;m0;;eidTicket;;pgasFecha;;pidrenglon;;p">
+<treenode node="deleteDetalle;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;565;5;576;;;;vpos;;v;;a;;r;;d4,566;;b1,5;;m0;;eidTicket;;pgasFecha;;pidrenglon;;p">
 </treenode>
 <treenode node="getAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;20;5;44;;;;vpos;;v;;aarray;;r&#10;Definition&#10;    getAll($filtro)&#10;&#10;Description&#10;     Retorna en la fila especificada de la tabla &apos;vappCategoria&apos;&#10;&#10;Parameters:&#10;     $idCategoria - Identificador del registro&#10;&#10;Return:&#10;   Datos del registro;;d4,21;;b1,5;;m0;;e $idCategoria;;p">
 </treenode>
-<treenode node="getAllAgrupados;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;69;5;205;;;;vpos;;v;;a;;r;;d4,71;;b1,5;;m0;;efiltroFechaGeneral;;pproductos;;pcomercios;;pFechaBuscar;;psonCuotasVal;;pmoneda;;pmformapago;;p">
+<treenode node="getAllAgrupados;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;69;5;223;;;;vpos;;v;;a;;r;;d4,72;;b1,5;;m0;;efiltroFechaGeneral;;pproductos;;pcomercios;;pFechaBuscarDde;;pFechaBuscarHta;;psonCuotasVal;;pmoneda;;pmformapago;;p">
 </treenode>
-<treenode node="getAllAgrupadosFecha;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;292;5;315;;;;vpos;;v;;a;;r;;d4,293;;b1,5;;m0;;eticketidParm;;pgasFecha;;p">
+<treenode node="getAllAgrupadosFecha;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;310;5;333;;;;vpos;;v;;a;;r;;d4,311;;b1,5;;m0;;eticketidParm;;pgasFecha;;p">
 </treenode>
-<treenode node="getAllDescripciones;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;348;5;371;;;;vpos;;v;;a;;r;;d4,349;;b1,5;;m0;;efechaTicket;;pticketid;;p">
+<treenode node="getAllDescripciones;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;366;5;389;;;;vpos;;v;;a;;r;;d4,367;;b1,5;;m0;;efechaTicket;;pticketid;;p">
 </treenode>
-<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;427;5;455;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($gasid)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,428;;b1,5;;m0;;e $idcategoria;;p">
+<treenode node="getById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;445;5;473;;;;vpos;;v;;amixed;;r&#10;Definition&#10;    getById($gasid)&#10;&#10;Description&#10;     Obtiene los campos de una categoria con un identificador determinado&#10;&#10;Parameters:&#10;     $idcategoria - Identificador de la categoria;;d4,446;;b1,5;;m0;;e $idcategoria;;p">
 </treenode>
-<treenode node="getLastTicket;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;373;5;391;;;;vpos;;v;;a;;r;;d4,374;;b1,5;;m0;;e">
+<treenode node="getLastTicket;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;391;5;409;;;;vpos;;v;;a;;r;;d4,392;;b1,5;;m0;;e">
 </treenode>
-<treenode node="getResumen;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;207;2;290;;;;vpos;;v;;a;;r;;d4,209;;b1,5;;m0;;excomercio;;pxproducto;;pxFechaDesde;;pxFechaHasta;;pxmonedaSeleccionada;;pxmformapago;;p">
+<treenode node="getResumen;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;225;2;308;;;;vpos;;v;;a;;r;;d4,227;;b1,5;;m0;;excomercio;;pxproducto;;pxFechaDesde;;pxFechaHasta;;pxmonedaSeleccionada;;pxmformapago;;p">
 </treenode>
-<treenode node="getTicketById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;319;5;344;;;;vpos;;v;;a;;r;;d4,320;;b1,5;;m0;;efechaTicket;;pticketid;;p">
+<treenode node="getTicketById;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;337;5;362;;;;vpos;;v;;a;;r;;d4,338;;b1,5;;m0;;efechaTicket;;pticketid;;p">
 </treenode>
-<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;506;5;526;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($ticketID,$tipoMedioPago,$gasFecha,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$movTipo,$gasobservaciones1,$gasobservaciones2,&#10;    $descgenDesc,$descuentogenmonto,$totalCuotas)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d49,507;;b1,5;;m0;;eticketID;;ptipoMedioPago;;pgasFecha;;pgasDescripcion;;pgasPUnit;;pgasCant;;punidad;;pComercioId;;pmonedaId;;pdescuento;;precargo;;pmovTipo;;pgasobservaciones1;;pgasobservaciones2;;pdescgenDesc;;pdescuentogenmonto;;ptotalCuotas;;p">
+<treenode node="insert;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;524;5;544;;;;vpos;;v;;aPDOStatement;;r&#10;Definition&#10;    insert($ticketID,$tipoMedioPago,$gasFecha,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$movTipo,$gasobservaciones1,$gasobservaciones2,&#10;    $descgenDesc,$descuentogenmonto,$totalCuotas)&#10;&#10;Description&#10;     Insertar un nuevo categoria&#10;&#10;Parameters:&#10;     $idcategoria - titulo del nuevo registro&#10;     $nombre - descripción del nuevo registro;;d49,525;;b1,5;;m0;;eticketID;;ptipoMedioPago;;pgasFecha;;pgasDescripcion;;pgasPUnit;;pgasCant;;punidad;;pComercioId;;pmonedaId;;pdescuento;;precargo;;pmovTipo;;pgasobservaciones1;;pgasobservaciones2;;pdescgenDesc;;pdescuentogenmonto;;ptotalCuotas;;p">
 </treenode>
-<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;465;5;497;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($i_ticketID,$gasFecha,$gasid,$tipoMedioPago,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,$descgenDesc,$descuentogenmonto)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,466;;b1,5;;m0;;ei_ticketID;;pgasFecha;;pgasid;;ptipoMedioPago;;pgasDescripcion;;pgasPUnit;;pgasCant;;punidad;;pComercioId;;pmonedaId;;pdescuento;;precargo;;ptipoMov;;pgasobservaciones1;;pgasobservaciones2;;pdescgenDesc;;pdescuentogenmonto;;p">
+<treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;483;5;515;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($i_ticketID,$gasFecha,$gasid,$tipoMedioPago,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,$descgenDesc,$descuentogenmonto)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,484;;b1,5;;m0;;ei_ticketID;;pgasFecha;;pgasid;;ptipoMedioPago;;pgasDescripcion;;pgasPUnit;;pgasCant;;punidad;;pComercioId;;pmonedaId;;pdescuento;;precargo;;ptipoMov;;pgasobservaciones1;;pgasobservaciones2;;pdescgenDesc;;pdescuentogenmonto;;p">
 </treenode>
 <treenode node="xgetAll;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\GastosIO.php;f18;47;5;67;;;;vpos;;v;;a;;r;;d4,48;;b1,5;;m0;;efiltro;;p">
 </treenode>
@@ -210,7 +210,7 @@
 <treenode node="update;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\Umedida.php;f18;106;5;121;;;;vpos;;v;;a;;r&#10;Definition&#10;    update($unidadmedidaid, $descripcionumedida,$nombreAbr)&#10;&#10;Description&#10;     Actualiza un registro de la bases de datos basado en los nuevos valores relacionados con un identificador&#10;&#10;Parameters:&#10;     $idcategoria - identificador&#10;     $nombre - nuevo titulo;;d4,107;;b1,5;;m0;;eunidadmedidaid;;pdescripcionumedida;;pnombreAbr;;p">
 </treenode>
 </treenode>
-<treenode node="insertarcuotas;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f0;311;1;417;;;;vpos;;v;;a;;r;;d63,311;;b0,0;;m0;;enumeroTotal;;pcuotaNumero;;ptotalCuotas;;p">
+<treenode node="insertarcuotas;PHP:Function Name;C:\laragon\www\gastardosAPP\apis\ioegresos.php;f0;319;1;425;;;;vpos;;v;;a;;r;;d63,319;;b0,0;;m0;;enumeroTotal;;pcuotaNumero;;ptotalCuotas;;p">
 </treenode>
 </phptree>
 </codestructure>

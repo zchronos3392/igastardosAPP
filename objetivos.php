@@ -251,9 +251,19 @@ h1{
 
 <div class="iconosFunciones">
 	<div class="icono1"><span class="icon-arrow-left" title="volver al main"></span></div>	
-	<div class="icono2"><span class="icon-time-slot" title="Resumen"></span></div>
-	<div class="icono3"><span class="icon-controller-volume" title="estadisticas"></span></div>
-	<div class="icono4"><span class="icon-adjust" title="abm objetivos"></span></div>
+	<div class="icono2">
+		<span class="icon-time-slot" title="Resumen"></span>
+		<span>ver</span>
+	</div>
+	<div class="icono3">
+		<span class="icon-controller-volume" title="estadisticas"></span>
+		<span>Consultas</span>
+	</div>
+	<div class="icono4">
+		<span class="icon-adjust" title="abm objetivos"></span>
+		<span>abm</span>
+	</div>
+
 	<div class="icono5"></div>
 	<div class="icono6"></div>
 </div>

@@ -44,6 +44,29 @@ class iogastos
         }
     }
     
+
+    public static function mesesCargados($ianio)
+    {
+        $consulta = "SELECT DISTINCT MONTH(gasFecha) as 'MesVal' ,
+						 ELT(MONTH(gasFecha), 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+						 	 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre')
+							  as 'MesDescripcion'
+						FROM gasmovdiarios
+							where year(gasFecha) = $ianio;";
+        try {
+            // Preparar sentencia
+            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+			// no se estaba devolviendl el resultado en formato JSON
+			// con esta linea se logro...
+			// usar en vez de return echo, aunque no se si funcionara con ANDROID
+            return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            return ($e->getMessage());
+        }
+    }	
     
     public static function xgetAll($filtro)
     {
@@ -67,7 +90,8 @@ class iogastos
         }
     }    
     
-    public static function getAllAgrupados($filtroFechaGeneral,$productos,$comercios,$FechaBuscar,
+    public static function getAllAgrupados($filtroFechaGeneral,$productos,$comercios,
+    									   $FechaBuscarDde,$FechaBuscarHta,
     									   $sonCuotasVal,$moneda,$mformapago)
     {
     	$filtro="";
@@ -86,61 +110,72 @@ class iogastos
     			$contadorFiltros++;
 		}
 		
-		
+			if($FechaBuscarDde == '' ){
 
 				switch($filtroFechaGeneral)
 				{
 					case "ESTASEMANA": 
 										$FechaCargaHoy = date('Y-m-d H:i:s');
-										//resto 7 días
+										//resto 7 dï¿½as
 										$FechaCargaHoyTexto = date('Y-m-d H:i:s',strtotime($FechaCargaHoy."- 7 days")); 
 										$FechaCargaHoyTexto = "'".$FechaCargaHoyTexto."'";
 										//$filtro=" and fechaEnHoja >= $FechaCargaHoyTexto ";
 										break;
 					case "ESTAQUINCENA":
 										$FechaCargaHoy = date('Y-m-d H:i:s');
-										//resto 7 días
+										//resto 7 dï¿½as
 										$FechaCargaHoyTexto = date('Y-m-d H:i:s',strtotime($FechaCargaHoy."- 2 weeks")); 
 										$FechaCargaHoyTexto = "'".$FechaCargaHoyTexto."'";
 										//$filtro=" and fechaEnHoja >= $FechaCargaHoyTexto ";
 										 break;
 					case "ESTAMES": 
 										$FechaCargaHoy = date('Y-m-d H:i:s');
-										//resto 7 días
+										//resto 7 dï¿½as
 										$FechaCargaHoyTexto = date('Y-m-d H:i:s',strtotime($FechaCargaHoy."- 1 month")); 
 										$FechaCargaHoyTexto = "'".$FechaCargaHoyTexto."'";
 										//$filtro=" and fechaEnHoja >= $FechaCargaHoyTexto ";
 										break;
 					case "ESTATRESM": 
 										$FechaCargaHoy = date('Y-m-d H:i:s');
-										//resto 7 días
+										//resto 7 dï¿½as
 										$FechaCargaHoyTexto = date('Y-m-d H:i:s',strtotime($FechaCargaHoy."- 3 months")); 
 										$FechaCargaHoyTexto = "'".$FechaCargaHoyTexto."'";
 										//$filtro=" and fechaEnHoja >= $FechaCargaHoyTexto ";
 										 break;
 					case "ESTASEISM": 
 										$FechaCargaHoy = date('Y-m-d H:i:s');
-										//resto 7 días
+										//resto 7 dï¿½as
 										$FechaCargaHoyTexto = date('Y-m-d H:i:s',strtotime($FechaCargaHoy."- 6 months")); 
 										$FechaCargaHoyTexto = "'".$FechaCargaHoyTexto."'";
 										//$filtro=" and fechaEnHoja >= $FechaCargaHoyTexto ";
 										 break;
 					case "ESTAANIO": 
 										$FechaCargaHoy = date('Y-m-d H:i:s');
-										//resto 7 días
+										//resto 7 dï¿½as
 										$FechaCargaHoyTexto = date('Y-m-d H:i:s',strtotime($FechaCargaHoy."- 1 year")); 
 										$FechaCargaHoyTexto = "'".$FechaCargaHoyTexto."'";
 										//$filtro=" and fechaEnHoja >= $FechaCargaHoyTexto ";
 										 break;
-				}
-		
+				} 
+
     	if($filtroFechaGeneral != '0' && $sonCuotasVal == 0){
     			if($contadorFiltros == 0)
 	    			$filtro=" where gasFecha >= $FechaCargaHoyTexto ";
-	    		else 	
+	    		else
+	    		   {
+	    		   	//mostramos,por ahora las fechas de cuotas futuras.
+		    			//$filtro .=" and  gasFecha >= $FechaCargaHoyTexto ";
+	    			if($sonCuotasVal != 0)
+		    			$FechaCargaHoyTexto = "'".$FechaCargaHoy."'"; 
 	    			$filtro .=" and  gasFecha >= $FechaCargaHoyTexto ";
+				   } 	
     			$contadorFiltros++;
 		}
+
+			}
+			
+	
+		
 
 		if($sonCuotasVal == 1){
     			if($contadorFiltros == 0)
@@ -151,11 +186,13 @@ class iogastos
 		}
 
 
-    	if($FechaBuscar != ''){
+    	if($FechaBuscarDde != ''){
     			if($contadorFiltros == 0)
-	    			$filtro=" where gasFecha = '$FechaBuscar' ";
+	    			$filtro=" where gasFecha >= '$FechaBuscarDde' 
+	    						and gasFecha <= '$FechaBuscarHta' ";
 	    		else 	
-	    			$filtro .=" and  gasFecha = '$FechaBuscar' ";
+	    			$filtro .=" and  (gasFecha >= '$FechaBuscarDde'
+	    				    	      and gasFecha <= '$FechaBuscarHta') ";
     			$contadorFiltros++;
 		}
 
@@ -176,8 +213,7 @@ class iogastos
 	    			$filtro .=" and  tipoMedioPago = $mformapago ";
     			$contadorFiltros++;
 		}
-
-
+/*
         $consulta = "(SELECT gasFecha,ticketID FROM gasmovdiarios
         						$filtro
         					 and montoCuota <> 0	
@@ -188,8 +224,13 @@ class iogastos
 						(SELECT gasFecha,ticketID FROM gasmovdiarios
         						$filtro
 							group by gasFecha,ticketID
-						ORDER BY gasFecha DESC,ticketID DESC) ";
-//        echo "<br> getAllAgrupados $consulta <br><br>";
+						ORDER BY ticketID DESC ) ";
+*/
+        $consulta = "(SELECT gasFecha,ticketID FROM gasmovdiarios
+        						$filtro
+							group by gasFecha,ticketID
+						ORDER BY gasFecha,ticketID ) ";
+       // echo "<br> getAllAgrupados $consulta <br><br>";
         try {
             // Preparar sentencia
             $comando = Database::getInstance()->getDb()->prepare($consulta);
@@ -449,7 +490,7 @@ class iogastos
             //echo json_encode($row);
 
         } catch (PDOException $e) {
-            // Aquí puedes clasificar el error dependiendo de la excepción
+            // Aquï¿½ puedes clasificar el error dependiendo de la excepciï¿½n
             // para presentarlo en la respuesta Json
             return -1;
         }
@@ -501,7 +542,7 @@ class iogastos
      * Insertar un nuevo categoria
      *
      * @param $idcategoria      titulo del nuevo registro
-     * @param $nombre descripción del nuevo registro
+     * @param $nombre descripciï¿½n del nuevo registro
      * @return PDOStatement
      */
     public static function insert($ticketID,$tipoMedioPago,$gasFecha,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$movTipo,$gasobservaciones1,$gasobservaciones2,
@@ -530,7 +571,7 @@ class iogastos
      * Eliminar el registro con el identificador especificado
      *
      * @param $idcategoria identificador de la categoria
-     * @return bool Respuesta de la eliminación
+     * @return bool Respuesta de la eliminaciï¿½n
      */
     public static function delete($idTicket,$gasFecha)
     {

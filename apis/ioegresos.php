@@ -56,11 +56,18 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 								$filtroFechaGeneral = $_GET['filtroFechaGeneral'];
 							if(isset($_POST['filtroFechaGeneral']))  
 								$filtroFechaGeneral = $_POST['filtroFechaGeneral'];
-						$FechaBuscar='';
-							if(isset($_GET['FechaBuscar']))  
-								$FechaBuscar = $_GET['FechaBuscar'];
-							if(isset($_POST['FechaBuscar']))  
-								$FechaBuscar = $_POST['FechaBuscar'];
+
+						$FechaBuscarDde='';
+							if(isset($_GET['FechaBuscarDde']))  
+								$FechaBuscarDde = $_GET['FechaBuscarDde'];
+							if(isset($_POST['FechaBuscarDde']))  
+								$FechaBuscarDde = $_POST['FechaBuscarDde'];
+
+						$FechaBuscarHta='';
+							if(isset($_GET['FechaBuscarHta']))  
+								$FechaBuscarHta = $_GET['FechaBuscarHta'];
+							if(isset($_POST['FechaBuscarHta']))  
+								$FechaBuscarHta = $_POST['FechaBuscarHta'];
 
 						
 						$sonCuotasVal=0;
@@ -98,12 +105,12 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 						if($llamador == 'pedirmod')
 							$gastosIOAgrupados = iogastos::getAllAgrupadosFecha($ticketidParm,$fechaTickret);
 						else
-							$gastosIOAgrupados = iogastos::getAllAgrupados($filtroFechaGeneral,$productos,$comercios,$FechaBuscar,$sonCuotasVal,$moneda,$mformapago);	
+							$gastosIOAgrupados = iogastos::getAllAgrupados($filtroFechaGeneral,$productos,$comercios,$FechaBuscarDde,$FechaBuscarHta,$sonCuotasVal,$moneda,$mformapago);	
 						//echo "<br> TICKETS DETECTADOS:: <BR>";						
 						//foreach($gastosIOAgrupados as $clave => $datosCabecera)
 						//			print_r($datosCabecera);
-						//echo "<br> ::: FIN TICKETS DETECTADOS:: <BR>";						
-						
+						//echo "<br> ::: FIN TICKETS DETECTADOS:: <BR>";	
+
 						
 						foreach($gastosIOAgrupados as $clave => $datosAgrupados){
 							$fechaTicket = $datosAgrupados['gasFecha'];
@@ -184,6 +191,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 						 {
 //									echo "  <br> parametros: $gasFechaUPD, $i_ticketID  <br>";
 									$gastosIOCabeceras = iogastos::getTicketById($gasFecha,$i_ticketID);
+									$totalCuotas = $gastosIOCabeceras['0']['montoCuota'];	
 //										echo "<br> INI CABECERA DETECTADA: <BR>";
 //											print_r($gastosIOCabeceras);
 //										echo "<br> FIN CABECERA DETECTADA: <BR>";
@@ -199,12 +207,12 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 						 }// recorrer $gastosIOAgrupados
 						//echo("DATOS PREVIOS PARA VER QUE CAMBIO..<br>");
 						//print_r($GastosIOUPD);	
-/**
-* NECESITO TRAER LO QUE HABIA PARA COMPARAR
-* 	QUE FALTA...NO LO VUELVO A INGRESAR, 
-*   LO QUE NO ESTABA SE INSERTA
-*   LO OTRO SE ACTUALIIZA, SEGUN GASID  Y LA CLAVE PRINCIPAL
-*/						
+						/**
+						* NECESITO TRAER LO QUE HABIA PARA COMPARAR
+						* 	QUE FALTA...NO LO VUELVO A INGRESAR, 
+						*   LO QUE NO ESTABA SE INSERTA
+						*   LO OTRO SE ACTUALIIZA, SEGUN GASID  Y LA CLAVE PRINCIPAL
+						*/						
 	
 						// un solo dato
 						$ComercioId=0;
@@ -287,7 +295,15 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
 							$GastosIO = iogastos::deleteDetalle($i_ticketID,$gasFecha,$idrenglon);
-					break;	
+					break;
+		case "MESES":						
+			$ianio = 0;
+			if(isset($_GET['ianio']))   $ianio = $_GET['ianio'];
+			if(isset($_POST['ianio']))  $ianio = $_POST['ianio'];
+
+			$GastosIO = iogastos::mesesCargados($ianio);
+			break;
+
 	};// end of SWITCH
 														
 

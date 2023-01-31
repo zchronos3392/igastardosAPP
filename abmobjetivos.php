@@ -54,6 +54,29 @@ function eliminaSubobjetivo(subobjetivoItemID)
 
 }
 
+
+function calcularTotal(destinoId)
+{
+		
+	var TotalesSubObjetivos   = 0;
+
+	var xcontadorSubObjetivos = $("#contadorSubObjetivos").text();
+	var MontoTotalSubObj      = 0;
+	for(var i=0;i<=xcontadorSubObjetivos;i++)
+	{
+		// console.log('conteo de registros: '+ xcontadorSubObjetivos);
+
+		 MontoTotalSubObj =	$('#'+destinoId+i).val();
+		 //console.log('monto: '+ MontoTotalSubObj);
+			 if(MontoTotalSubObj == undefined) MontoTotalSubObj = 0;
+		 TotalesSubObjetivos += parseFloat(MontoTotalSubObj);
+		//  console.log('Total calculado: '+TotalesSubObjetivos);
+	}
+	// console.log('Total calculado: '+TotalesSubObjetivos);
+	$("#TotalSubObjetivos").val(parseFloat(TotalesSubObjetivos));
+
+}
+
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	$(document).ready(function(){
 
@@ -78,20 +101,25 @@ $(".icon-circle-with-plus").on("click",function(){
 				'<input type="hidden" value="'+xcontadorSubObjetivos+'" id="idsuboj_'+xcontadorSubObjetivos+'" name="idsuboj_'+xcontadorSubObjetivos+'">'+
 			'</div>'+			
 			'<div class="itemSUFraccion2">'+
+				'<div>Moneda</div>'+
   		  		'<select id="subimonedas_'+xcontadorSubObjetivos+'" class="comercioSel">'+
   		  				'<option value="9999">Seleccione moneda</option>'+
   		  		'</select>'+
 			'</div>'+			
 			'<div class="itemSUFraccion3">'+
+  		  		'<div>MPago:</div>'+
   		  		'<select id="subimediospago_'+xcontadorSubObjetivos+'" class="comercioSel">'+
   		  				'<option value="9999">Seleccione Forma de pago</option>'+
   		  		'</select>'+
 			'</div>'+			
 			'<div class="itemSUFraccion4">'+
+			    '<div>Monto Obj.Fraccion</div>'+
 				'<input id="subFraccion_'+xcontadorSubObjetivos+'" name="subFraccion_'+xcontadorSubObjetivos+'" type="number" placeholder="Fraccion poor moneda y medio de pago.."/>'+	
 			'</div>'+			
 			'<div class="itemSUFraccion5">'+
-			'<input id="subFraccionTot_'+xcontadorSubObjetivos+'" name="subFraccionTot_'+xcontadorSubObjetivos+'" placeholder="Monto total de la fracción" /></div>'+
+			'<div>Total Max.Sub Objetivo</div>'+
+			'<input id="subFraccionTot_'+xcontadorSubObjetivos+'" name="subFraccionTot_'+xcontadorSubObjetivos+'" placeholder="Monto total de la fracción" '+
+			' onkeyup="calcularTotal(\'subFraccionTot_\'); " /></div>'+
 			'<div class="itemSUFraccion6">'+
 			'<button class="accionBotonCancel" value="eliminar sub objetivo" id="EliminarSubObjetivo" onclick="eliminaSubobjetivo(\'subobje_'+xcontadorSubObjetivos+'\');">-</button>'+
 			'</div>'+
@@ -114,7 +142,7 @@ $(".icon-circle-with-plus").on("click",function(){
 	{
 		    "FechaDesdeVig": $("#FechaDesdeVigencia").val(),
 		    "FechaHastaVig": $("#FechaHastaVigencia").val(),
-		    "fraccion"	: $("#fraccion").val(),
+		    "fraccion"	: $("#TotalSubObjetivos").val(),
 		    "fraccionTiempo" : $("#fraccionTiempo").val(),
 		    "fraccionTipo"	: $("#fraccionTipo").val(),
 			"montoobjetivo":$("#montoobjetivo").val(),
@@ -138,6 +166,7 @@ $(".icon-circle-with-plus").on("click",function(){
     success:  function (re){
     	$(".errores").append(re);
     	 location.reload();
+
      },
     	error: function (xhr, ajaxOptions, thrownError)
     	{
@@ -475,9 +504,10 @@ h1{
 	</div>
 	<div class="objitem3">
 		<div class="grillaFraccion">
-			<div class="itemFraccion1">Fracción</div>			
+			<div class="itemFraccion1">Total Sub Objetivos</div>			
 			<div class="itemFraccion2">
-				<input type="number" id="fraccion" value="" placeholder="Fraccion del Monto de Control"/>
+			<input type="hidden" id="fraccion" value="0" placeholder="Fraccion del Monto de Control"/>
+			<input type="number" id="TotalSubObjetivos" value="" placeholder="Total Acumulado de Montos por Sub objetivo" disabled="true"/>			
 			</div>			
 			<div class="itemFraccion20">
 				Fracción Tiempo
@@ -498,11 +528,11 @@ h1{
 	</div>
 	<div class="objitem30">
 		<div class="TitgrillaSubFraccion">
-			<div class="TITitemSUFraccion1">SubId</div>			
-			<div class="TITitemSUFraccion2">Moneda</div>			
-			<div class="TITitemSUFraccion3">MPago</div>			
-			<div class="TITitemSUFraccion4">Fracción</div>			
-			<div class="TITitemSUFraccion5">Fracción Total</div>
+			<div class="TITitemSUFraccion1"></div>			
+			<div class="TITitemSUFraccion2"></div>			
+			<div class="TITitemSUFraccion3"></div>			
+			<div class="TITitemSUFraccion4"></div>			
+			<div class="TITitemSUFraccion5"></div>
 			<div class="TITitemSUFraccion6">
 				<span class="icon-circle-with-plus" title="Agregar sub objetivo" id="crearsubobjetivo"></span>
 			   <span id="contadorSubObjetivos" style="display: none;"></span>
@@ -513,11 +543,12 @@ h1{
 	</div>	
 	<div class="objitem4">
 		<div class="grillaMontos">
-			<div class="itemMont1">Monto Objetivo</div>			
+<!--			<div class="itemMont1">Monto Objetivo</div>			
 			<div class="itemMont2">
 				<input type="number" id="montoobjetivo" value="" placeholder="Monto de Control" />
 			</div>			
-			<div class="itemMont3">Avisar En Monto</div>			
+-->		
+		<input type="hidden" id="montoobjetivo" value="" placeholder="Monto de Control" />			<div class="itemMont3">Avisar En Monto</div>			
 			<div class="itemMont4">
 				<input type="number" id="montocontrol" value="" placeholder="Monto de Alarma" />			    </div>									
 		</div>

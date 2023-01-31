@@ -53,6 +53,58 @@ function restar(idaRestar){
 	totalCalcular();
 }
 
+function pedirMeses(destinoID){
+
+
+	var parametros=
+	{
+			"funcion":"MESES",
+			"ianio": $("#ianio").val()
+	};
+
+
+ 	$.ajax({ 
+    url:   './apis/ioegresos.php',
+    type:  'GET',
+    data: parametros ,
+    datatype:   'text json',
+	// EVENTOS QUE PODRIAN OCURRIR CUANDO ESTEMOS PROCESANDO EL AJAX		            
+    beforeSend: function ( ){$(destinoID).empty();},
+    done: function(data){},
+    success:  function (re){
+
+		if(re.indexOf("<br />") > -1)
+					$(".errores").append(re);
+		else
+		{
+		var r = JSON.parse(re);
+        if(r['estado'] == 1)
+		{
+         $(r['gastos']).each(function(i, v)
+		        { // indice, valor
+		    //TUVE QUE AGREGARLE, QUE NO EXISTA EL ELEMENTO, PORQUE SE ESTA
+			// unidadmedidaid, descripcionumedida
+		        	if (! $(destinoID).find("option[value='" + v.mesVal+ "']").length)
+		        	{						
+						  $(destinoID).append('<option value="' + v.mesVal + '">' +
+						   v.MesDescripcion+'</option>');
+					}		
+		        });
+		}
+		else {			
+				$(".errores").append(re);
+			};
+		}			
+
+	},
+    	error: function (xhr, ajaxOptions, thrownError)
+    	{
+				$(".errores").append(xhr);
+		}
+    	});	
+
+}
+
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	$(document).ready(function(){
 
@@ -87,6 +139,32 @@ $("#cargarotroanio").on("click",function()
 			$("#FechaHastaVigencia").val(FechaDia);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		$("#grillaResumen").hide();
+		$("#grillaExtras").hide();
+
+
+		$("#verFiltros").on("click",function()
+		{
+			$("#grillaFiltros").toggle();
+			$("#grillaResumen").hide();
+			$("#grillaExtras").hide();
+		
+		});	
+		$("#verResumen").on("click",function()
+		{
+			$("#grillaFiltros").hide();
+			$("#grillaResumen").toggle();
+			$("#grillaExtras").hide();
+				pedirMeses('#selectMes');
+		
+		});	
+		$("#verExtras").on("click",function()
+		{
+			$("#grillaFiltros").hide();
+			$("#grillaResumen").hide();
+			$("#grillaExtras").toggle();
+		
+		});					
 
 			$("#fraccionTipo").on("click change",function()
 			{
@@ -141,9 +219,15 @@ $("#cargarotroanio").on("click",function()
 		pedirTickets("#grillaGastos",99);
 			pedirProductos("#gproductos",'');
 		
-		$("#FechaBuscar").on("change",function(){
+
+		$("#FechaBuscarDde").on("change",function(){
+			//pedirTickets("#grillaGastos",99);
+			$("#FechaBuscarHta").val($("#FechaBuscarDde").val());			
+		});
+		$("#FechaBuscarHta").on("change",function(){
 			pedirTickets("#grillaGastos",99);			
 		});
+
 		
 		$("#SonCuotas").on("change",function(){
 			pedirTickets("#grillaGastos",99);			
@@ -564,13 +648,18 @@ $("#cargarotroanio").on("click",function()
 			<div class="itemaccioneg3">
 					<button  class="botonMasDsc" id="agregaDescripcion" title="Generar nuevo item">+</button>
 			</div>
+			<div class="itemaccioneg4">
+					Total a Pagar
+					<input type="text" id="totalCalculado" disabled="true"/>
+			</div>					
+			<div class="itemaccioneg43">
+					Desc Total
+					<input type="text" id="totalDescuentos" disabled="true"/>
+			</div>					
+
 			<div class="itemaccioneg44">
 					<span id="contadorItemsVer"></span>
 			</div>
-			<div class="itemaccioneg4">
-					Total
-					<input type="text" id="totalCalculado" disabled="true"/>
-			</div>					
 			<div class="itemaccioneg45">
 				<div class="itac45a">DESC.GEN.CONCPT</div>
 				<div class="itac45b">
@@ -826,66 +915,124 @@ $("#cargarotroanio").on("click",function()
 </div> <!-- lisgta accesos -->
   <!-- grilla de novedades, ultimos cargados -->
 	<div class="grillaGastos" id="filtrosGrillaGastos">
-           <div class="grillaFiltros">
-           	<div class="grillaFiltrositem1">FILTROS</div>
-           	<div class="grillaFiltrositem10">Fecha Específica</div>           	
-           	<div class="grillaFiltrositem11">
-           		<input  type="date" id="FechaBuscar" name="FechaBuscar"/>
-           	</div>           	
-           	<div class="grillaFiltrositem12">
-           		<div>Son cuotas</div>
-           		<div>
-           			<input  type="checkbox" id="SonCuotas" name="SonCuotas"/>
-				</div>
-           	</div>           	
-           	
-           	<div class="grillaFiltrositem2">
-           		<select id="filtroFechaGastos">
-	           		<option value="0">Seleccione intervalo fechas...</option>
-           			<option value="ESTASEMANA">esta semana</option>
-           			<option value="ESTAQUINCENA">última quincena</option>
-           			<option value="ESTAMES">ultimo mes</option>
-           			<option value="ESTATRESM">ultimos tres meses</option>
-           			<option value="ESTASEISM">ultimo semestre</option>
-           			<option value="ESTAANIO">ultimo año</option>
-           		 </select>
-           	</div>
-           	<div class="grillaFiltrositem3">
-           	<!-- lo transformo en grilla -->
-					<div class="itemProductos1">
-		  		  		<div class="itmPrd1A">Producto</div>
-		  		  		<div  class="itmPrd1B">
-		  		  		<input type="text" id="productobuscar" class="productobuscar" value="" placeholder="nombre producto a buscar"/> </div>
-		  		  	</div>
-		  		  	<div class="itemProductos2">
-		  		  		<select id="gproductos" class="comercioSel">
-		  		  			<option value="9999">Seleccione producto...</option>
-		  		  		</select>
-		  		  	</div>
-           	</div>
-           	<div  class="grillaFiltrositem4">
-           	<!-- lo transformo en grilla -->
-	           	<div class="itemComercios1">
-	           		<div  class="itmCmm1A">Comercio:</div>
-	           		<div  class="itmCmm1B">
-	           		<input type="text" id="comerciobuscar" class="comerciobuscar" value="" placeholder="nombre comercio a buscar"/> 
-	           		</div>
+			<div class="TabsGeneral">
+				<ul class="ul">
+					<li class="li" id="verFiltros" >Filtros</li>
+					<li class="li" id="verResumen" >Resumen</li>
+					<li class="li" id="verExtras" >Extras</li>
+				</ul>
+			<div class="SubTab">	
+				<div class="BloqueSubTab">
+		           <!-- grillaFiltros-->
+		           <div class="grillaFiltros" id="grillaFiltros">
+		           	<div class="grillaFiltrositem1">FILTROS</div>
+		           	<div class="grillaFiltrositem10">
+			           	<div class="grillaFiltrositem10A">Fecha Dde</div>           	
+			           	<div class="grillaFiltrositem10B">
+			           		<input  type="date" id="FechaBuscarDde" name="FechaBuscar"/>
+			           	</div>           	
+			           	<div class="grillaFiltrositem10C">Fecha Hta</div>           	
+			           	<div class="grillaFiltrositem10D">
+			           		<input  type="date" id="FechaBuscarHta" name="FechaBuscar"/>
+			           	</div>           	
+		           	</div>
+		           	<div class="grillaFiltrositem12">
+	           		<div>Son cuotas</div>
+	           		<div>
+	           			<input  type="checkbox" id="SonCuotas" name="SonCuotas"/>
+					</div>
+	           	</div>           	
+		        <div class="grillaFiltrositem2">
+	           		<select id="filtroFechaGastos">
+		           		<option value="0">Seleccione intervalo fechas...</option>
+	           			<option value="ESTASEMANA">esta semana</option>
+	           			<option value="ESTAQUINCENA">última quincena</option>
+	           			<option value="ESTAMES">ultimo mes</option>
+	           			<option value="ESTATRESM">ultimos tres meses</option>
+	           			<option value="ESTASEISM">ultimo semestre</option>
+	           			<option value="ESTAANIO">ultimo año</option>
+	           		 </select>
 	           	</div>
-	           	<div class="itemComercios2">           	
-	  		  		<select id="fcomercios" class="comercioSel">
-	  		  				<option value="9999">Seleccione comercios...</option>
-	  		  		</select>
-	  		  	</div>	
-           	</div>
-           	<div  class="grillaFiltrositem5">
-				<div class="itemFmon2" id="itemFmon2">
+		        <div class="grillaFiltrositem3">
+	           	<!-- lo transformo en grilla -->
+						<div class="itemProductos1">
+			  		  		<div class="itmPrd1A">Producto</div>
+			  		  		<div  class="itmPrd1B">
+			  		  		<input type="text" id="productobuscar" class="productobuscar" value="" placeholder="nombre producto a buscar"/> </div>
+			  		  	</div>
+			  		  	<div class="itemProductos2">
+			  		  		<select id="gproductos" class="comercioSel">
+			  		  			<option value="9999">Seleccione producto...</option>
+			  		  		</select>
+			  		  	</div>
+	           	</div>
+		        <div  class="grillaFiltrositem4">
+	           	<!-- lo transformo en grilla -->
+		           	<div class="itemComercios1">
+		           		<div  class="itmCmm1A">Comercio:</div>
+		           		<div  class="itmCmm1B">
+		           		<input type="text" id="comerciobuscar" class="comerciobuscar" value="" placeholder="nombre comercio a buscar"/> 
+		           		</div>
+		           	</div>
+		           	<div class="itemComercios2">           	
+		  		  		<select id="fcomercios" class="comercioSel">
+		  		  				<option value="9999">Seleccione comercios...</option>
+		  		  		</select>
+		  		  	</div>	
+	           	</div>
+		        <div  class="grillaFiltrositem5">
+					<div class="itemFmon2" id="itemFmon2">
+					</div>
+	           	</div>
+		   		<div  class="grillaFiltrositem6">
+					<div class="itemFMP2" id="itemFMP2">
+					</div>
+	           	</div>           	
+		        </div>
+				</div> <!-- BloqueSubTab -->
+				<div class="BloqueSubTab">
+					<div id="grillaResumen">
+					<div  class="grillaResumenitem1">
+							<div>
+								Elegir Mes
+							</div>	
+							<div>
+								<select id="selectMes">
+									<option>Seleccione mes</option>
+								</select>
+							</div>	
+					</div>
+					<div  class="grillaResumenitem2">
+						<div class="grillaIngresos">
+							<div class="Titulos">
+								<div>:: INGRESOS ::</div>
+								<div>Moneda</div>		
+								<div>Monto</div>
+								<div>Descripción</div>
+							</div>
+							<div class="gIngresos">
+								<div>$ PESO</div>		
+								<div>333.222,055</div>
+								<div>SAC ACRED</div>
+							</div>
+						</div> <!--grillaIngresos-->
+					</div>
+					<div  class="grillaResumenitem3">
+						<div class="grillaGastos"></div>
+					</div>
+					<div  class="grillaResumenitem4">RESUMEN 4</div>
+					<div  class="grillaResumenitem5">RESUMEN 5</div>
+					<div  class="grillaResumenitem6">RESUMEN 6</div>
+					</div>
+				</div> <!-- BloqueSubTab -->
+				<div class="BloqueSubTab">
+				<div id="grillaExtras">
+
 				</div>
-           	</div>
-           	<div  class="grillaFiltrositem6">
-				<div class="itemFMP2" id="itemFMP2">
-				</div>
-           	</div>           	
-           </div>
+				</div> <!-- BloqueSubTab -->
+			</div> <!-- SubTabs -->
+		    </div> <!-- tabs general -->
+
 	</div>
 	<div class="grillaGastos" id="grillaGastos">
 	</div>

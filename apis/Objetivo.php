@@ -197,7 +197,7 @@ class objetivos
             //echo json_encode($row);
 
         } catch (PDOException $e) {
-            // Aquí puedes clasificar el error dependiendo de la excepción
+            // Aquï¿½ puedes clasificar el error dependiendo de la excepciï¿½n
             // para presentarlo en la respuesta Json
             return -1;
         }
@@ -256,12 +256,11 @@ class objetivos
     							 '$objobservaciones1','$objetivoTipo' )";
 
         // Preparar la sentencia
-       // echo "<br> $comando <br>";
+        //echo "<br> $comando <br>";
         $sentencia = Database::getInstance()->getDb()->prepare($comando);
 
-        return $sentencia->execute(
-            array($FechaDesdeVig, $FechaHastaVig, $fraccion,$FraccionTipo,
-    			$montoObjetivo, $montoAviso,$objobservaciones1,$objetivoTipo ));
+        return $sentencia->execute(array($FechaDesdeVig, $FechaHastaVig, $fraccion,$FraccionTipo,
+                  $fraccionTiempo,$montoObjetivo, $montoAviso,$objobservaciones1,$objetivoTipo  ));
 
     }
 
@@ -285,7 +284,7 @@ class objetivos
     /**
      * Eliminar el registro con el identificador especificado
      *
-     * @return bool Respuesta de la eliminación
+     * @return bool Respuesta de la eliminaciï¿½n
      */
     public static function delete($idobjetivo)
     {

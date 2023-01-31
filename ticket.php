@@ -337,13 +337,17 @@ function restar(idaRestar){
 			<div class="itemaccioneg3">
 					<button  class="botonMasDsc" id="agregaDescripcion" title="Generar nuevo item">+</button>
 			</div>
-			<div class="itemaccioneg44">
-					<span id="contadorItemsVer"></span>
-			</div>
 			<div class="itemaccioneg4">
 					Total
 					<input type="text" id="totalCalculado" disabled="true"/>
 			</div>	
+			<div class="itemaccioneg43">
+					Desc Total
+					<input type="text" id="totalDescuentos" disabled="true"/>
+			</div>					
+			<div class="itemaccioneg44">
+					<span id="contadorItemsVer"></span>
+			</div>
 			<div class="itemaccioneg45">
 				<div class="itac45a">DESC.GEN.CONCPT</div>
 				<div class="itac45b">

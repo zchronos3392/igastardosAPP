@@ -189,8 +189,8 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 					     if(isset($_POST['fraccionTipo'])) $FraccionTipo = $_POST['fraccionTipo'];
 
 					$montoObjetivo=0;
-					     if(isset($_GET['montoobjetivo']))  $montoObjetivo = $_GET['montoobjetivo'];
-					     if(isset($_POST['montoobjetivo'])) $montoObjetivo = $_POST['montoobjetivo'];
+					    // if(isset($_GET['montoobjetivo']))  $montoObjetivo = $_GET['montoobjetivo'];
+					    // if(isset($_POST['montoobjetivo'])) $montoObjetivo = $_POST['montoobjetivo'];
 
 					$montoAviso=0;
 					     if(isset($_GET['montocontrol']))  $montoAviso = $_GET['montocontrol'];
@@ -208,7 +208,8 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 					     
 
 						$Objetivos = objetivos::insert($FechaDesdeVig, $FechaHastaVig, $fraccion,
-													$fraccionTiempo,$FraccionTipo,$montoObjetivo, 														$montoAviso,$objobservaciones1,$objetivoTipo );
+													$fraccionTiempo,$FraccionTipo,$montoObjetivo,
+													$montoAviso,$objobservaciones1,$objetivoTipo );
 
 						$i_idobjetivo= objetivos::getLastId();
 						$idobjetivo = 0;
@@ -261,8 +262,8 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 					     if(isset($_POST['fraccionTipo'])) $FraccionTipo = $_POST['fraccionTipo'];
 
 					$montoObjetivo=0;
-					     if(isset($_GET['montoobjetivo']))  $montoObjetivo = $_GET['montoobjetivo'];
-					     if(isset($_POST['montoobjetivo'])) $montoObjetivo = $_POST['montoobjetivo'];
+					     //if(isset($_GET['montoobjetivo']))  $montoObjetivo = $_GET['montoobjetivo'];
+					     //if(isset($_POST['montoobjetivo'])) $montoObjetivo = $_POST['montoobjetivo'];
 
 					$montoAviso=0;
 					     if(isset($_GET['montocontrol']))  $montoAviso = $_GET['montocontrol'];
