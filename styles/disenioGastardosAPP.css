@@ -142,19 +142,47 @@ position: fixed;
 .grillaResumenitem1
 {
 	display: grid;
-	grid-template-columns: 20% 70%;
+	grid-template-columns: 30% 70%;
 }
 
-.Titulos, .gIngresos{
+
+.grillaTotales
+{
+ background-color: #fff;
+ display: grid;
+ grid-template-rows: 100% 100% ;
+ margin-top: 1rem;
+
+}
+
+.gIngreso{
 	display: grid;
 	grid-template-columns: 30% 30% 40%;
-	grid-template-rows: 100% 100% ;
-}
-.gIngresos{
+	background-color: #eb8f14;
 
-	color: #040c31;
-	
+	/*bordes redondeados*/
+	border: 1px solid #000000;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	/*bordes redondeados*/		    
+
 }
+.gEgreso{
+	display: grid;
+	grid-template-columns: 30% 30% 40%;
+	background-color: steelblue;
+
+	/*bordes redondeados*/
+	border: 1px solid #000000;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	/*bordes redondeados*/		    
+
+}
+
+
 
 .grillaGastos{
 	/*bordes redondeados*/
@@ -768,8 +796,9 @@ grid-gap:1em;
 
 }
 .TabsGeneral .BloqueSubTab{
-	background-color:#e68e1a;
-//	position: absolute;
+	/* background-color:#e68e1a; */
+	background-color:#d6ab71;	
+/*	position: absolute;*/
 	top: 0;
 	color:fff;	
 	

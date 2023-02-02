@@ -43,7 +43,66 @@ class iogastos
             return ($e->getMessage());
         }
     }
-    
+
+	
+    public static function ResuMesIngreso($ianio,$imes)
+    {
+		$consulta = "SELECT SUM(gasPUnit) as 'Monto' ,gasDescripcion,
+		CONCAT(mon.abrmoneda, ' ', mon.descripcionmoneda) As moneda  
+		FROM gasmovdiarios
+			inner join gasmonedas mon
+			 on mon.monedaId = gasmovdiarios.monedaId
+		where year(gasFecha) = $ianio
+			  and gasmovdiarios.movTipo='I'
+			  AND month(gasFecha) = $imes
+		GROUP by mon.abrmoneda,descripcionmoneda,gasPUnit,gasDescripcion";
+        
+		//echo "<br> $consulta<br>";
+		try {
+            // Preparar sentencia
+            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+			// no se estaba devolviendl el resultado en formato JSON
+			// con esta linea se logro...
+			// usar en vez de return echo, aunque no se si funcionara con ANDROID
+            return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            return ($e->getMessage());
+        }
+    }	
+    public static function ResuMesEgreso($ianio,$imes)
+    {
+		$consulta = "SELECT concat(mon.abrmoneda,' ',mon.descripcionmoneda) as 'moneda',   
+						(
+						ROUND(   
+						Sum(IF(md.montoCuota <>0,md.montoCuota,md.gasPUnit * md.gasCant +
+								(IF(md.EsRecargo = 1, md.descuento,(-1)*(md.descuento))- md.descuentoGeneral)))
+						,2)   
+						) as 'Monto'
+					FROM gasmovdiarios md 
+					INNER JOIN gasmonedas mon
+						on mon.monedaId = md.monedaId
+					WHERE md.movTipo='E'  AND year(md.gasFecha) = $ianio AND month(md.gasFecha) = $imes
+					GROUP BY md.monedaId,'Monto';";
+        
+		//echo "<br> $consulta<br>";
+		try {
+            // Preparar sentencia
+            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+			// no se estaba devolviendl el resultado en formato JSON
+			// con esta linea se logro...
+			// usar en vez de return echo, aunque no se si funcionara con ANDROID
+            return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            return ($e->getMessage());
+        }
+    }	
+
 
     public static function mesesCargados($ianio)
     {

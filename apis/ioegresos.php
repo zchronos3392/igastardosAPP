@@ -304,6 +304,27 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 			$GastosIO = iogastos::mesesCargados($ianio);
 			break;
 
+		case "RESUMES":						
+				$ianio = 0;
+				if(isset($_GET['ianio']))   $ianio = $_GET['ianio'];
+				if(isset($_POST['ianio']))  $ianio = $_POST['ianio'];
+	
+				$imes=0;
+				if(isset($_GET['imes']))   $imes = $_GET['imes'];
+				if(isset($_POST['imes']))  $imes = $_POST['imes'];
+
+				$resumenObtenidoI = iogastos::ResuMesIngreso($ianio,$imes);
+				$resumenObtenidoE = iogastos::ResuMesEgreso($ianio,$imes);				
+				//echo "Egresos <br>";
+				//print_r($resumenObtenidoE);
+				//echo "<br> Ingresos: ";
+				//print_r($resumenObtenidoI);
+				$resumenProcesado['Ingresos'] = $resumenObtenidoI;
+				$resumenProcesado['Egreso']['0']  = $resumenObtenidoE['0'];
+				$GastosIO = $resumenProcesado;
+				break;
+	
+
 	};// end of SWITCH
 														
 

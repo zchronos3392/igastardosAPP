@@ -53,6 +53,86 @@ function restar(idaRestar){
 	totalCalcular();
 }
 
+function pedirResumen(mesId)
+{
+
+	var cadenaHTML="";
+	//console.log('mes recibido a consultar: '+mesId);
+	var parametros=
+	{
+			"funcion":"RESUMES",
+			"ianio": $("#ianio").val(),
+			"imes" : mesId
+	};
+
+
+	$.ajax({ 
+    url:   './apis/ioegresos.php',
+    type:  'GET',
+    data: parametros ,
+    datatype:   'text json',
+	// EVENTOS QUE PODRIAN OCURRIR CUANDO ESTEMOS PROCESANDO EL AJAX		            
+    beforeSend: function ( ){},
+    done: function(data){},
+    success:  function (re){
+
+		if(re.indexOf("<br />") > -1)
+					$(".errores").append(re);
+		else
+		{
+		var r = JSON.parse(re);
+        if(r['estado'] == 1)
+		{
+		 $(".grillaTotales").empty();	
+         $(r['gastos']).each(function(i, v)
+		        { // indice, valor
+					// <div class="grillaTotales">
+					// 		<div class="gIngreso">
+					// 			<div>$ PESO</div>		
+					// 			<div>333.222,055</div>
+					// 			<div>SAC ACRED</div>
+					// 		</div>
+					// 		<div class="gEgreso">
+			
+				$(v['Ingresos']).each(function(j, w)
+		        { // indice, valor
+					cadenaHTML='<div class="gIngreso">'+
+								'<div>'+w.moneda+'</div>'+		
+								'<div>'+w.Monto+'</div>'+
+								'<div>'+w.gasDescripcion+'</div>'+
+								'</div>';	
+					$(".grillaTotales").append(cadenaHTML);
+				});
+
+				$(v['Egreso']).each(function(j, w)
+		        { // indice, valor
+					cadenaHTML='<div class="gEgreso">'+
+								'<div>'+w.moneda+'</div>'+		
+								'<div>'+w.Monto+'</div>'+
+								'<div> Gtos de '+$("#selectMes option:selected").text()+'</div>'+
+								'</div>';	
+					$(".grillaTotales").append(cadenaHTML);
+				});
+
+
+
+		});
+		}
+		else {			
+				$(".errores").append(re);
+			};
+		}			
+
+	},
+    	error: function (xhr, ajaxOptions, thrownError)
+    	{
+				$(".errores").append(xhr);
+		}
+    	});	
+
+
+
+}
 function pedirMeses(destinoID){
 
 
@@ -84,9 +164,9 @@ function pedirMeses(destinoID){
 		        { // indice, valor
 		    //TUVE QUE AGREGARLE, QUE NO EXISTA EL ELEMENTO, PORQUE SE ESTA
 			// unidadmedidaid, descripcionumedida
-		        	if (! $(destinoID).find("option[value='" + v.mesVal+ "']").length)
+		        	if (! $(destinoID).find("option[value='" + v.MesVal+ "']").length)
 		        	{						
-						  $(destinoID).append('<option value="' + v.mesVal + '">' +
+						  $(destinoID).append('<option value="' + v.MesVal + '">' +
 						   v.MesDescripcion+'</option>');
 					}		
 		        });
@@ -108,6 +188,13 @@ function pedirMeses(destinoID){
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	$(document).ready(function(){
 
+	$("#ianio").on("change",function()
+	{
+		$("#ianio").prop('disabled', true);
+		//grabar año en sesion
+			grabarsesion("IANIO",$("#ianio").val());
+			location.reload();
+	});
 
 $("#cargarotroanio").on("click",function()
 {
@@ -117,6 +204,7 @@ $("#cargarotroanio").on("click",function()
 
   } else
    {
+		//SI ESTABA ABIERTO, DESACTIVO EL COMBO DE AÑO Y LO PONGO EN AÑO ACTUAL
 		$("#ianio").prop('disabled', true);
 		var f=new Date();
 		var FechaHoy = f.getFullYear() ;
@@ -158,6 +246,13 @@ $("#cargarotroanio").on("click",function()
 				pedirMeses('#selectMes');
 		
 		});	
+
+		$("#selectMes").on("click change",function(){
+				pedirResumen( $("#selectMes").val() );
+
+		});
+
+
 		$("#verExtras").on("click",function()
 		{
 			$("#grillaFiltros").hide();
@@ -1003,26 +1098,26 @@ $("#cargarotroanio").on("click",function()
 							</div>	
 					</div>
 					<div  class="grillaResumenitem2">
-						<div class="grillaIngresos">
-							<div class="Titulos">
-								<div>:: INGRESOS ::</div>
-								<div>Moneda</div>		
-								<div>Monto</div>
-								<div>Descripción</div>
-							</div>
-							<div class="gIngresos">
+						<div class="grillaTotales">
+							<div class="gIngreso">
 								<div>$ PESO</div>		
 								<div>333.222,055</div>
 								<div>SAC ACRED</div>
 							</div>
+							<div class="gEgreso">
+								<div>$ PESO</div>		
+								<div>333.222,055</div>
+								<div>SAC ACRED</div>
+							</div>
+
 						</div> <!--grillaIngresos-->
 					</div>
 					<div  class="grillaResumenitem3">
 						<div class="grillaGastos"></div>
 					</div>
-					<div  class="grillaResumenitem4">RESUMEN 4</div>
-					<div  class="grillaResumenitem5">RESUMEN 5</div>
-					<div  class="grillaResumenitem6">RESUMEN 6</div>
+					<div  class="grillaResumenitem4"></div>
+					<div  class="grillaResumenitem5"></div>
+					<div  class="grillaResumenitem6"></div>
 					</div>
 				</div> <!-- BloqueSubTab -->
 				<div class="BloqueSubTab">
