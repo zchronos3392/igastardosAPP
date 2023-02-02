@@ -234,6 +234,7 @@ $("#cargarotroanio").on("click",function()
 		$("#verFiltros").on("click",function()
 		{
 			$("#grillaFiltros").toggle();
+				$("#grillaGastos").toggle();
 			$("#grillaResumen").hide();
 			$("#grillaExtras").hide();
 		
@@ -241,6 +242,7 @@ $("#cargarotroanio").on("click",function()
 		$("#verResumen").on("click",function()
 		{
 			$("#grillaFiltros").hide();
+				$("#grillaGastos").hide();
 			$("#grillaResumen").toggle();
 			$("#grillaExtras").hide();
 				pedirMeses('#selectMes');
