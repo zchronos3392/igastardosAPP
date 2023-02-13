@@ -4,6 +4,7 @@
  */
 require ('GastosIO.php');
 require_once('ObjetosConsumo.php');
+require_once('Objetivo.php');
 
 
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
@@ -317,10 +318,85 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 				$resumenObtenidoE = iogastos::ResuMesEgreso($ianio,$imes);				
 				//echo "Egresos <br>";
 				//print_r($resumenObtenidoE);
-				//echo "<br> Ingresos: ";
-				//print_r($resumenObtenidoI);
+				//  echo "<br> Ingresos: ";
+				//  print_r($resumenObtenidoI);
 				$resumenProcesado['Ingresos'] = $resumenObtenidoI;
-				$resumenProcesado['Egreso']['0']  = $resumenObtenidoE['0'];
+				$resumenProcesado['Egreso']  = $resumenObtenidoE;
+				// RESTANTE MES EN EFECTIVO INGRESO - TOTAL GASTOS CASH
+				$acumuladoIngreso = $calculoRestanteEfectivo = $acumuladoGasto = 0;
+				$monedaCalculo    = '';
+				foreach($resumenObtenidoE as $clave => $valor)
+				 {                
+					if($valor['nombreabrev'] == 'CASH')
+						$acumuladoGasto += $valor['Monto'];
+					//$html .= '<div><a class="suggest-element" data="'.$valor['gasDescripcion'].'" id="'.$valor['gasDescripcion'].'">'.$valor['gasDescripcion'].'</a></div>';
+				}
+
+				foreach($resumenObtenidoI as $clave => $valor)
+				{                
+					$acumuladoIngreso += $valor['Monto']; 
+						$monedaCalculo    = $valor['moneda'];
+				}
+
+				$calculoRestanteEfectivo = $acumuladoIngreso - $acumuladoGasto; 
+
+				$resumenProcesado['RestanteEFE'] =  round($calculoRestanteEfectivo,2);
+				$resumenProcesado['RestanteEFEMON'] = $monedaCalculo;
+				 $Semanas = [];
+				 $iObjetivos = iogastos::ResuMesEgresoSemana($ianio,$imes);
+					$Semanas = creaIntervaloSemanas($iObjetivos); 
+					// $Semanas = segun objetivos, las semanas que estan incluidas
+					//ETAPA 1
+					// Recorro $iObjetivos
+					//RECORRER EL INTERVALO DE FECHAS GENERICO
+					// $Semanas reemplaza a $intervaloFechas
+					foreach ($Semanas as $clave => $FechaAnalisis)
+					{
+						$contadorMedios = 0;	
+						$intervaloMEDIOP =[];
+						// $iObjetivos reemplaza a $subObjetivos	
+						foreach ($iObjetivos as $claveSOBX => $subobjetivox)
+						{
+							  $porcentajeAnalisis=objetivos::PorcentajeCumplidoFraccion
+							  		(
+										$FechaAnalisis['FechaInicio'],
+										$FechaAnalisis['FechaFin'],
+										$subobjetivox['fraccionMonto'],
+										$subobjetivox['mediopagoid'],
+										$subobjetivox['monedaid']
+							  		);	
+								// ajuste poor sino encuentra nada o no hay valores cargados			
+								if($porcentajeAnalisis['0']['PORCENTAJE']== '')
+									$porcentajeCalculo =0;
+								else
+									$porcentajeCalculo=$porcentajeAnalisis['0']['PORCENTAJE'];
+								// ajuste poor sino encuentra nada o no hay valores cargados			
+
+								$intervaloMEDIOP[$contadorMedios]['porcentaje']=$porcentajeCalculo;
+								$intervaloMEDIOP[$contadorMedios]['montoTotal']= $porcentajeAnalisis['0']['MONTOTF'];
+								$intervaloMEDIOP[$contadorMedios]['medionombre']= $subobjetivox['nombreabrev'];
+								$intervaloMEDIOP[$contadorMedios]['monedanombre']= $subobjetivox['abrmoneda'];
+								$intervaloMEDIOP[$contadorMedios]['montoFraccion']= $subobjetivox['fraccionMonto'];
+								//POR FRACCION, CALCULO EL GASTO ACUMULADO POR COMERCIO Y MONEDA
+								$GastosxComercio=[];
+								$GastosxComercio= iogastos::calculoGastosxComercio
+									(
+										$FechaAnalisis['FechaInicio'],
+										$FechaAnalisis['FechaFin'],
+										$subobjetivox['monedaid']
+									);
+								// agregara los gastos acumulados por semana?	
+								$intervaloMEDIOP[$contadorMedios]['GastosDetalle'][]=$GastosxComercio;	
+								//POR FRACCION, CALCULO EL GASTO ACUMULADO POR COMERCIO Y MONEDA									
+							$contadorMedios++;
+						}
+					    
+						$Semanas[$clave]['OBJETIVODETALLE']= $intervaloMEDIOP;
+					} // intervalos, calculo a traves de los medios de pago.
+					//FIN :: ETAPA 1					
+				// echo "Semanas ";	
+				// print_r($Semanas);
+				$resumenProcesado['Semanas'] = $Semanas;
 				$GastosIO = $resumenProcesado;
 				break;
 	
@@ -341,7 +417,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 	        $datos["gastos"] = $GastosIO;//es un array
 	        //el print lo puedo usar para cuando lo llamo desde android
 	    }
-		print json_encode($datos); 	
+		 print json_encode($datos); 	
 	}		    
 	
 } // FIN DEL GET
@@ -451,6 +527,60 @@ function insertarcuotas($numeroTotal,$cuotaNumero,$totalCuotas){
 			}
 									 
 	}
+
+}
+
+function creaintervaloSemanas($ListaObjetivos)
+{
+// --------------------------------------------------------------
+// :: INICIO BLOQUE :: CREANDO VECTOR DE FRACCIONES DE TIEMPO
+// -----------------------------------------------------------------
+$intervaloFechas=[];
+if(count($ListaObjetivos) >0){
+$FHasta = new DateTime($ListaObjetivos['0']['FechaHastaVig']);
+//fechas en modo STRING
+//	$FHastaS = "'".$Objetivos['0']['FechaHastaVig']."'";
+//	$FDesdeS = "'".$Objetivos['0']['FechaDesdeVig']."'";
+// Fraccion de tiempo en que quiero dividir el intervalo.
+$fraccionTiempo = $ListaObjetivos['0']['fraccionTiempo'];
+// se crean los intervalos segun la FRACCION
+// Echo " Fraccion  : $fraccionTiempo <br>";
+// $intervalosposibles = $diasCalculados/$fraccionTiempo;
+		//($FDesdeS, $FHastaS, 'Y-m-d',$diasCalculados,$fraccionTiempo);
+	$begin = new DateTime( $ListaObjetivos['0']['FechaDesdeVig'] );
+	$end   = new DateTime( $ListaObjetivos['0']['FechaHastaVig'] );
+	$textoCalculo = '+'.$fraccionTiempo.' day';
+		$end   = $end->modify( $textoCalculo );
+	$textoCalculo = 'P'.$fraccionTiempo.'D';
+	$interval = new DateInterval($textoCalculo);
+	//echo(" $textoCalculo ");
+	$periods = new DatePeriod($begin, $interval ,$end);
+	//print_r($periods);
+	$range = [];
+	foreach ($periods as $date) {
+		$range[] = $date->format("Y-m-d");
+	}
+	$range[count($range)-1] = $FHasta->format("Y-m-d");
+	//print_r($range);
+	//echo count($range);
+	// FIN DEL CALCULO DE INTERVALO DE FECHAS LIMITE
+	// creando coleccion con los porcentajes y la data parametrizada
+	$intervaloFechas = [];
+	
+	for($i=0;$i < count($range) ; $i++) {
+		//echo $range[$i]." y ".$range[$i+1];
+		if($i < count($range)-1)
+			$intervaloFechas[$i]['FechaInicio'] = $range[$i];
+		if( ($i+1) < count($range) )
+			$intervaloFechas[$i]['FechaFin'] 	= $range[$i+1];
+	}
+	// FIN::creando coleccion con los porcentajes y la data parametrizada
+// --------------------------------------------------------------
+// :: FIN BLOQUE :: CREANDO VECTOR DE FRACCIONES DE TIEMPO
+// -----------------------------------------------------------------
+}
+return $intervaloFechas;
+//print_r($intervaloFechas);
 
 }
 ?>

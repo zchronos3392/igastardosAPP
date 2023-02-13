@@ -938,9 +938,11 @@ function pedircomercio(destinoid,comercio){
 // ****************************************************************
 function agregacomercio(destinoid){	 
 
+
 	var parametros = {
 			"comnombre":$("#comercioNombre").val(),
 			"ctipo":$("#comerciotipo").val(),
+			"cID"  :$('#comercioID').val(),
 			"filtro":'',
 			"llama":"agregacomercio",
 			"funcion":"PUT"			
@@ -957,8 +959,8 @@ function agregacomercio(destinoid){
 			pedircomercio(destinoid,99);	
 				pedircomercio('#gcomercio',99);
 				pedircomercio('#fcomercios',99);
-
-    },
+					$('#comercioID').val(0);
+       },
     error: function (xhr, ajaxOptions, thrownError)
     	{
 			// LA TABLA VACIA, ES UN ERROR PORQUE NO DEVUELVE NADA

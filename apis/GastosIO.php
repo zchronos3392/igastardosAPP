@@ -74,7 +74,10 @@ class iogastos
     }	
     public static function ResuMesEgreso($ianio,$imes)
     {
-		$consulta = "SELECT concat(mon.abrmoneda,' ',mon.descripcionmoneda) as 'moneda',   
+		$consulta = "SELECT 
+						mp.descripcionmediopago,
+						mp.nombreabrev,
+						concat(mon.abrmoneda,' ',mon.descripcionmoneda) as 'moneda',   
 						(
 						ROUND(   
 						Sum(IF(md.montoCuota <>0,md.montoCuota,md.gasPUnit * md.gasCant +
@@ -84,8 +87,10 @@ class iogastos
 					FROM gasmovdiarios md 
 					INNER JOIN gasmonedas mon
 						on mon.monedaId = md.monedaId
+						INNER JOIN gasmediospago mp
+						on mp.mediopagoid = md.tipoMedioPago
 					WHERE md.movTipo='E'  AND year(md.gasFecha) = $ianio AND month(md.gasFecha) = $imes
-					GROUP BY md.monedaId,'Monto';";
+					GROUP BY mp.mediopagoid, md.monedaId,'Monto';";
         
 		//echo "<br> $consulta<br>";
 		try {
@@ -103,6 +108,73 @@ class iogastos
         }
     }	
 
+    public static function ResuMesEgresoSemana($ianio,$imes)
+	{
+		$consulta = "SELECT fraccionTiempo ,FechaHastaVig,FechaDesdeVig,
+							 Det.idobjetivo, Det.monedaid,Det.mediopagoid,Det.fraccionMonto,
+							 gasmonedas.abrmoneda,gasmediospago.nombreabrev							 
+						FROM gasobjetivos iobj
+						inner join gasdetobjetivos Det
+						  on Det.idobjetivo = iobj.idobjetivo
+						  INNER JOIN gasmonedas
+							on gasmonedas.monedaId=Det.monedaid
+						INNER JOIN gasmediospago
+							on gasmediospago.mediopagoid = Det.mediopagoid 
+						 WHERE 
+						month(FechaDesdeVig) >= $imes and month(FechaDesdeVig) <= $imes
+						and year(FechaDesdeVig) = $ianio;";
+		//echo "<br> $consulta<br>";
+		try {
+            // Preparar sentencia
+            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+			// no se estaba devolviendl el resultado en formato JSON
+			// con esta linea se logro...
+			// usar en vez de return echo, aunque no se si funcionara con ANDROID
+            return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            return ($e->getMessage());
+        }
+	}
+
+    public static function calculoGastosxComercio($FechaInicio,$FechaFin,$monedaid)
+	{
+			// por el momento no filtro poor monedaID
+			$consulta = "SELECT 
+					    negocios.descripcionComercio,
+						mp.nombreabrev,
+						concat(mon.abrmoneda,' ',mon.descripcionmoneda) as 'moneda',   
+						(
+						ROUND(   
+							Sum(IF(md.montoCuota <>0,md.montoCuota,md.gasPUnit * md.gasCant +
+							(IF(md.EsRecargo = 1, md.descuento,(-1)*(md.descuento))- md.descuentoGeneral)))
+							,2) ) as 'Monto'
+						FROM gasmovdiarios md 
+						INNER JOIN gasmonedas mon
+						on mon.monedaId = md.monedaId
+						INNER JOIN gasmediospago mp
+							on mp.mediopagoid = md.tipoMedioPago 
+						INNER JOIN gasnegocios negocios
+						on negocios.ComercioId = md.ComercioId
+						WHERE md.movTipo='E'  AND md.gasFecha >='$FechaInicio'  AND md.gasFecha <= '$FechaFin'
+						GROUP BY mp.nombreabrev,md.ComercioId, md.monedaId,'Monto';";
+		try {
+            // Preparar sentencia
+            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+			// no se estaba devolviendl el resultado en formato JSON
+			// con esta linea se logro...
+			// usar en vez de return echo, aunque no se si funcionara con ANDROID
+            return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            return ($e->getMessage());
+        }
+
+	}
 
     public static function mesesCargados($ianio)
     {

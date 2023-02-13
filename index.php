@@ -84,6 +84,8 @@ function pedirResumen(mesId)
         if(r['estado'] == 1)
 		{
 		 $(".grillaTotales").empty();	
+		 $(".grillaResumenitem4").empty();
+		 
          $(r['gastos']).each(function(i, v)
 		        { // indice, valor
 					// <div class="grillaTotales">
@@ -93,7 +95,15 @@ function pedirResumen(mesId)
 					// 			<div>SAC ACRED</div>
 					// 		</div>
 					// 		<div class="gEgreso">
-			
+
+					cadenaHTML='<div class="gRestante">'+
+							'<div>Restante efectivo</div>'+		
+							'<div>'+v['RestanteEFEMON']+'</div>'+		
+							'<div>'+v['RestanteEFE']+'</div>'+
+							'<div>'+$("#selectMes option:selected").text()+'</div>'+
+							'</div>';	
+				$(".grillaTotales").append(cadenaHTML);
+						
 				$(v['Ingresos']).each(function(j, w)
 		        { // indice, valor
 					cadenaHTML='<div class="gIngreso">'+
@@ -107,14 +117,79 @@ function pedirResumen(mesId)
 				$(v['Egreso']).each(function(j, w)
 		        { // indice, valor
 					cadenaHTML='<div class="gEgreso">'+
+								'<div>'+w.descripcionmediopago+'</div>'+		
 								'<div>'+w.moneda+'</div>'+		
 								'<div>'+w.Monto+'</div>'+
 								'<div> Gtos de '+$("#selectMes option:selected").text()+'</div>'+
 								'</div>';	
 					$(".grillaTotales").append(cadenaHTML);
 				});
+				// 	
+				cadenaHTML ='';
+				var Estado='OK';
+				$(v['Semanas']).each(function(i, j)
+		        { // indice, valor
+					// console.log('inicio: ' +j.FechaInicio+' fin '+ j.FechaFin);	
+					AcumuladosGastos = '';
+					GastosComercio   = '';
+				var GastosCargados = 0;		
+				$(j.OBJETIVODETALLE).each(function(w, u)
+		        { // indice, valor
+					Estado='OK';
+					// console.log(' indice: '+w+' valor: '+u.medionombre);
+					if(u.montoTotal > u.montoFraccion)
+						Estado='NOOK';
 
+					AcumuladosGastos+= '	<div class="grillaMPMonObjetivos">	<div class="igobjeti_1">'+u.medionombre+'</div>'+
+									   '		<div class="igobjeti_2">'+u.monedanombre+' - '+u.montoFraccion+'</div>'+
+								       '		<div class="igobjeti_3">'+u.monedanombre+' - '+u.montoTotal+'</div>'+
+								       '		<div class="igobjeti_4">'+Estado+'</div>'+
+								       '		<div class="igobjeti_5"></div>'+
+									   '   </div>';
 
+					if(GastosCargados == 0){	
+					$(u.GastosDetalle).each(function(y, z)
+						{ // indice, valor
+							$(z).each(function(a, b)
+								{ // indice, valor
+								//console.log(' indice: '+a+' valor: '+b.descripcionComercio);
+								GastosComercio+= 	'<div class="GastoComX">'+
+									'					<div class="DGastoComX1">'+b.descripcionComercio+'</div>'+
+									'					<div class="DGastoComX11">'+b.nombreabrev+'</div>'+									
+									'						<div class="DGastoComX2">'+b.moneda+' - '+b.Monto+'</div>'+
+									'					</div>';
+								});
+								GastosCargados =1;
+						});
+					}	
+
+				});
+				// GastosComercio+
+				//  console.log(GastosComercio);
+					cadenaHTML += '<div class="Semana">'+
+								  '<div class="itemsemana1">SEMANA</div>'+
+								   '<div class="itemsemana2">'+i+'</div>'+
+									'<div class="itemsemana3">MES</div>'+
+									'<div class="itemsemana4">'+$("#selectMes option:selected").text()+'</div>'+
+									'<div class="itemsemana5">'+
+									'	<div class="grillaMPMonOBj">'+
+											AcumuladosGastos+
+									'	</div>'+
+									'</div>'+
+									'<div class="itemsemana6">'+
+									'	<div class="DetalleGasto">'+
+									'		<div class="DlleGto1">Detalle del gasto por semana</div>'+
+									'			<div class="DlleGto2" id="DlleGto2">'+
+													GastosComercio+
+									'		    </div>'+
+									'	</div>'+
+									'</div>'+
+								'</div>';						
+					$(".grillaResumenitem4").append(cadenaHTML);
+					cadenaHTML ='';
+				});
+
+	
 
 		});
 		}
@@ -257,7 +332,8 @@ $("#cargarotroanio").on("click",function()
 
 		$("#verExtras").on("click",function()
 		{
-			$("#grillaFiltros").hide();
+			$("#grillaFiltros").hide();	
+				$("#grillaGastos").hide();
 			$("#grillaResumen").hide();
 			$("#grillaExtras").toggle();
 		
@@ -297,6 +373,7 @@ $("#cargarotroanio").on("click",function()
 		pedircomercio('#comercios',99);
 			pedircomercio('#gcomercio',99);
 				pedircomercio('#fcomercios',99);
+					pedircomercio('#GEXcomercios',99);
 
 		pedirmonedas('#imonedas',99);
 			pedirmonedas2('#itemgmon2',99);
@@ -315,7 +392,7 @@ $("#cargarotroanio").on("click",function()
 		
 		pedirTickets("#grillaGastos",99);
 			pedirProductos("#gproductos",'');
-		
+			pedirProductos("#GEXproductos",'');
 
 		$("#FechaBuscarDde").on("change",function(){
 			//pedirTickets("#grillaGastos",99);
@@ -359,10 +436,19 @@ $("#cargarotroanio").on("click",function()
 			filtrarComercio("#fcomercios","comerciobuscar");
 		});
 
+		$("#GEXcomerciobuscar").on("change",function(){
+			filtrarComercio("#GEXcomercios","GEXcomerciobuscar");
+		});
+
+
 		$("#productobuscar").on("change",function(){
 			filtrarProducto("#gproductos","productobuscar");
 		});
-		
+		$("#GEXproductobuscar").on("change",function(){
+			filtrarProducto("#GEXproductos","GEXproductobuscar");
+		});
+
+
 
 		
   		  	//<input type="text" class="FormNombres" id="descripciontipo" />
@@ -377,7 +463,16 @@ $("#cargarotroanio").on("click",function()
 		$(".itemAcceso7").hide();
 		$(".itemAcceso8").hide();
 		$(".itemAcceso9").hide();				
-		
+
+		$("#comercios").on("click change",function(){
+
+			var datosComercio =$("#comercios option:selected").text().split('-');	
+				//console.log(datosComercio[0] +' / ' +datosComercio[1]);
+			 $('#comercioNombre').val(datosComercio[0]);
+			 $('#comerciotipo').val(datosComercio[1].trim());
+			 $('#comercioID').val($("#comercios option:selected").val());
+		});
+
 		$("#AgregaComercio").on("click",function(){
 			agregacomercio('#comercios');
 		});
@@ -386,7 +481,7 @@ $("#cargarotroanio").on("click",function()
 			eliminacomercio('#comercios');
 					pedircomercio('#gcomercio',99);
 					pedircomercio('#fcomercios',99);
-
+					pedircomercio('#GEXcomercios',99);
 		});
 		
 		$("#AgregaMP").on("click",function(){
@@ -462,61 +557,116 @@ $("#cargarotroanio").on("click",function()
 			
 			$("#contadorItemsVer").text(contadorDescripcionItems);
 
-			$("#itemsTicket").append(
+			// $("#itemsTicket").append(
+			// 	'<div id="DSCCONTENEDOR_'+contadorDescripcionItems+'" >'+
+			// 		'<div class="descripcion">'+
+			// 		'<input type="hidden" id="idregistro_0" value="0"></input> '+
+			// 		'<div class="descitem1">'+contadorDescripcionItems+'</div>'+
+			// 		'<div class="descitem2">Descripcion</div>'+
+			// 		'<div class="descitem22"><input type="text" id="montoparcial_'+contadorDescripcionItems+'" disabled="true"></input></div>'+
+			// 		'<div class="descitem3">'+
+			// 			'<input type="text" value="" id="descripcion_'+contadorDescripcionItems+'" onclick="sugerir(this.id,'+contadorDescripcionItems+');" onkeyup="sugerir(this.id,'+contadorDescripcionItems+');" /><div id="suggestions_'+contadorDescripcionItems+'" class="suggestions" ></div>'+
+			// 		'</div>'+
+			// 		'<div class="descitem4" onclick="elimnaritem(\'DSCCONTENEDOR_'+contadorDescripcionItems+'\');">(X)</div>'+
+			// 	'</div>'+
+			// 	'<div class="CantPunit">'+
+			// 		'<div class="umedidas CantPunit1">'+
+			// 			 '<div class="itemumed1"></div>'+	
+			// 			  '<div class="itemumed2">'+
+			// 			  '<select id="iumedidas_'+contadorDescripcionItems+'" class="comercioSel">'+
+  		  	// 				'<option value="9999">Unidad medida</option>'+
+  		  	// 			  '</select>'+
+  		  	// 			  '</div>'+
+			// 		'</div>'+
+			// 		'<div class="cantidad CantPunit2">'+
+			// 			'<div class="itemcant1">Cant.</div>'+
+			// 			'<div class="itemcant2">'+
+			// 			'</div>'+
+			// 			'<div class="itemcant3">'+
+			// 				'<input type="number" value="" id="cantidad_'+contadorDescripcionItems+'"  onkeyup="totalCalcular();"  />'+
+			// 			'</div>'+
+			// 			'<div class="itemcant4">'+
+			// 			'</div>'+
+			// 		'</div>'+
+			// 		'<div class="preciounit CantPunit3">'+
+			// 			'<div class="itempun1">Precio Unitario</div>'+
+			// 			'<div class="itempun2">'+
+			// 			'</div>'+
+			// 			'<div class="itempun3">'+
+			// 				'<input type="number" value="" id="pun_'+contadorDescripcionItems+'" onkeyup="totalCalcular();" />'+
+			// 			'</div>'+
+			// 			'<div class="itempun4">'+
+			// 			'</div>'+
+			// 		'</div>'+
+
+			// 	'<div class="descuento CantPunit11">'+
+			// 		'<div class="itemdis1">Descuento</div>'+
+			// 		'<div class="itemdis2">'+
+			// 		'</div>'+
+			// 		'<div class="itemdis3">'+
+			// 			'<input type="number" value="" id="dis_'+contadorDescripcionItems+'" onkeyup="totalCalcular();" ></input>'+
+			// 		'</div>'+
+			// 		'<div class="itemdis4">'+
+			// 			'<input type="checkbox" id="EsRecargo_'+contadorDescripcionItems+'" value="0"  onclick="totalCalcular();" ></input>'+
+			// 		'</div>'+
+			// 	   '</div>'+
+			// 	 '</div>'+
+			// 	'</div>');
+// AGREGAMOS UNA COPIA CON EL NUEVO ESTILO HASTA QUE FUNCIONE 
+	// .descitem1 ID RENGLON 
+	// .descitem2,Titulo Descripción 
+	// .descitem3, eliminar producto 
+	// .descitem4, texto sugerible de producto 
+	// .descitem5,cantidad 
+	// .descitem6, precio unitario 
+	// .descitem7, umedidas 
+	// .descitem8, descuentos 
+	// .descitem9, monto total acumulado.
+			$("#itemsTicket").append( 
 				'<div id="DSCCONTENEDOR_'+contadorDescripcionItems+'" >'+
-					'<div class="descripcion">'+
+					'<div class="idescripcion">'+
 					'<input type="hidden" id="idregistro_0" value="0"></input> '+
-					'<div class="descitem1">'+contadorDescripcionItems+'</div>'+
-					'<div class="descitem2">Descripcion</div>'+
-					'<div class="descitem22"><input type="text" id="montoparcial_'+contadorDescripcionItems+'" disabled="true"></input></div>'+
-					'<div class="descitem3">'+
-						'<input type="text" value="" id="descripcion_'+contadorDescripcionItems+'" onclick="sugerir(this.id,'+contadorDescripcionItems+');" onkeyup="sugerir(this.id,'+contadorDescripcionItems+');" /><div id="suggestions_'+contadorDescripcionItems+'" class="suggestions" ></div>'+
+					'<div class="idescitem1">Item</div>'+
+					'<div class="idescitem11">Producto</div>'+
+					'<div class="idescitem12">Cantidad</div>'+
+					'<div class="idescitem13">Precio Unitario</div>'+
+					'<div class="idescitem14">Unidades</div>'+
+					'<div class="idescitem15">Descuento</div>'+
+					'<div class="idescitem16">Total Parcial</div>'+
+					'<div class="idescitem2" onclick="elimnaritem(\'DSCCONTENEDOR_'+contadorDescripcionItems+'\');">(X)</div>'+
+
+					'<div class="idescitem10">'+contadorDescripcionItems+'</div>'+
+					'<div class="idescitem4">'+
+						'<input type="text" value="" class="descripciontext" id="descripcion_'+contadorDescripcionItems+'" onclick="sugerir(this.id,'+contadorDescripcionItems+');" onkeyup="sugerir(this.id,'+contadorDescripcionItems+');" /><div id="suggestions_'+contadorDescripcionItems+'" class="suggestions" ></div>'+
 					'</div>'+
-					'<div class="descitem4" onclick="elimnaritem(\'DSCCONTENEDOR_'+contadorDescripcionItems+'\');">(X)</div>'+
-				'</div>'+
-				'<div class="CantPunit">'+
-					'<div class="umedidas CantPunit1">'+
-						 '<div class="itemumed1"></div>'+	
-						  '<div class="itemumed2">'+
+					'<div class="icantidad idescitem5">'+
+						'<div class="iitemcant1">'+
+							'<input type="number" value="" id="cantidad_'+contadorDescripcionItems+'"  onkeyup="totalCalcular();"  />'+
+						'</div>'+
+					'</div>'+
+					'<div class="ipreciounit idescitem6">'+
+						'<div class="iitempun1">'+
+							'<input type="number" value="" id="pun_'+contadorDescripcionItems+'" onkeyup="totalCalcular();" />'+
+						'</div>'+
+					'</div>'+
+					'<div class="iumedidas idescitem7">'+
+						  '<div class="iitemumed1">'+
 						  '<select id="iumedidas_'+contadorDescripcionItems+'" class="comercioSel">'+
   		  					'<option value="9999">Unidad medida</option>'+
   		  				  '</select>'+
   		  				  '</div>'+
 					'</div>'+
-					'<div class="cantidad CantPunit2">'+
-						'<div class="itemcant1">Cant.</div>'+
-						'<div class="itemcant2">'+
+					'<div class="idescuento idescitem8">'+
+						'<div class="iitemdis1">'+
+							'<input type="number" value="" id="dis_'+contadorDescripcionItems+'" onkeyup="totalCalcular();" ></input>'+
 						'</div>'+
-						'<div class="itemcant3">'+
-							'<input type="number" value="" id="cantidad_'+contadorDescripcionItems+'"  onkeyup="totalCalcular();"  />'+
-						'</div>'+
-						'<div class="itemcant4">'+
+						'<div class="iitemdis2">'+
+							'<input type="checkbox" id="EsRecargo_'+contadorDescripcionItems+'" value="0"  onclick="totalCalcular();" ></input>'+
 						'</div>'+
 					'</div>'+
-					'<div class="preciounit CantPunit3">'+
-						'<div class="itempun1">Precio Unitario</div>'+
-						'<div class="itempun2">'+
-						'</div>'+
-						'<div class="itempun3">'+
-							'<input type="number" value="" id="pun_'+contadorDescripcionItems+'" onkeyup="totalCalcular();" />'+
-						'</div>'+
-						'<div class="itempun4">'+
-						'</div>'+
-					'</div>'+
-
-				'<div class="descuento CantPunit11">'+
-					'<div class="itemdis1">Descuento</div>'+
-					'<div class="itemdis2">'+
-					'</div>'+
-					'<div class="itemdis3">'+
-						'<input type="number" value="" id="dis_'+contadorDescripcionItems+'" onkeyup="totalCalcular();" ></input>'+
-					'</div>'+
-					'<div class="itemdis4">'+
-						'<input type="checkbox" id="EsRecargo_'+contadorDescripcionItems+'" value="0"  onclick="totalCalcular();" ></input>'+
-					'</div>'+
-				   '</div>'+
-				 '</div>'+
-				'</div>');		
+					'<div class="idescitem9"><input type="text" id="montoparcial_'+contadorDescripcionItems+'" disabled="true"></input></div>'+
+				'</div>');
+// COPIA CON EL NUEVO ESTILO HASTA QUE FUNCIONE										
 				pedirumedidas('#iumedidas_'+contadorDescripcionItems,99);	
 				
 		});
@@ -888,6 +1038,7 @@ $("#cargarotroanio").on("click",function()
   		  </div>
   		  <div  class="itemFCom6">
   		  	<button class="agregarBoton" id="AgregaComercio" />+
+			<input type="hidden" id="comercioID" name="comercioID" value="0" />
   		  </div>  		   
   		</div>	
 </div>
@@ -1089,41 +1240,81 @@ $("#cargarotroanio").on("click",function()
 				</div> <!-- BloqueSubTab -->
 				<div class="BloqueSubTab">
 					<div id="grillaResumen">
-					<div  class="grillaResumenitem1">
-							<div>
-								Elegir Mes
-							</div>	
-							<div>
-								<select id="selectMes">
-									<option>Seleccione mes</option>
-								</select>
-							</div>	
-					</div>
-					<div  class="grillaResumenitem2">
-						<div class="grillaTotales">
-							<div class="gIngreso">
-								<div>$ PESO</div>		
-								<div>333.222,055</div>
-								<div>SAC ACRED</div>
-							</div>
-							<div class="gEgreso">
-								<div>$ PESO</div>		
-								<div>333.222,055</div>
-								<div>SAC ACRED</div>
-							</div>
+						<div  class="grillaResumenitem1">
+								<div>
+									Elegir Mes
+								</div>	
+								<div>
+									<select id="selectMes">
+										<option>Seleccione mes</option>
+									</select>
+								</div>	
+						</div>
+						<div  class="grillaResumenitem2">
+							<div class="grillaTotales">
+								<div class="gIngreso">
+								</div>
+								<div class="gEgreso">
+								</div>
 
-						</div> <!--grillaIngresos-->
+							</div> <!--grillaIngresos-->
+						</div>
+						<div  class="grillaResumenitem3">
+							<!-- MES COMERCIO MONTO DESCUENTOS -->
+							<div class="grillaGastos"></div>
+						</div>
+						<div  class="grillaResumenitem4">
+						</div><!-- 	fin resumen item 4 -->
+						<div  class="grillaResumenitem5"></div>
+						<div  class="grillaResumenitem6"></div>
 					</div>
-					<div  class="grillaResumenitem3">
-						<div class="grillaGastos"></div>
-					</div>
-					<div  class="grillaResumenitem4"></div>
-					<div  class="grillaResumenitem5"></div>
-					<div  class="grillaResumenitem6"></div>
-					</div>
-				</div> <!-- BloqueSubTab -->
+				</div> <!-- BloqueSubTab -->		
 				<div class="BloqueSubTab">
-				<div id="grillaExtras">
+				<div id="grillaExtras" class="GrillaExtras">
+					<!-- CAMBIOS ACA ALIMENTAN AL RESUMEN -->
+						<!-- GRILLA 1 COMERCIOS -->
+						<div class="grillaExtrasCOM">
+							<div  class="itemgexcom1">
+									<!-- ELEGIR COMERCIO -->
+								    <!-- FILTRO COMERCIO -->
+								<div  class="itmGEXCmm1A">Comercio:</div>
+								<div  class="itmGEXCmm1B">
+								<input type="text" id="GEXcomerciobuscar" class="comerciobuscar" value=" " placeholder="nombre comercio a buscar"/> 
+								</div>
+							</div>
+							<div  class="itemgexcom2">
+								<!-- SELECT COMERCIO -->
+								 <select id="GEXcomercios" class="comercioSel">
+										 <option value="9999">Seleccione comercios...</option>
+								 </select>
+								 <button>+</button>
+								 <button>-</button>
+							 </div>	
+							<div class="itemgexcom3">
+									<!-- LISTA DE COMERCIOS ELEGIDOS -->
+							</div>								
+						</div>  	
+						<!-- GRILLA 1 COMERCIOS -->
+						<div class="grillaExtrasPROD">
+							<div class="itemgexprod1">
+			  		  		<!-- ELEGIR PRODUCTO -->	
+							<div class="itmGEXPrd1A">Producto</div>
+			  		  		<!-- FILTRO PRODUCTO -->
+							<div  class="itmGEXPrd1B">
+			  		  		<input type="text" id="GEXproductobuscar" class="productobuscar" value="" placeholder="nombre producto a buscar"/> </div>
+			  		  	</div>
+			  		  	<div class="itemgexprod2">
+			  		  		<!-- SELECT PRODUCTO -->
+							<select id="GEXproductos" class="comercioSel">
+			  		  			<option value="9999">Seleccione producto...</option>
+			  		  		</select>
+								<button>+</button>
+								<button>-</button>
+			  		  	</div>
+						<div class="itemgexprod3">
+								<!-- LISTA DE PRODUCTOS ELEGIDOS -->
+						</div>								
+					</div>  	
 
 				</div>
 				</div> <!-- BloqueSubTab -->

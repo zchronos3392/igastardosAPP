@@ -101,11 +101,12 @@ position: fixed;
 .iconosFunciones
 {
 	display: grid;
-	grid-template-areas: 'icon1 icon2 icon3 icon4 icon5 icon6 icon7 icon8 icon9 ';
+	grid-template-areas: 'icon1 icon2 icon3 icon4 icon5 icon6 icon7';
 	color: #130d2d;
 	background-color: #fff;
 	margin-top: 1em;
 	row-gap: 0.5em;
+	column-gap: 0.5em;	
 }
 
 .iconosFunciones DIV
@@ -150,8 +151,9 @@ position: fixed;
 {
  background-color: #fff;
  display: grid;
- grid-template-rows: 100% 100% ;
+ grid-template-rows: 50% 50% ;
  margin-top: 1rem;
+ margin-bottom: 1rem;
 
 }
 
@@ -170,7 +172,7 @@ position: fixed;
 }
 .gEgreso{
 	display: grid;
-	grid-template-columns: 30% 30% 40%;
+	grid-template-columns:  20% 30% 25% 25%;
 	background-color: steelblue;
 
 	/*bordes redondeados*/
@@ -178,11 +180,26 @@ position: fixed;
 	-moz-border-radius: 7px;
 	-webkit-border-radius: 7px;
 	border-radius: 7px;
-	/*bordes redondeados*/		    
+	/*bordes redondeados*/
+	font-size:15px;		    
 
 }
 
+.gRestante{
+	display: grid;
+	grid-template-columns:  20% 30% 25% 25%;
+	background-color:#ec4ae0;
 
+	/*bordes redondeados*/
+	border: 1px solid #000000;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	/*bordes redondeados*/
+	font-size: small;		    
+
+
+}
 
 .grillaGastos{
 	/*bordes redondeados*/
@@ -762,15 +779,16 @@ grid-gap:1em;
 	 padding: 0em;
 }
 .TabsGeneral .ul{
-	//background-color: lightblue;
+	/* //background-color: lightblue; */
 	display: flex;
 	flex-flow: row nowrap; 
 	justify-content: flex-start;
 	align-items: strecht;
 	list-style-type: none;
 	padding-inline-start: 0px;
-	
+
 }
+
 .TabsGeneral .li{
 	background-color: #1abde6;
 	padding: 1em;
@@ -800,9 +818,86 @@ grid-gap:1em;
 	background-color:#d6ab71;	
 /*	position: absolute;*/
 	top: 0;
-	color:fff;	
+	color:#000;	
 	
 }
+
+/* GRILLAS DE DATA ACUMULADA POR SEMANA */
+.itemsemana1{grid-area:itemsemana1 ;}
+.itemsemana2{grid-area:itemsemana2 ;}
+.itemsemana3{grid-area:itemsemana3 ;}
+.itemsemana4{grid-area:itemsemana4 ;}
+.itemsemana5{grid-area:itemsemana5 ;}
+.itemsemana6{grid-area:itemsemana6 ; background-color: goldenrod; padding: 1rem;}
+.DlleGto1{grid-area: DlleGto1;}
+.DlleGto2{grid-area: DlleGto2;}
+
+.DetalleGasto
+{
+	display: grid;
+	grid-template-areas: 'DlleGto1' 'DlleGto2';
+
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+		border-radius: 7px;
+	/*bordes redondeados*/		    
+	background-color: #fff;
+}
+
+/* .DGastoComX1{}
+.DGastoComX2{} */
+.GastoComX{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;	
+	border: 1px solid #000000;
+}
+
+
+
+.Semana
+{
+	display:grid;
+	grid-template-areas:'itemsemana1 itemsemana2 itemsemana3 itemsemana4'
+						'itemsemana5 itemsemana5 itemsemana5 itemsemana5'
+						'itemsemana6 itemsemana6 itemsemana6 itemsemana6' ;
+	gap: 0.5rem;
+	/* justify-content: start; */
+	align-items: baseline;	
+		background-color: #ff7676;
+}
+
+.grillaMPMonObj
+{
+	display:grid;
+	grid-template-columns: 100%;
+	gap: 0.5rem;
+	justify-content: start;
+	align-items: baseline;	
+	background-color: blanchedalmond;
+
+}
+
+.grillaMPMonObjetivos
+{
+	display:flex;
+	flex-flow: row; 
+	padding-inline-start: 0px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	justify-content: start;
+	align-items: baseline;	
+	background-color: blanchedalmond;
+}
+
+/* GRILLAS DE DATA ACUMULADA POR SEMANA */
+
 
 
 
@@ -873,6 +968,94 @@ background-color: rgba(255,255,255,0.9);
 	grid-area: filtrositem3;
 	}
 
+
+
+/* ESTILO DE LOS EXTRAS EN INDEX */
+.GrillaExtras
+{
+ background-color: #01479c;
+ padding: 1em;
+
+}
+
+.GrillaExtras BUTTON{
+		font-size: 1em;
+		width: 3rem;
+		height: 3rem;
+		transition: .3s;
+		color:#070235;
+		border: none;
+		border-radius: 65%;
+		outline: none;
+		/* background: #dab91f; */
+		background: #ffb3f6;
+		box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+}
+
+.itemgexprod1{
+	grid-area: itemgexprod1;
+	flex-flow: row nowrap; 
+	padding-inline-start: 0px;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	justify-content: start;
+	align-items: baseline;	
+}
+
+.itemgexprod2{
+	grid-area: itemgexprod2;	
+	display: flex;
+	justify-content: flex-start;
+    gap: 0.5em;
+}
+
+.itemgexprod3{
+	grid-area: itemgexprod3;	
+}
+
+.grillaExtrasPROD{
+	display: grid;
+	grid-template-areas: 'itemgexprod1' 'itemgexprod2' 'itemgexprod3';
+	gap: 1em;
+}
+
+.itemgexcom1{
+	grid-area: itemgexcom1;
+	flex-flow: row nowrap; 
+	padding-inline-start: 0px;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	justify-content: start;
+	align-items: baseline;	
+
+}
+
+
+
+.itemgexcom2{
+	grid-area: itemgexcom2;	
+	display: flex;
+	justify-content: flex-start;
+    gap: 0.5em;
+
+}
+
+
+.itemgexcom3{
+	grid-area: itemgexcom3;	
+}
+
+.grillaExtrasCOM{
+	display: grid;
+	grid-template-areas: 'itemgexcom1' 'itemgexcom2' 'itemgexcom3';
+	gap: 1em;
+}
+/* ESTILO DE LOS EXTRAS EN INDEX */
+
 .itmCmm1A{
 	grid-area: itmCmm1A;
 	
@@ -932,7 +1115,6 @@ background-color: rgba(255,255,255,0.9);
 							 'filtrositem70 filtrositem70 filtrositem70';
 		color: #130d2d;
 			background-color: #fff;
-	padding: 0em;
 
 }
 
@@ -1294,8 +1476,8 @@ position: fixed;
 	/*bordes redondeados*/		    
 	background-color:#fff;	
 	padding: 1rem;
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 0%;
+	margin-right: 0%;
 }
 
 
@@ -1341,9 +1523,9 @@ position: fixed;
 			    'itemaccioneg1 itemaccioneg2 itemaccioneg22 itemaccioneg3 itemaccioneg3'
 				'itemaccioneg4 itemaccioneg4 itemaccioneg43  itemaccioneg44 itemaccioneg44'
 				'itemaccioneg45 itemaccioneg45 itemaccioneg45  itemaccioneg45 itemaccioneg45'
-				'itemaccioneg51 itemaccioneg51 itemaccioneg51  itemaccioneg51 itemaccioneg51'
+				'itemaccioneg51 itemaccioneg51 itemaccioneg6  itemaccioneg7 itemaccioneg7'
 			 	'itemaccioneg52 itemaccioneg52 itemaccioneg52  itemaccioneg52 itemaccioneg52'
-				'itemaccioneg5 itemaccioneg6 itemaccioneg6  itemaccioneg7 itemaccioneg7'
+				'itemaccioneg5 itemaccioneg5 itemaccioneg5  itemaccioneg5 itemaccioneg5'
 				'itemaccioneg8 itemaccioneg8 itemaccioneg8  itemaccioneg8 itemaccioneg8';
 	/*bordes redondeados*/
 		border: 1px solid #000000;
@@ -1544,6 +1726,7 @@ input[type=number] { -moz-appearance:textfield; }
 	color: black;
 	background-color:#fff;	
 	grid-gap: 0.2rem;		
+	height: 100%;
 }
 
 
@@ -1574,9 +1757,14 @@ input[type=number] { -moz-appearance:textfield; }
 }
 .itemgmon2{
 	grid-area:itemgmon2;
-	display:grid;
-	grid-template-columns: 30% 30% 30% ;	
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items: baseline;	
 }
+
 .gMon{
 	overflow: hidden;	
 	margin-top: 0em;
@@ -1587,9 +1775,10 @@ input[type=number] { -moz-appearance:textfield; }
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
 	/*bordes redondeados*/		    
-	padding:0.3rem;
+	/* padding:0.3rem; */
 	color: black;
 	background-color:#fff;	
+	/* height: 100%; */
 }
 	
 .itemgmon BUTTON{
@@ -1664,15 +1853,17 @@ input[type=number] { -moz-appearance:textfield; }
 	overflow: hidden;	
 	margin-top: 0em;
 	display: grid;
-	grid-template-areas: 'itemgTipoEI1 itemgTipoEI2 itemgTipoEI3';
+	grid-template-areas: 'itemgTipoEI1 itemgTipoEI1 '
+						 'itemgTipoEI2 itemgTipoEI3';
 	/*bordes redondeados*/
 		border: 1px solid #000000;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
 	/*bordes redondeados*/		    
-	padding:0.3rem;
+	/* padding:0.3rem; */
 	color: black;
 	background-color:#fff;	
+	/* height: 100%; */
 }
 
 .gTipoEI BUTTON.inputI{
@@ -1716,8 +1907,13 @@ input[type=number] { -moz-appearance:textfield; }
 }
 .itemgmpa2{
 	grid-area:itemgmpa2;
-	display:grid;
-	grid-template-columns: 30% 30% 30% ;	
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items: baseline;	
+
 }
 
 
@@ -1731,9 +1927,10 @@ input[type=number] { -moz-appearance:textfield; }
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
 	/*bordes redondeados*/		    
-	padding:0.3rem;
+	/* padding:0.3rem; */
 	color: black;
 	background-color:#fff;	
+	/* height: 100%; */
 }
 
 
@@ -1763,11 +1960,155 @@ input[type=number] { -moz-appearance:textfield; }
 	transition: .3s;
 }
 
-.descitem1{grid-area: descitem1;}
-.descitem2{grid-area: descitem2;}
-.descitem22{grid-area: descitem22;}
-.descitem3{grid-area: descitem3;width:100%;}
-.descitem4{grid-area: descitem4;text-align: right;}
+/* CAMBIOS EN LA FORMA DE MOSTRAR LA CARGA DEL I TICKET.. */
+.idescitem1{grid-area: idescitem1;} /* .descitem2,ID RENGLON */
+	.idescitem11{grid-area: idescitem11;} /* .descitem2,ID RENGLON */
+	.idescitem12{grid-area: idescitem12;} /* .descitem2,ID RENGLON */
+	.idescitem13{grid-area: idescitem13;} /* .descitem2,ID RENGLON */
+	.idescitem14{grid-area: idescitem14;} /* .descitem2,ID RENGLON */
+	.idescitem15{grid-area: idescitem15;} /* .descitem2,ID RENGLON */
+	.idescitem16{grid-area: idescitem16;} /* .descitem2,ID RENGLON */
+.idescitem2{grid-area: idescitem2;text-align: right;} /* .descitem4, eliminar producto */
+.idescitem3{grid-area: idescitem3;} /* vacio */ 
+
+.idescitem4{grid-area: idescitem4;gap: 0.5em;} /* .descitem4, texto sugerible de producto */
+.idescitem4 .descripciontext{vertical-align: bottom;}
+.idescitem5{grid-area: idescitem5;} /* cantidad */ 
+.idescitem6{grid-area: idescitem6;} /* precio unitario */
+.idescitem7{grid-area: idescitem7;} /* umedidas */
+.idescitem8{grid-area: idescitem8;} /* descuentos */
+.idescitem9{grid-area: idescitem9;} /* .descitem3,monto total acumulado. */
+.idescitem10{grid-area: idescitem10;} /* .descitem10,numero de renglon. */
+.idescripcion{
+	overflow: hidden;	
+	margin-top: 1em;
+	display: grid;
+	/* PRODUCTO - CANTIDAD - PRECIO UNITARIO - UNIDADES -DESCUENTO - TOTAL */
+	grid-template-areas: 'idescitem1  idescitem11 idescitem11 idescitem12 idescitem13 idescitem14 idescitem15  idescitem16 idescitem2'
+						 'idescitem10 idescitem4  idescitem4  idescitem5  idescitem6  idescitem7   idescitem8  idescitem9  idescitem9';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	padding:1em;
+	color: black;
+	background-color:#fff;	
+	grid-gap: 0.2rem;			
+}
+
+.iitemcant1{grid-area: iitemcant1;}
+
+.icantidad{
+	overflow: hidden;	
+	display: grid;
+	grid-template-areas: 'iitemcant1';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	/* padding:1em; */
+	color: black;
+	background-color:#fff;	
+	grid-gap: 0.2rem;	
+}
+
+.iitempun1{grid-area: iitempun1;}
+
+.ipreciounit{
+	overflow: hidden;	
+	display: grid;
+	grid-template-areas: 'iitempun1';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	/* padding:1em; */
+	color: black;
+	background-color:#fff;	
+	grid-gap: 0.2rem;			
+}
+
+
+.iitemumed1{
+	grid-area: iitemumed1;
+}	
+
+.iumedidas{
+	display: grid;
+	grid-template-areas: 'iitemumed1';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/	
+	/* padding:1em;	    	 */
+}
+
+.iumedidas SELECT {
+  width: 100%;
+}
+
+.iMonedaMPago1{
+	grid-area:iMonedaMPago1; 
+}
+.iMonedaMPago2{
+		grid-area:iMonedaMPago2; 
+}
+.iMonedaMPago{
+	display: grid;
+	grid-template-areas: 'iMonedaMPago1 iMonedaMPago2';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+}
+.iitemdis1{grid-area: iitemdis1;}
+.iitemdis2 input[type="checkbox"] {
+	/* width: 1em;
+	height: 1.5rem; */
+/*** estilo alocado dell SELECT *****/
+    display: inline-block;
+    margin: 0rem;
+    border: 1px solid #fff;
+}
+
+.idescuento{
+	overflow: hidden;	
+	display: grid;
+	grid-template-areas: 'iitemdis1 iitemdis2';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	color: black;
+	background-color:#fff;	
+	padding: 0.5rem;
+	/* grid-gap: 0.2rem;			 */
+}
+
+.idescuento input[type="checkbox"] {
+	width: 1em;
+	height: 1.5rem;
+/*** estilo alocado dell SELECT *****/
+    display: inline-block;
+    margin: 0rem;
+    border: 1px solid #fff;
+}
+
+.idescuento input[type="number"] {
+	width: 90%;
+	height: 1.5rem;
+/*** estilo alocado dell SELECT *****/
+    display: inline-block;
+    margin: 0rem;
+    border: 1px solid #fff;
+}
+/* CAMBIOS EN LA FORMA DE MOSTRAR LA CARGA DEL I TICKET.. */
 
 .descripcion{
 	overflow: hidden;	
@@ -2066,6 +2407,166 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 /*  540px) or ( (min-width: 540px) and (max-width: */
+@media (min-width: 720px) and (max-width:980px) {
+
+/* CAMBIOS EN LA FORMA DE MOSTRAR LA CARGA DEL I TICKET.. */
+.idescitem1{grid-area: idescitem1;} /* .descitem2,ID RENGLON */
+	.idescitem11{grid-area: idescitem11;} /* .descitem2,ID RENGLON */
+	.idescitem12{grid-area: idescitem12;} /* .descitem2,ID RENGLON */
+	.idescitem13{grid-area: idescitem13;} /* .descitem2,ID RENGLON */
+	.idescitem14{grid-area: idescitem14;} /* .descitem2,ID RENGLON */
+	.idescitem15{grid-area: idescitem15;} /* .descitem2,ID RENGLON */
+	.idescitem16{grid-area: idescitem16;} /* .descitem2,ID RENGLON */
+.idescitem2{grid-area: idescitem2;text-align: right;} /* .descitem4, eliminar producto */
+.idescitem3{grid-area: idescitem3;} /* vacio */ 
+
+.idescitem4{grid-area: idescitem4;gap: 0.5em;} /* .descitem4, texto sugerible de producto */
+.idescitem4 .descripciontext{vertical-align: bottom;}
+.idescitem5{grid-area: idescitem5;} /* cantidad */ 
+.idescitem6{grid-area: idescitem6;} /* precio unitario */
+.idescitem7{grid-area: idescitem7;} /* umedidas */
+.idescitem8{grid-area: idescitem8;} /* descuentos */
+.idescitem9{grid-area: idescitem9;} /* .descitem3,monto total acumulado. */
+.idescitem10{grid-area: idescitem10;} /* .descitem10,numero de renglon. */
+.idescripcion{
+	overflow: hidden;	
+	margin-top: 1em;
+	display: grid;
+	/* PRODUCTO - CANTIDAD - PRECIO UNITARIO - UNIDADES -DESCUENTO - TOTAL */
+	grid-template-areas: 'idescitem16 idescitem9  idescitem2'
+						 'idescitem1  idescitem11 idescitem11'
+						 'idescitem10 idescitem4  idescitem4' 
+						 'idescitem12 idescitem13 idescitem13'
+						 'idescitem5  idescitem6  idescitem6 '
+						 'idescitem14 idescitem15 idescitem15'
+						 'idescitem7   idescitem8 idescitem8';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	padding:1em;
+	color: black;
+	background-color:#fff;	
+	grid-gap: 0.2rem;			
+}
+
+.iitemcant1{grid-area: iitemcant1;}
+
+.icantidad{
+	overflow: hidden;	
+	display: grid;
+	grid-template-areas: 'iitemcant1';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	/* padding:1em; */
+	color: black;
+	background-color:#fff;	
+	grid-gap: 0.2rem;	
+}
+
+.iitempun1{grid-area: iitempun1;}
+
+.ipreciounit{
+	overflow: hidden;	
+	display: grid;
+	grid-template-areas: 'iitempun1';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	/* padding:1em; */
+	color: black;
+	background-color:#fff;	
+	grid-gap: 0.2rem;			
+}
+
+
+.iitemumed1{
+	grid-area: iitemumed1;
+}	
+
+.iumedidas{
+	display: grid;
+	grid-template-areas: 'iitemumed1';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/	
+	/* padding:1em;	    	 */
+}
+
+.iumedidas SELECT {
+  width: 100%;
+}
+
+.iMonedaMPago1{
+	grid-area:iMonedaMPago1; 
+}
+.iMonedaMPago2{
+		grid-area:iMonedaMPago2; 
+}
+.iMonedaMPago{
+	display: grid;
+	grid-template-areas: 'iMonedaMPago1 iMonedaMPago2';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+}
+.iitemdis1{grid-area: iitemdis1;}
+.iitemdis2 input[type="checkbox"] {
+	/* width: 1em;
+	height: 1.5rem; */
+/*** estilo alocado dell SELECT *****/
+    display: inline-block;
+    margin: 0rem;
+    border: 1px solid #fff;
+}
+
+.idescuento{
+	overflow: hidden;	
+	display: grid;
+	grid-template-areas: 'iitemdis1 iitemdis2';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	color: black;
+	background-color:#fff;	
+	padding: 0.5rem;
+	/* grid-gap: 0.2rem;			 */
+}
+
+.idescuento input[type="checkbox"] {
+	width: 1em;
+	height: 1.5rem;
+/*** estilo alocado dell SELECT *****/
+    display: inline-block;
+    margin: 0rem;
+    border: 1px solid #fff;
+}
+
+.idescuento input[type="number"] {
+	width: 90%;
+	height: 1.5rem;
+/*** estilo alocado dell SELECT *****/
+    display: inline-block;
+    margin: 0rem;
+    border: 1px solid #fff;
+}
+/* CAMBIOS EN LA FORMA DE MOSTRAR LA CARGA DEL I TICKET.. */
+
+
+
+}
 
 @media (max-width: 719px) {
 
@@ -2110,7 +2611,6 @@ position: fixed;
 	color: #130d2d;
 	background-color: #fff;
 	margin-top: 1em;
-	padding: auto;
 }
 
 .iconosFunciones DIV
@@ -2120,7 +2620,7 @@ position: fixed;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
 	/*bordes redondeados*/		    
-	width: 7em;
+	width: 6em;
 	height: 3em;
 	font-style: italic;
 	text-align: center;
@@ -2628,7 +3128,6 @@ padding: 0.5em;
 /* ESTILOS DEL ABM INSERT DE OBJETIVOS */
 
 .AccionesEgresos{
-
 	overflow: hidden;	
 	display: grid;
 	grid-template-areas: 'itemaccioneg1 itemaccioneg2 itemaccioneg22 itemaccioneg3'
@@ -2638,15 +3137,17 @@ padding: 0.5em;
 			 			 'itemaccioneg51 itemaccioneg51 itemaccioneg51  itemaccioneg51'			
 			 			 'itemaccioneg52 itemaccioneg52 itemaccioneg52  itemaccioneg52'									 'itemaccioneg6 itemaccioneg6 itemaccioneg7  itemaccioneg7'
 						 'itemaccioneg8 itemaccioneg8 itemaccioneg8  itemaccioneg8';
-	/*bordes redondeados*/
-		border: 1px solid #000000;
+
+  border: 1px solid #000000;
+		/*bordes redondeados*/
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
-	/*bordes redondeados*/		    
-	padding:0.5rem;
+		border-radius: 7px;		
+		/*bordes redondeados*/		    
+	padding:0rem;
 	color: black;
 	background-color:#fff;	
-	grid-gap: 0.2rem;
+	grid-gap: 0rem;
 	text-align: center;			
 }
 
@@ -2667,6 +3168,162 @@ padding: 0.5em;
 .itemsTicket{
 	margin-top: 4em;
 }
+
+
+/* CAMBIOS EN LA FORMA DE MOSTRAR LA CARGA DEL I TICKET.. */
+.idescitem1{grid-area: idescitem1;} /* .descitem2,ID RENGLON */
+	.idescitem11{grid-area: idescitem11;} /* .descitem2,ID RENGLON */
+	.idescitem12{grid-area: idescitem12;} /* .descitem2,ID RENGLON */
+	.idescitem13{grid-area: idescitem13;} /* .descitem2,ID RENGLON */
+	.idescitem14{grid-area: idescitem14;} /* .descitem2,ID RENGLON */
+	.idescitem15{grid-area: idescitem15;} /* .descitem2,ID RENGLON */
+	.idescitem16{grid-area: idescitem16;} /* .descitem2,ID RENGLON */
+.idescitem2{grid-area: idescitem2;text-align: right;} /* .descitem4, eliminar producto */
+.idescitem3{grid-area: idescitem3;} /* vacio */ 
+
+.idescitem4{grid-area: idescitem4;gap: 0.5em;} /* .descitem4, texto sugerible de producto */
+.idescitem4 .descripciontext{vertical-align: bottom;}
+.idescitem5{grid-area: idescitem5;} /* cantidad */ 
+.idescitem6{grid-area: idescitem6;} /* precio unitario */
+.idescitem7{grid-area: idescitem7;} /* umedidas */
+.idescitem8{grid-area: idescitem8;} /* descuentos */
+.idescitem9{grid-area: idescitem9;} /* .descitem3,monto total acumulado. */
+.idescitem10{grid-area: idescitem10;} /* .descitem10,numero de renglon. */
+.idescripcion{
+	overflow: hidden;	
+	margin-top: 1em;
+	display: grid;
+	/* PRODUCTO - CANTIDAD - PRECIO UNITARIO - UNIDADES -DESCUENTO - TOTAL */
+	grid-template-areas: 'idescitem16 idescitem9  idescitem2'
+						 'idescitem1  idescitem11 idescitem11'
+						 'idescitem10 idescitem4  idescitem4' 
+						 'idescitem12 idescitem13 idescitem13'
+						 'idescitem5  idescitem6  idescitem6 '
+						 'idescitem14 idescitem15 idescitem15'
+						 'idescitem7   idescitem8 idescitem8';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	padding:1em;
+	color: black;
+	background-color:#fff;	
+	grid-gap: 0.2rem;			
+}
+
+.iitemcant1{grid-area: iitemcant1;}
+
+.icantidad{
+	overflow: hidden;	
+	display: grid;
+	grid-template-areas: 'iitemcant1';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	/* padding:1em; */
+	color: black;
+	background-color:#fff;	
+	grid-gap: 0.2rem;	
+}
+
+.iitempun1{grid-area: iitempun1;}
+
+.ipreciounit{
+	overflow: hidden;	
+	display: grid;
+	grid-template-areas: 'iitempun1';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	/* padding:1em; */
+	color: black;
+	background-color:#fff;	
+	grid-gap: 0.2rem;			
+}
+
+
+.iitemumed1{
+	grid-area: iitemumed1;
+}	
+
+.iumedidas{
+	display: grid;
+	grid-template-areas: 'iitemumed1';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/	
+	/* padding:1em;	    	 */
+}
+
+.iumedidas SELECT {
+  width: 100%;
+}
+
+.iMonedaMPago1{
+	grid-area:iMonedaMPago1; 
+}
+.iMonedaMPago2{
+		grid-area:iMonedaMPago2; 
+}
+.iMonedaMPago{
+	display: grid;
+	grid-template-areas: 'iMonedaMPago1 iMonedaMPago2';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+}
+.iitemdis1{grid-area: iitemdis1;}
+.iitemdis2 input[type="checkbox"] {
+	/* width: 1em;
+	height: 1.5rem; */
+/*** estilo alocado dell SELECT *****/
+    display: inline-block;
+    margin: 0rem;
+    border: 1px solid #fff;
+}
+
+.idescuento{
+	overflow: hidden;	
+	display: grid;
+	grid-template-areas: 'iitemdis1 iitemdis2';
+	/*bordes redondeados*/
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	/*bordes redondeados*/		    
+	color: black;
+	background-color:#fff;	
+	padding: 0.5rem;
+	/* grid-gap: 0.2rem;			 */
+}
+
+.idescuento input[type="checkbox"] {
+	width: 1em;
+	height: 1.5rem;
+/*** estilo alocado dell SELECT *****/
+    display: inline-block;
+    margin: 0rem;
+    border: 1px solid #fff;
+}
+
+.idescuento input[type="number"] {
+	width: 90%;
+	height: 1.5rem;
+/*** estilo alocado dell SELECT *****/
+    display: inline-block;
+    margin: 0rem;
+    border: 1px solid #fff;
+}
+/* CAMBIOS EN LA FORMA DE MOSTRAR LA CARGA DEL I TICKET.. */
 
 
 

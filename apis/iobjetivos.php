@@ -41,7 +41,9 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 						// Coleccion de SUBOBJETIVOS...
 						$subObjetivos = objetivos::getAllSubObjetivos($filtro);
 						$Objetivos['0']['SubObjetivos']=$subObjetivos;
-						// CREANDO VECTOR DE FRACCIONES DE TIEMPO
+						// --------------------------------------------------------------
+						// :: INICIO BLOQUE :: CREANDO VECTOR DE FRACCIONES DE TIEMPO
+						// -----------------------------------------------------------------
 						$FHasta = new DateTime($Objetivos['0']['FechaHastaVig']);
 						//fechas en modo STRING
 						//	$FHastaS = "'".$Objetivos['0']['FechaHastaVig']."'";
@@ -80,17 +82,17 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 							        $intervaloFechas[$i]['FechaFin'] 	= $range[$i+1];
 						    }
 							// FIN::creando coleccion con los porcentajes y la data parametrizada
+						// --------------------------------------------------------------
+						// :: FIN BLOQUE :: CREANDO VECTOR DE FRACCIONES DE TIEMPO
+						// -----------------------------------------------------------------
 					//ETAPA 1
-					//	$MediosPago = MediosPago::getAll();
-					//ahora recorro $subObjetivos
-						//print_r($MediosPago);
-						//RECORRER EL INTERVALO DE FECHAS GENERICO
+					// Recorro $subObjetivos
+					//RECORRER EL INTERVALO DE FECHAS GENERICO
 					foreach ($intervaloFechas as $clave => $FechaAnalisis)
 					{
 						$contadorMedios = 0;	
 						$intervaloMEDIOP =[];	
 						foreach ($subObjetivos as $claveSOBX => $subobjetivox)
-						//foreach ($MediosPago as $claveMP => $mediopago)
 						{
 							  $porcentajeAnalisis=objetivos::PorcentajeCumplidoFraccion(
 							  		$FechaAnalisis['FechaInicio'],
@@ -116,10 +118,11 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 					 // $intervaloFechasX[$mediopago['nombreabrev']]=$intervaloFechas;	
 					} // intervalos, calculo a traves de los medios de pago.
 					//FIN :: ETAPA 1					
+
 					//ETAPA 2
-					  //----------------------------------------
-					  //AHORA TRABAJO CON EL INTERVALO TOTAL...
-					  //----------------------------------------
+					  //--------------------------------------------------------------
+					  //::INICIO :: INTERVALO TOTAL...INCLUYE LOS BORDES
+					  //--------------------------------------------------------------
 					$intervaloCompleto[0]['FechaTotalIni'] = $Objetivos['0']['FechaDesdeVig'];
 					$intervaloCompleto[0]['FechaTotalFin'] 	= $Objetivos['0']['FechaHastaVig'];
 					$contadorMedios = 0;	
@@ -162,10 +165,10 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 					
 				  $intervaloCompleto[0]['OBJETIVODETALLE']= $intervaloMEDIOP;
 				
-				//----------------------------------------------------
-				//	AHORA TRABAJO CON EL INTERVALO TOTAL...
-				//-----------------------------------------------------
-	              } // hay objetivos cargados...						
+					  //--------------------------------------------------------------
+					  //::FIN :: INTERVALO TOTAL...INCLUYE LOS BORDES
+					  //--------------------------------------------------------------
+					} // hay objetivos cargados...						
 	
 					break;
 

@@ -41,7 +41,14 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 				     if(isset($_GET['ctipo']))  $tipo = $_GET['ctipo'];
 				     if(isset($_POST['ctipo']))  $tipo = $_POST['ctipo'];
 
-						$Comercios = Comercios::insert($nombre,$tipo);			
+					 $comercioid=0; // en cero no hace nada, en 1 achica la lista
+				     if(isset($_GET['cID']))  $comercioid = $_GET['cID'];
+				     if(isset($_POST['cID']))  $comercioid = $_POST['cID'];
+
+						if($comercioid == 0)
+							$Comercios = Comercios::insert($nombre,$tipo);
+						else
+							$Comercios = Comercios::update($comercioid,$nombre,$tipo);
 					break;					
 		case "DEL":
 						$Comercios = Comercios::delete($filtro);			

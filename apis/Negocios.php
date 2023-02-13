@@ -117,7 +117,7 @@ class Comercios
             //echo json_encode($row);
 
         } catch (PDOException $e) {
-            // Aquí puedes clasificar el error dependiendo de la excepción
+            // Aquï¿½ puedes clasificar el error dependiendo de la excepciï¿½n
             // para presentarlo en la respuesta Json
             return -1;
         }
@@ -131,17 +131,18 @@ class Comercios
      * @param $nombre      nuevo titulo
      * 
      */
-    public static function update($ComercioId, $descripcionComercio)
+    public static function update($ComercioId, $descripcionComercio,$tipo)
     {
         // Creando consulta UPDATE
         $consulta = "UPDATE gasnegocios
-        				SET descripcionComercio ='$descripcionComercio' 
+        				SET descripcionComercio ='$descripcionComercio' ,
+                            tipo = '$tipo'
         					WHERE ComercioId=$ComercioId ";
 //		echo "$consulta";
         // Preparar la sentencia
         $cmd = Database::getInstance()->getDb()->prepare($consulta);
         // Relacionar y ejecutar la sentencia
-        $cmd->execute(array($ComercioId, $descripcionComercio));
+        $cmd->execute(array($ComercioId, $descripcionComercio,$tipo));
 
         //return $cmd;
 		echo json_encode($cmd);
@@ -151,7 +152,7 @@ class Comercios
      * Insertar un nuevo categoria
      *
      * @param $idcategoria      titulo del nuevo registro
-     * @param $nombre descripción del nuevo registro
+     * @param $nombre descripciï¿½n del nuevo registro
      * @return PDOStatement
      */
     public static function insert($descripcionComercio,$tipoComercio){
@@ -173,7 +174,7 @@ class Comercios
      * Eliminar el registro con el identificador especificado
      *
      * @param $idcategoria identificador de la categoria
-     * @return bool Respuesta de la eliminación
+     * @return bool Respuesta de la eliminaciï¿½n
      */
     public static function delete($ComercioId)
     {
