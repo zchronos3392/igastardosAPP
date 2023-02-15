@@ -145,7 +145,7 @@ class iogastos
 			$consulta = "SELECT 
 					    negocios.descripcionComercio,
 						mp.nombreabrev,
-						concat(mon.abrmoneda,' ',mon.descripcionmoneda) as 'moneda',   
+						mon.abrmoneda as 'moneda',   
 						(
 						ROUND(   
 							Sum(IF(md.montoCuota <>0,md.montoCuota,md.gasPUnit * md.gasCant +

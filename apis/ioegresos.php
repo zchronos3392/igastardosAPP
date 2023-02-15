@@ -373,7 +373,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 								// ajuste poor sino encuentra nada o no hay valores cargados			
 
 								$intervaloMEDIOP[$contadorMedios]['porcentaje']=$porcentajeCalculo;
-								$intervaloMEDIOP[$contadorMedios]['montoTotal']= $porcentajeAnalisis['0']['MONTOTF'];
+								$intervaloMEDIOP[$contadorMedios]['montoTotal']= round($porcentajeAnalisis['0']['MONTOTF'],2);
 								$intervaloMEDIOP[$contadorMedios]['medionombre']= $subobjetivox['nombreabrev'];
 								$intervaloMEDIOP[$contadorMedios]['monedanombre']= $subobjetivox['abrmoneda'];
 								$intervaloMEDIOP[$contadorMedios]['montoFraccion']= $subobjetivox['fraccionMonto'];
