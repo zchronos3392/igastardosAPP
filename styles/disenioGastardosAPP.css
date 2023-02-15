@@ -142,21 +142,49 @@ position: fixed;
 
 .grillaResumenitem1
 {
-	display: grid;
-	grid-template-columns: 30% 70%;
+	display: flex;
+	flex-direction: row;
+	column-gap: 3em;
+	padding: 1rem;
+	justify-content: space-around;
+	grid-area: gResumenitem1;
 }
+.grillaResumenitem1 SELECT
+{
+	width: 100%;
+}
+
+.grillaResumenitem2{grid-area: gResumenitem2;}
+.grillaResumenitem3
+{
+	display: grid;
+	grid-template-columns: 100%;
+	height: 100%;
+	grid-area: gResumenitem3;
+}
+.grillaResumenitem4{grid-area: gResumenitem4;}
+.grillaResumenitem5{grid-area: gResumenitem5;}
+.grillaResumenitem6{grid-area: gResumenitem6;}
 
 .grillaResumen
 {
 	display: grid;
-	grid-template-rows: 18% 94%;
+	grid-template-areas: 'gResumenitem1'
+						 'gResumenitem2' 
+						 'gResumenitem3' 
+						 'gResumenitem4' 
+						 'gResumenitem5' 
+						 'gResumenitem6';
+grid-gap: 1em;
 }
 
+.grillaTotales1{grid-area: grillaTotales1;}
+.grillaTotales2{grid-area: grillaTotales2;}
 .grillaTotales
 {
  background-color: #fff;
  display: grid;
- grid-template-rows: 50% 50% ;
+ grid-template-areas: 'grillaTotales1' 'grillaTotales2' ;
  margin-top: 1rem;
  margin-bottom: 1rem;
 
@@ -165,8 +193,8 @@ position: fixed;
 .gIngreso{
 	display: grid;
 	grid-template-columns: 30% 30% 40%;
-	background-color: #eb8f14;
-
+	background-color: #a6e2ec;
+	color: #000;
 	/*bordes redondeados*/
 	border: 1px solid #000000;
 	-moz-border-radius: 7px;
@@ -175,16 +203,21 @@ position: fixed;
 	/*bordes redondeados*/		    
 
 }
+.gEgreso1{  grid-area: gEgreso1;}
+.gEgreso2{  grid-area: gEgreso2;}
+.gEgreso3{  grid-area: gEgreso3;}
+.gEgreso4{  grid-area: gEgreso4;}
+
 .gEgreso{
 	display: grid;
-	grid-template-columns:  20% 30% 25% 25%;
+	grid-template-areas: ' gEgreso1 gEgreso2 gEgreso3 gEgreso4';
 	background-color: steelblue;
 
 	/*bordes redondeados*/
-	border: 1px solid #000000;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;
+		border: 1px solid #000000;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+		border-radius: 7px;
 	/*bordes redondeados*/
 	font-size:15px;		    
 
@@ -193,8 +226,8 @@ position: fixed;
 .gRestante{
 	display: grid;
 	grid-template-columns:  20% 30% 25% 25%;
-	background-color:#ec4ae0;
-
+	background-color:#a8cf88;
+	
 	/*bordes redondeados*/
 	border: 1px solid #000000;
 	-moz-border-radius: 7px;
@@ -820,10 +853,11 @@ grid-gap:1em;
 }
 .TabsGeneral .BloqueSubTab{
 	/* background-color:#e68e1a; */
-	background-color:#d6ab71;	
+	/* background-color:#d6ab71;	 */
+	background-color: #002234;
 /*	position: absolute;*/
 	top: 0;
-	color:#000;	
+	color:#fff;	
 	
 }
 
@@ -848,7 +882,7 @@ grid-gap:1em;
 		-webkit-border-radius: 7px;
 		border-radius: 7px;
 	/*bordes redondeados*/		    
-	background-color: #fff;
+	background-color: #47b7cd;
 }
 
 /* .DGastoComX1{}
@@ -885,7 +919,7 @@ grid-gap:1em;
 	justify-content: start;
 	align-items: baseline;	
 	background-color: blanchedalmond;
-
+	color: #000;
 }
 
 .grillaMPMonObjetivos

@@ -84,7 +84,7 @@ function pedirResumen(mesId)
         if(r['estado'] == 1)
 		{
 		 $(".grillaTotales").empty();	
-		 $(".grillaResumenitem4").empty();
+		 $(".grillaResumenitem3").empty();
 		 
          $(r['gastos']).each(function(i, v)
 		    { // indice, valor
@@ -113,16 +113,17 @@ function pedirResumen(mesId)
 								'</div>';	
 					$(".grillaTotales").append(cadenaHTML);
 				});
-
+				cadenaHTML='';
+				// hay varios egresos, por medio de pago y moneda
 				$(v['Egreso']).each(function(j, w)
 		        { // indice, valor
-					cadenaHTML='<div class="gEgreso">'+
-								'<div>'+w.descripcionmediopago+'</div>'+		
-								'<div>'+w.moneda+'</div>'+		
-								'<div>'+w.Monto+'</div>'+
-								'<div> Gtos de '+$("#selectMes option:selected").text()+'</div>'+
-								'</div>';	
-					$(".grillaTotales").append(cadenaHTML);
+					 cadenaHTML ='<div class="gEgreso">'+
+								    '<div class="gEgreso1">'+w.descripcionmediopago+'</div>'+		
+								    '<div class="gEgreso2">'+w.moneda+'</div>'+		
+								    '<div class="gEgreso3">'+w.Monto+'</div>'+
+								     '<div class="gEgreso4"> Gtos de '+$("#selectMes option:selected").text()+'</div>'+
+								  '</div>';	
+						$(".grillaTotales").append(cadenaHTML);
 				});
 				// 	
 				cadenaHTML ='';
@@ -188,12 +189,12 @@ function pedirResumen(mesId)
 										'	</div>'+
 										'</div>'+
 									'</div>';						
-						$(".grillaResumenitem4").append(cadenaHTML);
+						$(".grillaResumenitem3").append(cadenaHTML);
 						cadenaHTML ='';
 					});
 			    }
 			    else
-			    	$(".grillaResumenitem4").append('No hay objetivos cargados.No es posible el analisis');
+			    	$(".grillaResumenitem3").append('<div>No hay objetivos cargados.No es posible el analisis</div>');
 		    });
 		}
 		else {			
@@ -327,7 +328,7 @@ $("#cargarotroanio").on("click",function()
 		
 		});	
 
-		$("#selectMes").on("click change",function(){
+		$("#selectMes").on("change click",function(){
 				pedirResumen( $("#selectMes").val() );
 
 		});
@@ -1255,16 +1256,17 @@ $("#cargarotroanio").on("click",function()
 						</div>
 						<div  class="grillaResumenitem2">
 							<div class="grillaTotales">
-								<div class="gIngreso">
+								<div class="grillaTotales1">
+									<div class="gIngreso"></div>
+								</div>	
+								<div class="grillaTotales2">							
+									<div class="gEgreso"></div>
 								</div>
-								<div class="gEgreso">
-								</div>
-
 							</div> <!--grillaIngresos-->
 						</div>
 						<div  class="grillaResumenitem3">
 							<!-- MES COMERCIO MONTO DESCUENTOS -->
-							<div class="grillaGastos"></div>
+							<!-- <div class="grillaGastos"></div> -->
 						</div>
 						<div  class="grillaResumenitem4">
 						</div><!-- 	fin resumen item 4 -->
