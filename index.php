@@ -172,7 +172,7 @@ function pedirResumen(mesId)
 					//  console.log(GastosComercio);
 						cadenaHTML += '<div class="Semana">'+
 									'<div class="itemsemana1">SEMANA</div>'+
-									'<div class="itemsemana2">'+i+'</div>'+
+									'<div class="itemsemana2">'+(i+1)+'</div>'+
 										'<div class="itemsemana3">MES</div>'+
 										'<div class="itemsemana4">'+$("#selectMes option:selected").text()+'</div>'+
 										'<div class="itemsemana5">'+
