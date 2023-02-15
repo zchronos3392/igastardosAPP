@@ -394,8 +394,8 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 						$Semanas[$clave]['OBJETIVODETALLE']= $intervaloMEDIOP;
 					} // intervalos, calculo a traves de los medios de pago.
 					//FIN :: ETAPA 1					
-				// echo "Semanas ";	
-				// print_r($Semanas);
+				//  echo "Semanas ";	
+				//  print_r($Semanas);
 				$resumenProcesado['Semanas'] = $Semanas;
 				$GastosIO = $resumenProcesado;
 				break;

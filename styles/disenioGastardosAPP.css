@@ -146,6 +146,11 @@ position: fixed;
 	grid-template-columns: 30% 70%;
 }
 
+.grillaResumen
+{
+	display: grid;
+	grid-template-rows: 18% 94%;
+}
 
 .grillaTotales
 {

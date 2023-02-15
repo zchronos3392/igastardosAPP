@@ -120,10 +120,10 @@ class iogastos
 							on gasmonedas.monedaId=Det.monedaid
 						INNER JOIN gasmediospago
 							on gasmediospago.mediopagoid = Det.mediopagoid 
-						 WHERE 
-						month(FechaDesdeVig) >= $imes and month(FechaDesdeVig) <= $imes
-						and year(FechaDesdeVig) = $ianio;";
-		//echo "<br> $consulta<br>";
+						 WHERE (month(FechaDesdeVig) = $imes OR month(FechaDesdeVig) = ($imes-1)) 
+						   AND (month(FechaHastaVig) = $imes or month(FechaHastaVig) = ($imes+1)) 
+						      and year(FechaDesdeVig) = $ianio;";
+		// echo "<br> $consulta<br>";
 		try {
             // Preparar sentencia
             $comando = Database::getInstance()->getDb()->prepare($consulta);

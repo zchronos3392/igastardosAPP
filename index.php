@@ -87,7 +87,7 @@ function pedirResumen(mesId)
 		 $(".grillaResumenitem4").empty();
 		 
          $(r['gastos']).each(function(i, v)
-		        { // indice, valor
+		    { // indice, valor
 					// <div class="grillaTotales">
 					// 		<div class="gIngreso">
 					// 			<div>$ PESO</div>		
@@ -127,71 +127,74 @@ function pedirResumen(mesId)
 				// 	
 				cadenaHTML ='';
 				var Estado='OK';
-				$(v['Semanas']).each(function(i, j)
-		        { // indice, valor
-					// console.log('inicio: ' +j.FechaInicio+' fin '+ j.FechaFin);	
-					AcumuladosGastos = '';
-					GastosComercio   = '';
-				var GastosCargados = 0;		
-				$(j.OBJETIVODETALLE).each(function(w, u)
-		        { // indice, valor
-					Estado='OK';
-					// console.log(' indice: '+w+' valor: '+u.medionombre);
-					if(u.montoTotal > u.montoFraccion)
-						Estado='NOOK';
 
-					AcumuladosGastos+= '	<div class="grillaMPMonObjetivos">	<div class="igobjeti_1">'+u.medionombre+'</div>'+
-									   '		<div class="igobjeti_2">'+u.monedanombre+' - '+u.montoFraccion+'</div>'+
-								       '		<div class="igobjeti_3">'+u.monedanombre+' - '+u.montoTotal+'</div>'+
-								       '		<div class="igobjeti_4">'+Estado+'</div>'+
-								       '		<div class="igobjeti_5"></div>'+
-									   '   </div>';
-
-					if(GastosCargados == 0){	
-					$(u.GastosDetalle).each(function(y, z)
+				if(v['Semanas'].length > 0)
+				{
+					$(v['Semanas']).each(function(i, j)
+					{ // indice, valor
+						// console.log('inicio: ' +j.FechaInicio+' fin '+ j.FechaFin);	
+						AcumuladosGastos = '';
+						GastosComercio   = '';
+					var GastosCargados = 0;		
+						$(j.OBJETIVODETALLE).each(function(w, u)
 						{ // indice, valor
-							$(z).each(function(a, b)
+							Estado='OK';
+							// console.log(' indice: '+w+' valor: '+u.medionombre);
+							if(u.montoTotal > u.montoFraccion)
+								Estado='NOOK';
+
+							AcumuladosGastos+= '	<div class="grillaMPMonObjetivos">	<div class="igobjeti_1">'+u.medionombre+'</div>'+
+											'		<div class="igobjeti_2">'+u.monedanombre+' - '+u.montoFraccion+'</div>'+
+											'		<div class="igobjeti_3">'+u.monedanombre+' - '+u.montoTotal+'</div>'+
+											'		<div class="igobjeti_4">'+Estado+'</div>'+
+											'		<div class="igobjeti_5"></div>'+
+											'   </div>';
+
+							if(GastosCargados == 0){	
+							$(u.GastosDetalle).each(function(y, z)
 								{ // indice, valor
-								//console.log(' indice: '+a+' valor: '+b.descripcionComercio);
-								GastosComercio+= 	'<div class="GastoComX">'+
-									'					<div class="DGastoComX1">'+b.descripcionComercio+'</div>'+
-									'					<div class="DGastoComX11">'+b.nombreabrev+'</div>'+									
-									'						<div class="DGastoComX2">'+b.moneda+' - '+b.Monto+'</div>'+
-									'					</div>';
+									$(z).each(function(a, b)
+										{ // indice, valor
+										//console.log(' indice: '+a+' valor: '+b.descripcionComercio);
+										GastosComercio+= 	'<div class="GastoComX">'+
+											'					<div class="DGastoComX1">'+b.descripcionComercio+'</div>'+
+											'					<div class="DGastoComX11">'+b.nombreabrev+'</div>'+									
+											'						<div class="DGastoComX2">'+b.moneda+' - '+b.Monto+'</div>'+
+											'					</div>';
+										});
+										GastosCargados =1;
 								});
-								GastosCargados =1;
+							}	
+
 						});
-					}	
-
-				});
-				// GastosComercio+
-				//  console.log(GastosComercio);
-					cadenaHTML += '<div class="Semana">'+
-								  '<div class="itemsemana1">SEMANA</div>'+
-								   '<div class="itemsemana2">'+i+'</div>'+
-									'<div class="itemsemana3">MES</div>'+
-									'<div class="itemsemana4">'+$("#selectMes option:selected").text()+'</div>'+
-									'<div class="itemsemana5">'+
-									'	<div class="grillaMPMonOBj">'+
-											AcumuladosGastos+
-									'	</div>'+
-									'</div>'+
-									'<div class="itemsemana6">'+
-									'	<div class="DetalleGasto">'+
-									'		<div class="DlleGto1">Detalle del gasto por semana</div>'+
-									'			<div class="DlleGto2" id="DlleGto2">'+
-													GastosComercio+
-									'		    </div>'+
-									'	</div>'+
-									'</div>'+
-								'</div>';						
-					$(".grillaResumenitem4").append(cadenaHTML);
-					cadenaHTML ='';
-				});
-
-	
-
-		});
+					// GastosComercio+
+					//  console.log(GastosComercio);
+						cadenaHTML += '<div class="Semana">'+
+									'<div class="itemsemana1">SEMANA</div>'+
+									'<div class="itemsemana2">'+i+'</div>'+
+										'<div class="itemsemana3">MES</div>'+
+										'<div class="itemsemana4">'+$("#selectMes option:selected").text()+'</div>'+
+										'<div class="itemsemana5">'+
+										'	<div class="grillaMPMonOBj">'+
+												AcumuladosGastos+
+										'	</div>'+
+										'</div>'+
+										'<div class="itemsemana6">'+
+										'	<div class="DetalleGasto">'+
+										'		<div class="DlleGto1">Detalle del gasto por semana</div>'+
+										'			<div class="DlleGto2" id="DlleGto2">'+
+														GastosComercio+
+										'		    </div>'+
+										'	</div>'+
+										'</div>'+
+									'</div>';						
+						$(".grillaResumenitem4").append(cadenaHTML);
+						cadenaHTML ='';
+					});
+			    }
+			    else
+			    	$(".grillaResumenitem4").append('No hay objetivos cargados.No es posible el analisis');
+		    });
 		}
 		else {			
 				$(".errores").append(re);
@@ -1239,7 +1242,7 @@ $("#cargarotroanio").on("click",function()
 		        </div>
 				</div> <!-- BloqueSubTab -->
 				<div class="BloqueSubTab">
-					<div id="grillaResumen">
+					<div id="grillaResumen" class="grillaResumen">
 						<div  class="grillaResumenitem1">
 								<div>
 									Elegir Mes
