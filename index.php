@@ -561,61 +561,6 @@ $("#cargarotroanio").on("click",function()
 			
 			$("#contadorItemsVer").text(contadorDescripcionItems);
 
-			// $("#itemsTicket").append(
-			// 	'<div id="DSCCONTENEDOR_'+contadorDescripcionItems+'" >'+
-			// 		'<div class="descripcion">'+
-			// 		'<input type="hidden" id="idregistro_0" value="0"></input> '+
-			// 		'<div class="descitem1">'+contadorDescripcionItems+'</div>'+
-			// 		'<div class="descitem2">Descripcion</div>'+
-			// 		'<div class="descitem22"><input type="text" id="montoparcial_'+contadorDescripcionItems+'" disabled="true"></input></div>'+
-			// 		'<div class="descitem3">'+
-			// 			'<input type="text" value="" id="descripcion_'+contadorDescripcionItems+'" onclick="sugerir(this.id,'+contadorDescripcionItems+');" onkeyup="sugerir(this.id,'+contadorDescripcionItems+');" /><div id="suggestions_'+contadorDescripcionItems+'" class="suggestions" ></div>'+
-			// 		'</div>'+
-			// 		'<div class="descitem4" onclick="elimnaritem(\'DSCCONTENEDOR_'+contadorDescripcionItems+'\');">(X)</div>'+
-			// 	'</div>'+
-			// 	'<div class="CantPunit">'+
-			// 		'<div class="umedidas CantPunit1">'+
-			// 			 '<div class="itemumed1"></div>'+	
-			// 			  '<div class="itemumed2">'+
-			// 			  '<select id="iumedidas_'+contadorDescripcionItems+'" class="comercioSel">'+
-  		  	// 				'<option value="9999">Unidad medida</option>'+
-  		  	// 			  '</select>'+
-  		  	// 			  '</div>'+
-			// 		'</div>'+
-			// 		'<div class="cantidad CantPunit2">'+
-			// 			'<div class="itemcant1">Cant.</div>'+
-			// 			'<div class="itemcant2">'+
-			// 			'</div>'+
-			// 			'<div class="itemcant3">'+
-			// 				'<input type="number" value="" id="cantidad_'+contadorDescripcionItems+'"  onkeyup="totalCalcular();"  />'+
-			// 			'</div>'+
-			// 			'<div class="itemcant4">'+
-			// 			'</div>'+
-			// 		'</div>'+
-			// 		'<div class="preciounit CantPunit3">'+
-			// 			'<div class="itempun1">Precio Unitario</div>'+
-			// 			'<div class="itempun2">'+
-			// 			'</div>'+
-			// 			'<div class="itempun3">'+
-			// 				'<input type="number" value="" id="pun_'+contadorDescripcionItems+'" onkeyup="totalCalcular();" />'+
-			// 			'</div>'+
-			// 			'<div class="itempun4">'+
-			// 			'</div>'+
-			// 		'</div>'+
-
-			// 	'<div class="descuento CantPunit11">'+
-			// 		'<div class="itemdis1">Descuento</div>'+
-			// 		'<div class="itemdis2">'+
-			// 		'</div>'+
-			// 		'<div class="itemdis3">'+
-			// 			'<input type="number" value="" id="dis_'+contadorDescripcionItems+'" onkeyup="totalCalcular();" ></input>'+
-			// 		'</div>'+
-			// 		'<div class="itemdis4">'+
-			// 			'<input type="checkbox" id="EsRecargo_'+contadorDescripcionItems+'" value="0"  onclick="totalCalcular();" ></input>'+
-			// 		'</div>'+
-			// 	   '</div>'+
-			// 	 '</div>'+
-			// 	'</div>');
 // AGREGAMOS UNA COPIA CON EL NUEVO ESTILO HASTA QUE FUNCIONE 
 	// .descitem1 ID RENGLON 
 	// .descitem2,Titulo Descripción 
@@ -641,7 +586,7 @@ $("#cargarotroanio").on("click",function()
 
 					'<div class="idescitem10">'+contadorDescripcionItems+'</div>'+
 					'<div class="idescitem4">'+
-						'<input type="text" value="" class="descripciontext" id="descripcion_'+contadorDescripcionItems+'" onclick="sugerir(this.id,'+contadorDescripcionItems+');" onkeyup="sugerir(this.id,'+contadorDescripcionItems+');" /><div id="suggestions_'+contadorDescripcionItems+'" class="suggestions" ></div>'+
+						'<input type="text" value="" class="descripciontext" id="descripcion_'+contadorDescripcionItems+'"  onchange="sugerir(this.id,'+contadorDescripcionItems+');" /><div id="suggestions_'+contadorDescripcionItems+'" class="suggestions" ></div>'+
 					'</div>'+
 					'<div class="icantidad idescitem5">'+
 						'<div class="iitemcant1">'+

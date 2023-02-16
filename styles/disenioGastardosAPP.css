@@ -67,7 +67,7 @@ position: fixed;
     box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2);
     height: auto;
     top: 45px;
-    z-index: 9999;
+    z-index: 90;
     width: 206px;
 }
  
@@ -78,6 +78,11 @@ position: fixed;
     padding: 8px;
     width: 100%;
     float: left;
+    z-index: 90;
+}
+
+.suggestions DIV {
+    z-index: 90;
 }
 
 .suggestions .suggest-element a{
@@ -2011,7 +2016,11 @@ input[type=number] { -moz-appearance:textfield; }
 .idescitem3{grid-area: idescitem3;} /* vacio */ 
 
 .idescitem4{grid-area: idescitem4;gap: 0.5em;} /* .descitem4, texto sugerible de producto */
-.idescitem4 .descripciontext{vertical-align: bottom;}
+.idescitem4 .descripciontext{
+	vertical-align: bottom;
+	background-color: #eec811;	
+}
+}
 .idescitem5{grid-area: idescitem5;} /* cantidad */ 
 .idescitem6{grid-area: idescitem6;} /* precio unitario */
 .idescitem7{grid-area: idescitem7;} /* umedidas */
@@ -3221,7 +3230,10 @@ padding: 0.5em;
 .idescitem3{grid-area: idescitem3;} /* vacio */ 
 
 .idescitem4{grid-area: idescitem4;gap: 0.5em;} /* .descitem4, texto sugerible de producto */
-.idescitem4 .descripciontext{vertical-align: bottom;}
+.idescitem4 .descripciontext{
+		vertical-align: bottom;
+		background-color: #eec811;	
+}
 .idescitem5{grid-area: idescitem5;} /* cantidad */ 
 .idescitem6{grid-area: idescitem6;} /* precio unitario */
 .idescitem7{grid-area: idescitem7;} /* umedidas */

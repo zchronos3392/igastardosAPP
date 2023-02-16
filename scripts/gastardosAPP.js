@@ -141,7 +141,8 @@ if(key != ''){
 			   	
                 $('#suggestions_'+identificadorRegistro).fadeIn(1000).html(data);
                 //Al hacer click en alguna de las sugerencias
-                $('.suggest-element').on('click', function(){
+                
+				$('.suggest-element').on('click', function(){
                         //Obtenemos la id unica de la sugerencia pulsada
                         var id = $(this).attr('id');
                         //Editamos el valor del input con data de la sugerencia pulsada
@@ -151,6 +152,10 @@ if(key != ''){
                         	//alert('Has seleccionado el '+id+' '+$('#'+id).attr('data'));
                         return false;
                 });
+					$("#"+idDescriptor).on('click', function(){
+						$('#suggestions_'+identificadorRegistro).fadeOut(1000);
+							return false;						
+					});
                }
              }
         });// fin del AJAX
