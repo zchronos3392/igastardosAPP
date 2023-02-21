@@ -586,11 +586,11 @@ $("#cargarotroanio").on("click",function()
 
 					'<div class="idescitem10">'+contadorDescripcionItems+'</div>'+
 					'<div class="idescitem4">'+
-						'<input type="text" value="" class="descripciontext" id="descripcion_'+contadorDescripcionItems+'"  onchange="sugerir(this.id,'+contadorDescripcionItems+');" /><div id="suggestions_'+contadorDescripcionItems+'" class="suggestions" ></div>'+
+						'<input type="text" value="" class="descripciontext" id="descripcion_'+contadorDescripcionItems+'"  onkeyUp="sugerir(this.id,'+contadorDescripcionItems+');" /><div id="suggestions_'+contadorDescripcionItems+'" class="suggestions" ></div>'+
 					'</div>'+
 					'<div class="icantidad idescitem5">'+
 						'<div class="iitemcant1">'+
-							'<input type="number" value="" id="cantidad_'+contadorDescripcionItems+'"  onkeyup="totalCalcular();"  />'+
+							'<input type="number" value="" id="cantidad_'+contadorDescripcionItems+'"  onclick="borrarSugerencia('+contadorDescripcionItems+');" onkeyup="totalCalcular();"  />'+
 						'</div>'+
 					'</div>'+
 					'<div class="ipreciounit idescitem6">'+
@@ -876,7 +876,7 @@ $("#cargarotroanio").on("click",function()
 					</div>					
 				</div>
 			</div>				
-			<div class="itemaccioneg51">
+			<div class="itemaccioneg52">
 				<div class="gTipoEI">
 					<div class="itemgTipoEI1">Tipo</div>
 					<div class="itemgTipoEI2">
@@ -887,7 +887,7 @@ $("#cargarotroanio").on("click",function()
 					</div>	  		  		
 				</div>
 			</div>							
-			<div class="itemaccioneg52">
+			<div class="itemaccioneg51">
 				<div class="gCuotas">
 					<div class="itemgcuota1">Cuotas</div>
 					<div class="itemgcuota2">

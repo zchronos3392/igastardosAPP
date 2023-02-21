@@ -1567,8 +1567,8 @@ position: fixed;
 			    'itemaccioneg1 itemaccioneg2 itemaccioneg22 itemaccioneg3 itemaccioneg3'
 				'itemaccioneg4 itemaccioneg4 itemaccioneg43  itemaccioneg44 itemaccioneg44'
 				'itemaccioneg45 itemaccioneg45 itemaccioneg45  itemaccioneg45 itemaccioneg45'
-				'itemaccioneg51 itemaccioneg51 itemaccioneg6  itemaccioneg7 itemaccioneg7'
-			 	'itemaccioneg52 itemaccioneg52 itemaccioneg52  itemaccioneg52 itemaccioneg52'
+			 	'itemaccioneg51 itemaccioneg51 itemaccioneg52  itemaccioneg52 itemaccioneg52'
+				 'itemaccioneg6 itemaccioneg6 itemaccioneg6  itemaccioneg7 itemaccioneg7'
 				'itemaccioneg5 itemaccioneg5 itemaccioneg5  itemaccioneg5 itemaccioneg5'
 				'itemaccioneg8 itemaccioneg8 itemaccioneg8  itemaccioneg8 itemaccioneg8';
 	/*bordes redondeados*/
@@ -1810,23 +1810,28 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .gMon{
+	display: flex;
+	flex-direction: row;
+	column-gap: 3em;	
+
 	overflow: hidden;	
 	margin-top: 0em;
-	display: grid;
-	grid-template-areas: 'itemgmon1' ' itemgmon2';
+
 	/*bordes redondeados*/
 		border: 1px solid #000000;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
+		border-radius: 7px;
 	/*bordes redondeados*/		    
 	/* padding:0.3rem; */
 	color: black;
 	background-color:#fff;	
-	/* height: 100%; */
+	height: 100%;
 }
 	
 .itemgmon BUTTON{
-	   background: #076d70;
+ /* background: #076d70; */
+	background:#1499bb;
 	   color: #fff;
 }
 
@@ -1867,7 +1872,7 @@ input[type=number] { -moz-appearance:textfield; }
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
 	/*bordes redondeados*/		    
-	padding:0.3rem;
+	height: 100%;
 	color: black;
 	background-color:#fff;	
 }
@@ -1880,12 +1885,14 @@ input[type=number] { -moz-appearance:textfield; }
 .gTipoEI{
 	overflow: hidden;	
 	margin-top: 0em;
-	display: grid;
-	grid-template-areas: 'itemgTipoEI1 itemgTipoEI2 itemgTipoEI3';
+		display: flex;
+		flex-direction: row;
+		column-gap: 3em;
 	/*bordes redondeados*/
 		border: 1px solid #000000;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
+		border-radius: 7px;
 	/*bordes redondeados*/		    
 	padding:0.3rem;
 	color: black;
@@ -1911,7 +1918,8 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .gTipoEI BUTTON.inputI{
-	   background: #2bec51;
+	   /* background: #2bec51; */
+		background:#1499bb;
 	   color: #fff;
 }
 
@@ -1921,7 +1929,9 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .gTipoEI BUTTON.inputE{
-	   background: #fa3058;
+	 /*background: #fa3058; */
+	 background:#1499bb;
+
 	   color: #fff;
 }
 
@@ -1931,7 +1941,8 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .gTipoEI BUTTON.selectedINPUT{
-	   background: #1b1078;
+	   /* background: #1b1078; */
+	   background:#1abde6;
 	   color: #fff;
 	/*bordes redondeados*/
 		border: 1px solid #000000;
@@ -1980,7 +1991,8 @@ input[type=number] { -moz-appearance:textfield; }
 
 
 .itemgMPa BUTTON{
-	   background: #9f9409;
+	   /* background: #9f9409; */
+	   background:#1499bb;
 	   color: #fff;
 }
 
@@ -2668,7 +2680,7 @@ position: fixed;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
 	/*bordes redondeados*/		    
-	width: 6em;
+	width: 7em;
 	height: 3em;
 	font-style: italic;
 	text-align: center;
@@ -3183,7 +3195,9 @@ padding: 0.5em;
 						 'itemaccioneg45 itemaccioneg45 itemaccioneg45  itemaccioneg45'
 						 'itemaccioneg5 itemaccioneg5 itemaccioneg5  itemaccioneg5'
 			 			 'itemaccioneg51 itemaccioneg51 itemaccioneg51  itemaccioneg51'			
-			 			 'itemaccioneg52 itemaccioneg52 itemaccioneg52  itemaccioneg52'									 'itemaccioneg6 itemaccioneg6 itemaccioneg7  itemaccioneg7'
+			 			 'itemaccioneg52 itemaccioneg52 itemaccioneg52  itemaccioneg52'
+						 'itemaccioneg6 itemaccioneg6 itemaccioneg6  itemaccioneg6'
+						 'itemaccioneg7 itemaccioneg7 itemaccioneg7  itemaccioneg7'
 						 'itemaccioneg8 itemaccioneg8 itemaccioneg8  itemaccioneg8';
 
   border: 1px solid #000000;
@@ -3441,11 +3455,12 @@ padding: 0.5em;
 .FormEgresos BUTTON.botonMas{
     font-size: 1em;
     width: 3rem;
-    height: 2.5rem;
+    height: 3rem;
     transition: .3s;
     color: #fff;
-    border: none;
-    border-radius: 35%;
+
+	border: none;
+    border-radius: 100%;
     outline: none;
     background: #bf4a1e;
     box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
@@ -3459,14 +3474,16 @@ padding: 0.5em;
 .FormEgresos BUTTON.botonMasDsc{
     font-size: 1em;
     width: 3rem;
-    height: 2.5rem;
+    height: 3rem;
     transition: .3s;
     color: #fff;
     border: none;
-    border-radius: 35%;
+    border-radius: 100%;
     outline: none;
-    background: #dab91f;
-    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+    /* background: #dab91f; */
+	   background:#1abde6;
+ 
+	box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
 }
 
 .FormEgresos BUTTON.botonMasDsc:hover{
@@ -3589,29 +3606,46 @@ input[type=number] { -moz-appearance:textfield; }
 .itemgmon1{
 	grid-area:itemgmon1; 
 }
+
 .itemgmon2{
 	grid-area:itemgmon2;
-	display:grid;
-	grid-template-columns: 30% 30% 30% ;	
-	grid-gap: 1rem;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items: baseline;	
 }
+
 .gMon{
+	/* DISPLAY COMO FLEX */
+	display: flex;
+	flex-direction: row;
+	/* column-gap: 3em; */
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items:flex-end;	
+	/* DISPLAY COMO FLEX, Y CONFIGURACION */
+
 	overflow: hidden;	
 	margin-top: 0em;
-	display: grid;
-	grid-template-areas: 'itemgmon1' 'itemgmon2';
+
 	/*bordes redondeados*/
 		border: 1px solid #000000;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
+		border-radius: 7px;
 	/*bordes redondeados*/		    
-	padding:0.3rem;
+	height: 100%;
 	color: black;
 	background-color:#fff;	
 }
 	
 .itemgmon BUTTON{
-	   background: #076d70;
+	/* background: #076d70; */
+	 background:#1499bb;
+
 	   color: #fff;
 }
 
@@ -3650,8 +3684,9 @@ input[type=number] { -moz-appearance:textfield; }
 		border: 1px solid #000000;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
+		border-radius: 7px;
 	/*bordes redondeados*/		    
-	padding:0.3rem;
+	height: 100%;;
 	color: black;
 	background-color:#fff;	
 }
@@ -3663,12 +3698,20 @@ input[type=number] { -moz-appearance:textfield; }
 .gTipoEI{
 	overflow: hidden;	
 	margin-top: 0em;
-	display: grid;
-	grid-template-areas: 'itemgTipoEI1 itemgTipoEI2 itemgTipoEI3';
+	display: flex;
+	flex-direction: row;
+	/* column-gap: 3em; */
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items:flex-end;	
+
+
 	/*bordes redondeados*/
 		border: 1px solid #000000;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
+		border-radius: 7px;
 	/*bordes redondeados*/		    
 	padding:0.3rem;
 	color: black;
@@ -3676,7 +3719,9 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .gTipoEI BUTTON.inputI{
-	   background: #2bec51;
+	   /* background: #2bec51; */
+		background:#1499bb;
+ 
 	   color: #fff;
 }
 
@@ -3686,7 +3731,9 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .gTipoEI BUTTON.inputE{
-	   background: #fa3058;
+	 /*background: #fa3058; */
+	   background:#1499bb;
+
 	   color: #fff;
 }
 
@@ -3696,7 +3743,8 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .gTipoEI BUTTON.selectedINPUT{
-	   background: #1b1078;
+	   /* background: #1b1078; */
+	   background:#1abde6;
 	   color: #fff;
 	/*bordes redondeados*/
 		border: 1px solid #000000;
@@ -3706,7 +3754,7 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .gTipoEI BUTTON.selectedINPUT:hover{
-    background: gold;
+     background: gold; 
 	transition: .3s;
 }
 
@@ -3715,19 +3763,29 @@ input[type=number] { -moz-appearance:textfield; }
 }
 .itemgmpa2{
 	grid-area:itemgmpa2;
-	display:grid;
-	grid-gap: 1rem;	
-	grid-template-columns: 45% 45% ;	
+	display:flex;
+	flex-direction: row;
+	column-gap: 1rem;
 }
+
 .gMPa{
 	overflow: hidden;	
 	margin-top: 0em;
-	display: grid;
-	grid-template-areas: 'itemgmpa1' 'itemgmpa2';
+/* CONFIGURACION DE VISUALIZACION FLEX */
+	display: flex;
+	flex-direction: row;
+	/* column-gap: 3em; */
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items:flex-end;	
+/* CONFIGURACION DE VISUALIZACION FLEX */
+
 	/*bordes redondeados*/
 		border: 1px solid #000000;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
+		border-radius: 7px;
 	/*bordes redondeados*/		    
 	padding:0.3rem;
 	color: black;
@@ -3735,7 +3793,8 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .itemgMPa BUTTON{
-	   background: #9f9409;
+	   /* background: #9f9409; */
+	   background:#1499bb;
 	   color: #fff;
 }
 

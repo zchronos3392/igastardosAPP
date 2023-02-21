@@ -208,15 +208,22 @@ $("#cargarotroanio").on("click",function()
  					  'contieneRenglones3 contieneRenglones4 contieneRenglones4'
  					  'contieneRenglones5 contieneRenglones6 contieneRenglones6'
  					  'contieneRenglones7 contieneRenglones8 contieneRenglones8'; 
-  text-align: center;
+  /* text-align: center; */
   color: #fff;
-background-color: #040c31;
-padding: 0.5em;
+  background-color: #040c31;
+  padding: 1rem;
 	/*bordes redondeados*/
 		border: 1px solid #000000;
 		-moz-border-radius: 7px;
 		-webkit-border-radius: 7px;
+		border-radius: 7px;
 	/*bordes redondeados*/		
+}
+
+.contieneGraficoRenglones.EXTREMS
+{
+	background-color:#952ca5;
+
 }
 
 h1{

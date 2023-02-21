@@ -3,22 +3,39 @@
 
 function elijeFondo(porcentaje){
 
-console.log('analizando porcentaje que llego : '+porcentaje);
+var vcolorNombre=[];
+// console.log('analizando porcentaje que llego : '+porcentaje);
+ colorNombre = '[DFLT] Azul Pseudo Neutro';
+seleccionColor='#07a3c9';//azul pseudo neutro celeste inicial original de la funcion knob87CEEB
+	vcolorNombre[0]=seleccionColor;
+	vcolorNombre[1]=colorNombre;
 
-seleccionColor='#07a3c9';//azul pseudo neutro
-	
-if(porcentaje < 49)
+	if(porcentaje > 25 && porcentaje < 50)
+{
   seleccionColor='#78D053';//verde manzanita	
- 
-if(porcentaje >= 49 && porcentaje <= 75 ) 
+   colorNombre = 'Verde Manzanita';
+	vcolorNombre[0]=seleccionColor;
+	vcolorNombre[1]=colorNombre;
+}
+
+if(porcentaje >= 50 && porcentaje < 100 )
+{ 
 		seleccionColor='#e49e3f';	//naranja opaco
-
-if(porcentaje >= 100) 
+		 colorNombre = 'Naranja Opaco';
+			vcolorNombre[0]=seleccionColor;
+			vcolorNombre[1]=colorNombre;		 
+}
+if(porcentaje >= 100)
+{ 
 		seleccionColor='#fe2525';	//rojo encendido
+		 colorNombre = 'Rojo Encendido';
+			vcolorNombre[0]=seleccionColor;
+			vcolorNombre[1]=colorNombre;		 		
+}
 
-console.log('color: : '+seleccionColor);
+//console.log('color: : '+seleccionColor + '('+colorNombre+')');
 
-return seleccionColor;	
+return vcolorNombre;	
 } 
 
 
@@ -113,6 +130,13 @@ function cargarItems(){
 return 	itemsLista;
 };
 
+function borrarSugerencia(identificadorRegistro){
+//	$("#"+idDescriptor).on('click', function(){
+	$('#suggestions_'+identificadorRegistro).fadeOut(1000);
+		return false;						
+//});
+}
+
 function  sugerir(idDescriptor,identificadorRegistro)
 {
 	
@@ -152,10 +176,6 @@ if(key != ''){
                         	//alert('Has seleccionado el '+id+' '+$('#'+id).attr('data'));
                         return false;
                 });
-					$("#"+idDescriptor).on('click', function(){
-						$('#suggestions_'+identificadorRegistro).fadeOut(1000);
-							return false;						
-					});
                }
              }
         });// fin del AJAX
@@ -554,12 +574,13 @@ function pedirObjetivos(destinoid,tipoControl,idObjetivo){
 				indiceGrid++;			
 			});		
 				//console.log("excedente: " + excente + " porcentaje: " + porcentaje);
-				graficos += '<div class="contieneGraficoRenglones">';
+				graficos += '<div class="contieneGraficoRenglones EXTREMS">';
 			graficos +='<div class="contieneRenglones1">Extremo Inicial '+v.FechaTotalIni+'</div>';
 			graficos +='<div class="contieneRenglones11"><button id="stats" name="stats" onclick="location.href=\'estadisticas.php?finicio='+v.FechaTotalIni+'&ffin='+v.FechaTotalFin+'\';">Stats</button></div>';
 
 				graficos +=	'<div  class="contieneRenglones2">Extremo Final '+v.FechaTotalFin+'</div>';
-				graficos +=	'<div  class="contieneRenglones20">'+xMontos+'</div>';								graficos += xgraficos;
+				graficos +=	'<div  class="contieneRenglones20">'+xMontos+'</div>';
+					graficos += xgraficos;
 				graficos +='</div>';
 		});		
 		  	  
@@ -690,11 +711,14 @@ function pedirObjetivos(destinoid,tipoControl,idObjetivo){
 		        //if(excente > 100) excente = 100;	
 //		        console.log("XTRM excedente obtenido: " + excente);					
 		         var seleccionColor=seleccionColorExcedente='';
-		         seleccionColor = elijeFondo(porcentaje);
-				 seleccionColorExcedente = elijeFondo(excente);
-				 //console.log(seleccionColor);
-				 //console.log(i);				 
-			      $('.ObjetivoFraccion_'+(j+99)).knob({
+		         xColorYNombre=[];
+				 	xColorYNombre=elijeFondo(porcentaje);
+				seleccionColor = xColorYNombre[0];
+					 xColorYNombre=elijeFondo(porcentaje);
+				seleccionColorExcedente =  xColorYNombre[0];
+				 console.log('[XCOMPLETO] Color segun porcentaje: Porcentaje: ' +porcentaje +' Color: '+xColorYNombre[1]);
+
+				 $('.ObjetivoFraccion_'+(j+99)).knob({
 			        'min':0,'max':100,
 			        'width':120,'height':120,
 			        'displayInput':true,
@@ -731,11 +755,15 @@ function pedirObjetivos(destinoid,tipoControl,idObjetivo){
 				//console.log("COMUN, porcentaje EXCEDENTE obtenido: " + excente);	
 						        
 			         var seleccionColor=seleccionColorExcedente='';
-			         seleccionColor = elijeFondo(porcentaje);
-					 seleccionColorExcedente = elijeFondo(excente);
-					 //console.log(seleccionColor);
-					 //console.log(i);				 
-				      $('.ObjetivoFraccion_'+(j+99)).knob({
+					 xColorYNombre=[];
+				 	 	xColorYNombre=elijeFondo(porcentaje);
+					 seleccionColor = xColorYNombre[0];
+					 	xColorYNombre=elijeFondo(porcentaje);
+					 seleccionColorExcedente =  xColorYNombre[0];
+				 		console.log('[XFracciones] Color segun porcentaje: Porcentaje: ' +porcentaje +' Color: '+xColorYNombre[1]);
+
+
+					 $('.ObjetivoFraccion_'+(j+99)).knob({
 				        'min':0,'max':100,
 				        'width':120,'height':120,
 				        'displayInput':true,
