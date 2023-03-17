@@ -228,7 +228,9 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 						if(isset($_GET['tipoMovimiento']))   $tipoMov = $_GET['tipoMovimiento'];
 						if(isset($_POST['tipoMovimiento']))  $tipoMov = $_POST['tipoMovimiento'];
 
-						
+						$esGastoFijo=0;
+						if(isset($_GET['esGastoFijo']))  $esGastoFijo = $_GET['esGastoFijo'];
+						if(isset($_POST['esGastoFijo']))  $esGastoFijo = $_POST['esGastoFijo'];
 						     //no se usan aun...
 						$gasobservaciones1=$gasobservaciones2="";
 
@@ -268,10 +270,10 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 							if($gasid == 0)
 							{
 								//$tipoMov='E';
-								$GastosIO = iogastos::insert($i_ticketID,$tipoMedioPago,$gasFecha,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,$descgenDesc,$descuentogenmonto,$totalCuotas);
+								$GastosIO = iogastos::insert($i_ticketID,$tipoMedioPago,$gasFecha,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,$descgenDesc,$descuentogenmonto,$totalCuotas,$esGastoFijo);
 							}
 							else
-							     $GastosIO = iogastos::update($i_ticketID,$gasFecha,$gasid,$tipoMedioPago,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,$descgenDesc,$descuentogenmonto);
+							     $GastosIO = iogastos::update($i_ticketID,$gasFecha,$gasid,$tipoMedioPago,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,$descgenDesc,$descuentogenmonto,$esGastoFijo);
 						}
 					break;										
 		case "DEL":
@@ -314,6 +316,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 				if(isset($_GET['imes']))   $imes = $_GET['imes'];
 				if(isset($_POST['imes']))  $imes = $_POST['imes'];
 
+				$imedioPago=0;
+				if(isset($_GET['mformapago']))   $imedioPago = $_GET['mformapago'];
+				if(isset($_POST['mformapago']))  $imedioPago = $_POST['mformapago'];
+
+
+
+
 				$resumenObtenidoI = iogastos::ResuMesIngreso($ianio,$imes);
 				$resumenObtenidoE = iogastos::ResuMesEgreso($ianio,$imes);				
 				//echo "Egresos <br>";
@@ -342,9 +351,41 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 				$resumenProcesado['RestanteEFE'] =  round($calculoRestanteEfectivo,2);
 				$resumenProcesado['RestanteEFEMON'] = $monedaCalculo;
+
 				 $Semanas = [];
 				 $iObjetivos = iogastos::ResuMesEgresoSemana($ianio,$imes);
-					$Semanas = creaIntervaloSemanas($iObjetivos); 
+
+				 // FECHA INICIAL DEL INTERVALO COMPLETO
+				$FDesde = new DateTime( $iObjetivos['0']['FechaDesdeVig'] );
+				// FECHA FINAL DEL INTERVALO COMPLETE
+				$FHasta   = new DateTime( $iObjetivos['0']['FechaHastaVig'] );
+				//echo "Desde : ".$iObjetivos['0']['FechaDesdeVig']." / Hasta: ".$iObjetivos['0']['FechaHastaVig'];	
+
+				// agrego estadisticas acumuladas desde la cabecera: tope de gastos y tope de repetidos en el MES/INTERVALO
+					$xTopGastosRepetidos=[];
+					$xTopGastosRepetidos= iogastos::TopGastosRepetidos
+						(
+							$iObjetivos['0']['FechaDesdeVig'],
+							$iObjetivos['0']['FechaHastaVig'],
+							0,
+							0,
+							10
+						);
+						$resumenProcesado['xTopGastosRepetido'][]=$xTopGastosRepetidos;	
+					// echo " ----------------------------------------------------------------------------------------------------------------------------";	
+					$xTopGastosGrandes=[];
+					$xTopGastosGrandes= iogastos::TopGastosGrandes
+						(
+							$iObjetivos['0']['FechaDesdeVig'],
+							$iObjetivos['0']['FechaHastaVig'],
+							0,
+							0,
+							10
+						);
+						$resumenProcesado['xTopGastosGrandes'][]=$xTopGastosGrandes;	
+					// agrego estadisticas acumuladas desde la cabecera: tope de gastos y tope de repetidos en el MES/INTERVALO
+
+				 $Semanas = creaIntervaloSemanas($iObjetivos); 
 					// $Semanas = segun objetivos, las semanas que estan incluidas
 					//ETAPA 1
 					// Recorro $iObjetivos
@@ -378,13 +419,45 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 								$intervaloMEDIOP[$contadorMedios]['monedanombre']= $subobjetivox['abrmoneda'];
 								$intervaloMEDIOP[$contadorMedios]['montoFraccion']= $subobjetivox['fraccionMonto'];
 								//POR FRACCION, CALCULO EL GASTO ACUMULADO POR COMERCIO Y MONEDA
+								$TopGastosRepetidos=[];
+								// echo " ----------------------------------------------------------------------------------------------------------------------------";	
+								$TopGastosRepetidos= iogastos::TopGastosRepetidos
+									(
+										$FechaAnalisis['FechaInicio'],
+										$FechaAnalisis['FechaFin'],
+										$subobjetivox['monedaid'],
+										$imedioPago,
+										5
+									);
+								// agregara los gastos acumulados por semana
+								$intervaloMEDIOP[$contadorMedios]['TopGastosRepetido'][]=$TopGastosRepetidos;	
+								// echo " ----------------------------------------------------------------------------------------------------------------------------";	
+								$TopGastosGrandes=[];
+								// echo " ----------------------------------------------------------------------------------------------------------------------------";	
+								$TopGastosGrandes= iogastos::TopGastosGrandes
+									(
+										$FechaAnalisis['FechaInicio'],
+										$FechaAnalisis['FechaFin'],
+										$subobjetivox['monedaid'],
+										$imedioPago,
+										5
+									);
+								$intervaloMEDIOP[$contadorMedios]['TopGastosGrandes'][]=$TopGastosGrandes;	
+								// echo " ----------------------------------------------------------------------------------------------------------------------------";	
+
 								$GastosxComercio=[];
+								// echo " ----------------------------------------------------------------------------------------------------------------------------";	
 								$GastosxComercio= iogastos::calculoGastosxComercio
 									(
 										$FechaAnalisis['FechaInicio'],
 										$FechaAnalisis['FechaFin'],
-										$subobjetivox['monedaid']
+										$subobjetivox['monedaid'],
+										$imedioPago
 									);
+								// echo " =========================================================================================================================";										
+									// print_r($GastosxComercio);
+								// echo " =========================================================================================================================";																		
+								// echo " ----------------------------------------------------------------------------------------------------------------------------";	
 								// agregara los gastos acumulados por semana?	
 								$intervaloMEDIOP[$contadorMedios]['GastosDetalle'][]=$GastosxComercio;	
 								//POR FRACCION, CALCULO EL GASTO ACUMULADO POR COMERCIO Y MONEDA									
@@ -453,6 +526,11 @@ function insertarcuotas($numeroTotal,$cuotaNumero,$totalCuotas){
 	if(isset($_GET['moneda']))  $monedaId = $_GET['moneda'];
 	if(isset($_POST['moneda']))  $monedaId = $_POST['moneda'];
 
+
+	$esGastoFijo=0;
+	if(isset($_GET['esGastoFijo']))  $esGastoFijo = $_GET['esGastoFijo'];
+	if(isset($_POST['esGastoFijo']))  $esGastoFijo = $_POST['esGastoFijo'];
+
 	//no se usan aun...
 	$gasobservaciones1=$gasobservaciones2="";
 	if($numeroTotal != 0)
@@ -509,7 +587,7 @@ function insertarcuotas($numeroTotal,$cuotaNumero,$totalCuotas){
 		$GastosIO = iogastos::insert($ultimoTicket,$tipoMedioPago,$gasFecha,$gasDescripcion,
 									 $gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,
 									 $recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,
-									 $descgenDesc,$descuentogenmonto,$totalCuotas);
+									 $descgenDesc,$descuentogenmonto,$totalCuotas,$esGastoFijo);
 			$objetosconsumo = gconsObjeto::xgetAll($gasDescripcion);
 			if(!count($objetosconsumo)>0) 
 			{

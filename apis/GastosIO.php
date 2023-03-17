@@ -139,11 +139,89 @@ class iogastos
         }
 	}
 
-    public static function calculoGastosxComercio($FechaInicio,$FechaFin,$monedaid)
+
+public static function TopGastosRepetidos($FechaInicio,$FechaFin,$monedaid,$imedioPago,$tope)
+{
+		// por el momento  filtro por monedaID
+		// ESTA TRAYENDO LOS MONTOS DE LAS TARJETAS TODAS LAS SEMANAS DEL MES...
+		
+		$filtroExtra = "";
+		
+		if($imedioPago != 0)
+			$filtroExtra = "and md.tipoMedioPago = $imedioPago ";
+
+	
+	$consulta = "	SELECT  md.gasDescripcion, count(md.gasDescripcion) as 'Conteo', 
+						( ROUND( Sum(IF(md.montoCuota <>0,md.montoCuota,md.gasPUnit * md.gasCant + (IF(md.EsRecargo = 1, md.descuento,(-1)*(md.descuento))- md.descuentoGeneral))) ,2) ) as 'Monto' 
+					FROM gasmovdiarios md
+					WHERE md.movTipo='E'  AND md.gasFecha >='$FechaInicio'  AND md.gasFecha < '$FechaFin'
+					$filtroExtra
+					GROUP BY md.gasDescripcion
+					ORDER by count(md.gasDescripcion) desc  LIMIT $tope;";
+	//   ECHO "<BR> $consulta <BR>";
+	try {
+		// Preparar sentencia
+		$comando = Database::getInstance()->getDb()->prepare($consulta);
+		// Ejecutar sentencia preparada
+		$comando->execute();
+		// no se estaba devolviendl el resultado en formato JSON
+		// con esta linea se logro...
+		// usar en vez de return echo, aunque no se si funcionara con ANDROID
+		return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+	} catch (PDOException $e) {
+		return ($e->getMessage());
+	}
+}
+
+public static function TopGastosGrandes($FechaInicio,$FechaFin,$monedaid,$imedioPago,$tope)
+{
+		// por el momento  filtro por monedaID
+		// ESTA TRAYENDO LOS MONTOS DE LAS TARJETAS TODAS LAS SEMANAS DEL MES...
+		
+		$filtroExtra = "";
+		
+		if($imedioPago != 0)
+			$filtroExtra = "and md.tipoMedioPago = $imedioPago ";
+
+	
+	$consulta = "SELECT  md.gasDescripcion, count(md.gasDescripcion) as 'Conteo', 
+					( ROUND( Sum(IF(md.montoCuota <>0,md.montoCuota,md.gasPUnit * md.gasCant + (IF(md.EsRecargo = 1, md.descuento,(-1)*(md.descuento))- md.descuentoGeneral))) ,2) ) as 'Monto' 
+				FROM gasmovdiarios md
+				WHERE md.movTipo='E'
+				AND md.gasFecha >='2023-01-26'
+				AND md.gasFecha < '2023-02-28'
+				$filtroExtra
+				GROUP BY md.gasDescripcion,'Monto'  
+				ORDER BY `Monto`  DESC limit $tope";
+	//   ECHO "<BR> $consulta <BR>";
+	try {
+		// Preparar sentencia
+		$comando = Database::getInstance()->getDb()->prepare($consulta);
+		// Ejecutar sentencia preparada
+		$comando->execute();
+		// no se estaba devolviendl el resultado en formato JSON
+		// con esta linea se logro...
+		// usar en vez de return echo, aunque no se si funcionara con ANDROID
+		return $comando->fetchAll(PDO::FETCH_ASSOC);
+
+	} catch (PDOException $e) {
+		return ($e->getMessage());
+	}
+}
+
+    public static function calculoGastosxComercio($FechaInicio,$FechaFin,$monedaid,$imedioPago)
 	{
-			// por el momento no filtro poor monedaID
+			// por el momento  filtro por monedaID
+			// ESTA TRAYENDO LOS MONTOS DE LAS TARJETAS TODAS LAS SEMANAS DEL MES...
+			
+			$filtroExtra = "";
+			
+			if($imedioPago != 0)
+				$filtroExtra = "and md.tipoMedioPago = $imedioPago ";
+	
 			$consulta = "SELECT 
-					    negocios.descripcionComercio,
+					    md.gasFecha,negocios.descripcionComercio,
 						mp.nombreabrev,
 						mon.abrmoneda as 'moneda',   
 						(
@@ -158,8 +236,10 @@ class iogastos
 							on mp.mediopagoid = md.tipoMedioPago 
 						INNER JOIN gasnegocios negocios
 						on negocios.ComercioId = md.ComercioId
-						WHERE md.movTipo='E'  AND md.gasFecha >='$FechaInicio'  AND md.gasFecha <= '$FechaFin'
-						GROUP BY mp.nombreabrev,md.ComercioId, md.monedaId,'Monto';";
+						WHERE md.movTipo='E'  AND md.gasFecha >='$FechaInicio'  AND md.gasFecha < '$FechaFin'
+						$filtroExtra 
+						GROUP BY md.gasFecha,mp.nombreabrev,md.ComercioId, md.monedaId,'Monto';";
+		//   ECHO "<BR> $consulta <BR>";
 		try {
             // Preparar sentencia
             $comando = Database::getInstance()->getDb()->prepare($consulta);
@@ -380,7 +460,11 @@ class iogastos
     public static function getResumen($xcomercio,$xproducto,$xFechaDesde,$xFechaHasta,
 						   			  $xmonedaSeleccionada,$xmformapago)
     {
-    	$filtro="";
+
+		//echo "getResumen($xcomercio,$xproducto,$xFechaDesde,$xFechaHasta,$xmonedaSeleccionada,$xmformapago)<br>";
+
+
+		$filtro="";
     	$contadorFiltros = 0;
     	
     	if($xcomercio != '9999'){
@@ -443,7 +527,7 @@ class iogastos
 								   on gumed.unidadmedidaid = gm.unidad
         						$filtro
 						ORDER BY gasFecha DESC,ticketID DESC ";
-        //echo "<br>  $consulta <br><br>";
+       // echo "<br>  $consulta <br><br>";
 		
         try {
             // Preparar sentencia
@@ -635,7 +719,7 @@ class iogastos
      * @param $nombre      nuevo titulo
      * 
      */
-    public static function update($i_ticketID,$gasFecha,$gasid,$tipoMedioPago,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,$descgenDesc,$descuentogenmonto)
+    public static function update($i_ticketID,$gasFecha,$gasid,$tipoMedioPago,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,$descgenDesc,$descuentogenmonto,$esGastoFijo)
     {
         // Creando consulta UPDATE
         $consulta = "UPDATE gasmovdiarios
@@ -648,6 +732,7 @@ class iogastos
 							monedaId = $monedaId, 
 							descuento = $descuento, 
 							EsRecargo = $recargo,
+							esGastoFijo =$esGastoFijo,
 							ConceptoDescGen='$descgenDesc',
 							descuentoGeneral = $descuentogenmonto,
 							movTipo = '$tipoMov',
@@ -664,7 +749,7 @@ class iogastos
         $cmd->execute(array($i_ticketID,$gasFecha,$gasid,$tipoMedioPago,$gasDescripcion,
         					$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,
         					$recargo,$tipoMov,$gasobservaciones1,$gasobservaciones2,
-        					$descgenDesc,$descuentogenmonto));
+        					$descgenDesc,$descuentogenmonto,$esGastoFijo));
 			//echo json_encode($cmd);
 			
     }
@@ -677,16 +762,17 @@ class iogastos
      * @return PDOStatement
      */
     public static function insert($ticketID,$tipoMedioPago,$gasFecha,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$movTipo,$gasobservaciones1,$gasobservaciones2,
-    $descgenDesc,$descuentogenmonto,$totalCuotas){
+    $descgenDesc,$descuentogenmonto,$totalCuotas,$esGastoFijo){
         // Sentencia INSERT
          
         $comando = "INSERT INTO gasmovdiarios (ticketID,tipoMedioPago, gasFecha, 
         				gasDescripcion,gasPUnit, gasCant,unidad, ComercioId, monedaId,movTipo,
-        				descuento,EsRecargo,gasobservaciones1, gasobservaciones2,											ConceptoDescGen,descuentoGeneral,montoCuota) 
+        				descuento,EsRecargo,gasobservaciones1, gasobservaciones2,
+						ConceptoDescGen,descuentoGeneral,montoCuota,esGastoFijo) 
         				VALUES ($ticketID,$tipoMedioPago,'$gasFecha','$gasDescripcion',$gasPUnit,
         					    $gasCant,$unidad,$ComercioId,$monedaId,'$movTipo',$descuento,
         					    $recargo,'$gasobservaciones1','$gasobservaciones2',
-        					    '$descgenDesc',$descuentogenmonto,$totalCuotas)";
+        					    '$descgenDesc',$descuentogenmonto,$totalCuotas,$esGastoFijo)";
 
 		//echo " <br> $comando <br>";
         // Preparar la sentencia
@@ -694,7 +780,7 @@ class iogastos
 
         return $sentencia->execute(
             array($ticketID,$tipoMedioPago,$gasFecha,$gasDescripcion,$gasPUnit,$gasCant,$unidad,$ComercioId,$monedaId,$descuento,$recargo,$movTipo,$gasobservaciones1,$gasobservaciones2,
-    				$descgenDesc,$descuentogenmonto,$totalCuotas));
+    				$descgenDesc,$descuentogenmonto,$totalCuotas,$esGastoFijo));
     				
     }
 

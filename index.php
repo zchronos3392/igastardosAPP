@@ -58,11 +58,22 @@ function pedirResumen(mesId)
 
 	var cadenaHTML="";
 	//console.log('mes recibido a consultar: '+mesId);
+
+	$(".selectedMPago").each(function(index) {
+	 //     console.log(index + ": " + $(this).text());
+	 	  stringmepago = $(this).attr('id').split("_");
+	  });	
+
+	// var stringmepago = $( ".itemgMPa BUTTON.selectedMPago" ).attr("id").split("_");
+	mformapago = stringmepago[1];
+	//alert( " id ("+mformapago+" ) de la MEDIO DE PAGO SELECC., Descripcion abreviada:" + $( ".itemgMPa BUTTON.selectedMPago" ).html());
+
 	var parametros=
 	{
 			"funcion":"RESUMES",
 			"ianio": $("#ianio").val(),
-			"imes" : mesId
+			"imes" : mesId,
+			"mformapago": mformapago,
 	};
 
 
@@ -125,10 +136,68 @@ function pedirResumen(mesId)
 								  '</div>';	
 						$(".grillaTotales").append(cadenaHTML);
 				});
-				// 	
+				// 	TOPS PARA EL RESUMEN CON FECHA TOTAL DE INTERVALO
+					// MAS COMPRADOS
+					// MAS CAROS
 				cadenaHTML ='';
 				var Estado='OK';
+				if(v['xTopGastosRepetido'].length > 0)
+				{
+					$(v['xTopGastosRepetido']).each(function(y, z)
+								{ // indice, valor
+									$(z).each(function(a, b)
+										{ // indice, valor
+										if(y==0 && a==0)
+										{
+										cadenaHTML+= '<div class="xgrillaTopsResumen xTITrepetidos">'+	
+											'		<div class="igtopres_1">Compras</div>'+
+											'		<div class="igtopres_2">repetidas</div>'+
+											'		<div class="igtopres_3">en</div>'+
+											'		<div class="igtopres_4">el</div>'+
+											'		<div class="igtopres_5">mes</div>'+
+											'   </div>';
+										}			
+										//console.log(' indice: '+a+' valor: '+b.descripcionComercio);
+										cadenaHTML += '	<div class="xgrillaTopsResumen xrepetidos">	<div class="igtopres_1">'+b.gasDescripcion+'</div>'+
+											'		<div class="igtopres_2">'+b.Conteo+'</div>'+
+											'		<div class="igtopres_3">'+b.Monto+'</div>'+
+											'		<div class="igtopres_4"></div>'+
+											'		<div class="igtopres_5"></div>'+
+											'   </div>';
+										});
+								});
+				}	
+				if(v['xTopGastosGrandes'].length > 0)
+				{
+					$(v['xTopGastosGrandes']).each(function(y, z)
+								{ // indice, valor
+									$(z).each(function(a, b)
+										{ // indice, valor
+										if(y==0 && a==0)
+										{
+										cadenaHTML += '<div class="xgrillaTopsResumen xTITgasGrandes">'+	
+											'		<div class="igtopres_1"></div>'+
+											'		<div class="igtopres_2">Mayores compras</div>'+
+											'		<div class="igtopres_3">realizadas</div>'+
+											'		<div class="igtopres_4">en el </div>'+
+											'		<div class="igtopres_5">mes</div>'+
+											'   </div>';
+										}			
 
+										//console.log(' indice: '+a+' valor: '+b.descripcionComercio);
+										cadenaHTML += '	<div class="xgrillaTopsResumen xgasGrandes">	<div class="igtopres_1">'+b.gasDescripcion+'</div>'+
+											'		<div class="igtopres_2">'+b.Conteo+'</div>'+
+											'		<div class="igtopres_3">'+b.Monto+'</div>'+
+											'		<div class="igtopres_4"></div>'+
+											'		<div class="igtopres_5"></div>'+
+											'   </div>';
+
+										});
+								});
+				}				
+				// 	TOPS PARA EL RESUMEN CON FECHA TOTAL DE INTERVALO
+				$(".grillaTotales").append(cadenaHTML);
+				cadenaHTML='';
 				if(v['Semanas'].length > 0)
 				{
 					$(v['Semanas']).each(function(i, j)
@@ -136,8 +205,9 @@ function pedirResumen(mesId)
 						// console.log('inicio: ' +j.FechaInicio+' fin '+ j.FechaFin);	
 						AcumuladosGastos = '';
 						GastosComercio   = '';
+						TopsResumen   = '';
 					var GastosCargados = 0;		
-						$(j.OBJETIVODETALLE).each(function(w, u)
+						$(j.OBJETIVODETALLE).each(function(w, u) //W=0,1,2
 						{ // indice, valor
 							Estado='OK';
 							// console.log(' indice: '+w+' valor: '+u.medionombre);
@@ -150,7 +220,6 @@ function pedirResumen(mesId)
 											'		<div class="igobjeti_4">'+Estado+'</div>'+
 											'		<div class="igobjeti_5"></div>'+
 											'   </div>';
-
 							if(GastosCargados == 0){	
 							$(u.GastosDetalle).each(function(y, z)
 								{ // indice, valor
@@ -158,6 +227,7 @@ function pedirResumen(mesId)
 										{ // indice, valor
 										//console.log(' indice: '+a+' valor: '+b.descripcionComercio);
 										GastosComercio+= 	'<div class="GastoComX">'+
+										    '					<div class="DGastoComX1">'+b.gasFecha+'</div>'+										
 											'					<div class="DGastoComX1">'+b.descripcionComercio+'</div>'+
 											'					<div class="DGastoComX11">'+b.nombreabrev+'</div>'+									
 											'						<div class="DGastoComX2">'+b.moneda+' - '+b.Monto+'</div>'+
@@ -165,6 +235,58 @@ function pedirResumen(mesId)
 										});
 										GastosCargados =1;
 								});
+
+								$(u.TopGastosRepetido).each(function(y, z)
+								{ // indice, valor
+									$(z).each(function(a, b)
+										{ // indice, valor
+										if(y==0 && a==0)
+										{
+										TopsResumen += '<div class="grillaTopsResumen TITrepetidos">'+	
+											'		<div class="igtopres_1">DESCRIPCION</div>'+
+											'		<div class="igtopres_2">Repeticiones</div>'+
+											'		<div class="igtopres_3">Monto</div>'+
+											'		<div class="igtopres_4"></div>'+
+											'		<div class="igtopres_5"></div>'+
+											'   </div>';
+										}			
+										//console.log(' indice: '+a+' valor: '+b.descripcionComercio);
+										TopsResumen += '	<div class="grillaTopsResumen repetidos">	<div class="igtopres_1">'+b.gasDescripcion+'</div>'+
+											'		<div class="igtopres_2">'+b.Conteo+'</div>'+
+											'		<div class="igtopres_3">'+b.Monto+'</div>'+
+											'		<div class="igtopres_4"></div>'+
+											'		<div class="igtopres_5"></div>'+
+											'   </div>';
+										});
+								});
+								
+								$(u.TopGastosGrandes).each(function(y, z)
+								{ // indice, valor
+									$(z).each(function(a, b)
+										{ // indice, valor
+										if(y==0 && a==0)
+										{
+										TopsResumen += '<div class="grillaTopsResumen TITgasGrandes">'+	
+											'		<div class="igtopres_1">DESCRIPCION</div>'+
+											'		<div class="igtopres_2">Repeticiones</div>'+
+											'		<div class="igtopres_3">Monto</div>'+
+											'		<div class="igtopres_4"></div>'+
+											'		<div class="igtopres_5"></div>'+
+											'   </div>';
+										}			
+
+										//console.log(' indice: '+a+' valor: '+b.descripcionComercio);
+										TopsResumen += '	<div class="grillaTopsResumen gasGrandes">	<div class="igtopres_1">'+b.gasDescripcion+'</div>'+
+											'		<div class="igtopres_2">'+b.Conteo+'</div>'+
+											'		<div class="igtopres_3">'+b.Monto+'</div>'+
+											'		<div class="igtopres_4"></div>'+
+											'		<div class="igtopres_5"></div>'+
+											'   </div>';
+
+										});
+								});
+
+
 							}	
 
 						});
@@ -178,6 +300,7 @@ function pedirResumen(mesId)
 										'<div class="itemsemana5">'+
 										'	<div class="grillaMPMonOBj">'+
 												AcumuladosGastos+
+												TopsResumen+
 										'	</div>'+
 										'</div>'+
 										'<div class="itemsemana6">'+
@@ -267,6 +390,8 @@ function pedirMeses(destinoID){
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	$(document).ready(function(){
 
+	$("#grillaResultadosExtra").hide();
+
 	$("#ianio").on("change",function()
 	{
 		$("#ianio").prop('disabled', true);
@@ -274,6 +399,14 @@ function pedirMeses(destinoID){
 			grabarsesion("IANIO",$("#ianio").val());
 			location.reload();
 	});
+
+$("#BuscarExtras").on("click",function()
+{
+	// pedirResumenExtraFiltros("#iGexRes3");
+		pedirResumenExtraFiltros("#grillaResultadosExtra");
+		$("#grillaResultadosExtra").toggle();
+});
+
 
 $("#cargarotroanio").on("click",function()
 {
@@ -386,7 +519,10 @@ $("#cargarotroanio").on("click",function()
 		pedirObjetivos('#iobjetivos',"select",99);
 			
 		pedirmediospago('#imediospago',99);
+		pedirmediospago3('#RESgMPa','resMPGA_',999); // para FILTROS DE BUSQUEDA
+
 			pedirmediospago2('#itemgmpa2',99);
+
 			//pedirmediospago2('#itemFMP2',99); //para FILTROS DE BUSQUEDA
 			pedirmediospago3('#itemFMP2','mpagoFiltro_',99); //para FILTROS DE BUSQUEDA
 		pedirumedidas('#iumed',99);
@@ -650,6 +786,12 @@ $("#cargarotroanio").on("click",function()
 
 	//alert(TipoMovParm);
 
+	 
+	var esGastoFijo = 0;
+	if( $("#EsGastoFix").is(':checked') )
+		esGastoFijo=1;
+
+
 	var parametros=
 	{
 		    "gasFecha": $("#FechaTicket").val(),
@@ -663,6 +805,7 @@ $("#cargarotroanio").on("click",function()
 		    "totalCuotas" : $("#totalCalculado").val(),
 			"llama":"insertar",
 			"tipoMovimiento":TipoMovParm,
+			"esGastoFijo":esGastoFijo,
 			"funcion":"PUT"
 	};
 
@@ -862,6 +1005,10 @@ $("#cargarotroanio").on("click",function()
 				  <input type="text" id="descgenDesc" placeholder="Descuento general ticket razón" value="No"/>				</div>
 			<div class="itac45c">
 				<input  type="number" id="descuentogenmonto" placeholder="0.000" value="0.000"/>
+			</div>
+			<div class="itac45D">Fijo</div>
+			<div class="itac45E">
+	           	<input  type="checkbox" id="EsGastoFix" name="EsGastoFix"/>
 			</div>
 		  	</div>	
 			<div class="itemaccioneg5">
@@ -1197,7 +1344,12 @@ $("#cargarotroanio").on("click",function()
 									<select id="selectMes">
 										<option>Seleccione mes</option>
 									</select>
-								</div>	
+								</div>
+						</div>			
+						<div  class="grillaResumenitem10">		
+								<div>Medios de Pago </div>	
+								<div class="itemFMP2" id="RESgMPa"></div>
+						</div>									
 						</div>
 						<div  class="grillaResumenitem2">
 							<div class="grillaTotales">
@@ -1222,6 +1374,29 @@ $("#cargarotroanio").on("click",function()
 				<div class="BloqueSubTab">
 				<div id="grillaExtras" class="GrillaExtras">
 					<!-- CAMBIOS ACA ALIMENTAN AL RESUMEN -->
+						<!-- GRILLA 3 TEXTO ESPECIFICO -->
+						<div class="grillaExtrasDTXT">
+							<div class="itemgDTXT1">
+								<!-- ELEGIR PRODUCTO -->	
+								<div class="itmDTXT1A">Buscar</div>
+								<div class="itmDTXT1A1">
+								<button id="BuscarExtras">(?)</button>
+								</div>
+								<!-- FILTRO PRODUCTO -->
+								<div  class="itmDTXT1B">
+									<input type="text" id="GEXproductoNomTxt" class="productobuscar" value="" placeholder="TEXTO/PRODUCTO"/> 
+								</div>
+								<div  class="itmDTXT1C">
+									<input type="date" id="GEXFDesde" class="productobuscar" value="" placeholder="FDesde"/>
+									<input type="date" id="GEXFHasta" class="productobuscar" value="" placeholder="FHasta"/> 		
+								</div>
+			  		  		</div>
+							<div class="itemgDTXT2">
+								<!-- LISTADO -->
+							</div>
+						</div>  	
+						<!-- FIN GRILLA 3 TEXTO ESPECIFICO -->
+						<div class="Raya"></div>
 						<!-- GRILLA 1 COMERCIOS -->
 						<div class="grillaExtrasCOM">
 							<div  class="itemgexcom1">
@@ -1244,28 +1419,38 @@ $("#cargarotroanio").on("click",function()
 									<!-- LISTA DE COMERCIOS ELEGIDOS -->
 							</div>								
 						</div>  	
-						<!-- GRILLA 1 COMERCIOS -->
+						<!-- GRILLA 2 PRODUCTOS -->
 						<div class="grillaExtrasPROD">
 							<div class="itemgexprod1">
-			  		  		<!-- ELEGIR PRODUCTO -->	
-							<div class="itmGEXPrd1A">Producto</div>
-			  		  		<!-- FILTRO PRODUCTO -->
-							<div  class="itmGEXPrd1B">
-			  		  		<input type="text" id="GEXproductobuscar" class="productobuscar" value="" placeholder="nombre producto a buscar"/> </div>
-			  		  	</div>
-			  		  	<div class="itemgexprod2">
-			  		  		<!-- SELECT PRODUCTO -->
-							<select id="GEXproductos" class="comercioSel">
-			  		  			<option value="9999">Seleccione producto...</option>
-			  		  		</select>
+								<!-- ELEGIR PRODUCTO -->	
+								<div class="itmGEXPrd1A">Producto</div>
+								<!-- FILTRO PRODUCTO -->
+								<div  class="itmGEXPrd1B">
+									<input type="text" id="GEXproductobuscar" class="productobuscar" value="" placeholder="nombre producto a buscar"/> 
+								</div>
+			  		  		</div>
+							<div class="itemgexprod2">
+								<!-- SELECT PRODUCTO -->
+								<select id="GEXproductos" class="comercioSel">
+									<option value="9999">Seleccione producto...</option>
+								</select>
 								<button>+</button>
 								<button>-</button>
-			  		  	</div>
-						<div class="itemgexprod3">
-								<!-- LISTA DE PRODUCTOS ELEGIDOS -->
-						</div>								
-					</div>  	
-
+							</div>
+							<div class="itemgexprod3">
+									<!-- LISTA DE PRODUCTOS ELEGIDOS -->
+							</div>								
+						</div>  	
+						<!-- FIN GRILLA 2 PRODUCTOS -->
+						<div  class="grillaExtraResultado">
+							<div class="iGexRes1">TOTAL</div>
+							<div class="iGexRes2">
+								<input id="totalConsulta" name="totalConsulta" type="text" value="" placeholder="Monto total de la consulta" disabled="true" />
+							</div>
+							<div class="iGexRes3" id="iGexRes3">
+								<div class="grillaObjetivos" id="grillaResultadosExtra"></div>
+							</div> 
+					    </div>
 				</div>
 				</div> <!-- BloqueSubTab -->
 			</div> <!-- SubTabs -->
